@@ -11,7 +11,7 @@
             $(".preloader").delay(300).fadeOut("slow");
         }
     });
-    
+
 
     $(document).ready(function() {
         /* -------------------------------------------------------------
@@ -37,8 +37,8 @@
             });
         } else {
             $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
-                event.preventDefault(); 
-                event.stopPropagation(); 
+                event.preventDefault();
+                event.stopPropagation();
                 $(this).parent().siblings().removeClass('open');
                 $(this).parent().toggleClass('open');
             });
@@ -74,8 +74,8 @@
                 $(this).removeClass('opened').removeClass('fa-angle-up').addClass('closed').addClass('fa-angle-down');
             });
         }
-        
-        
+
+
         /* -------------------------------------------------------------
             All FAQ Accordian... Starting with FAQ in id
         ------------------------------------------------------------- */
@@ -148,7 +148,7 @@
             });
         }
 
-        
+
         /* -------------------------------------------------------------
             Gallery Carousel
         ------------------------------------------------------------- */
@@ -185,7 +185,7 @@
             });
         }
 
-        
+
         /* -------------------------------------------------------------
             Team Isotop Filter
         ------------------------------------------------------------- */
@@ -223,7 +223,7 @@
             Gallery Isotop Filter
         ------------------------------------------------------------- */
         becharity_isotpop_filter('.gallery-isotope','.gallery-isotope-btn');
-       
+
         /* -------------------------------------------------------------
             Image Gallery Popup
         ------------------------------------------------------------- */
@@ -271,7 +271,7 @@
                     $(this).parent().css('position', 'relative');
                 })
             }
-        }   
+        }
         /* -------------------------------------------------------------
             FAQ Page Sticky Sidebar
         ------------------------------------------------------------- */
@@ -311,7 +311,7 @@
         becharity_countdown('#count2','2017/2/31');
         becharity_countdown('#count3','2017/3/11');
 
-        
+
         /* -------------------------------------------------------------
             Google Map
         ------------------------------------------------------------- */
@@ -319,8 +319,8 @@
         window.initMap = function() {
             if ( $('#map').length){
                 map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+                center: {lat: -34.40975102849039, lng: -58.603423833847046},
+                zoom: 16
                 });
             }
         }

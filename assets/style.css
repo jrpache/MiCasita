@@ -382,6 +382,9 @@ input[type=text] {
 .navbar-brand > img {
     max-height: 70px;
 }
+#header-main-nav {
+    margin-top: 25px
+}
 .header .main-nav .navbar-default {
     background-color: #fff;
     border: 0 none;
@@ -488,7 +491,7 @@ input[type=text] {
 ================================================================== */
 
 .home-slider {
-    margin-top: 150px;
+    margin-top: -20px;
 }
 .home-slider .item {
     position: relative;
@@ -823,7 +826,7 @@ input[type=text] {
     background-size: cover;
 }
 .page-title-section {
-  margin-top: 150px;
+  margin-top: -20px;
   padding-top: 300px;
   position: relative;
 }
