@@ -69,6 +69,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 22px;
+    margin-top: 121px;
 }
 h1,
 h2,
@@ -215,6 +216,9 @@ input[type=text] {
 }
 .btn-red {
     background: #FF3450;
+}
+.btn-green {
+    background: #AFB867;
 }
 .btn-red:hover {
     background: #2867de;
@@ -496,7 +500,7 @@ input[type=text] {
 .home-slider .item {
     position: relative;
     overflow: hidden;
-    height: 550px;
+    height: 620px;
 }
 .slider-image > img {
     height: 100%;
@@ -509,6 +513,10 @@ input[type=text] {
 }
 .slider-content {
     padding-top: 115px;
+}
+.slider-content-text {
+    background-color: rgba(169, 169, 169, 0.7);
+    border-radius:10px;
 }
 .home-slider .slider-content h2 {
     color: #ffffff;
@@ -835,7 +843,7 @@ input[type=text] {
     position: relative;
 }
 .page-title-wrap .page-title-overlay {
-    background: rgba(000, 0, 0, 0.7);
+    background: rgba(000, 0, 0, 0.3);
     height: 100%;
     width: 100%;
     position: absolute;
