@@ -161,7 +161,9 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Viene hace 3 años a La Casita</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <a class="btn mg-top-40">Conoce su historia</a>
+                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/i23aUei_7ig" data-target="#myModal">
+                            Conoce su historia
+                        </button>
                     </div>
                     <!-- <div class="recent-cause-funding">
                         <div class="fund-line">
@@ -178,7 +180,9 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Tiene 8 años y esta en tercer grado</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <a class="btn mg-top-40">Conoce su historia</a>
+                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/fN6eaOR73SM" data-target="#myModal">
+                            Conoce su historia
+                        </button>
                     </div>
                     <!-- <div class="recent-cause-funding">
                         <div class="fund-line">
@@ -195,7 +199,9 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Entro en la Casita y es nuestro ejemplo</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <a class="btn mg-top-40">Conoce su historia</a>
+                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
+                            Conoce su historia
+                        </button>
                     </div>
                     <!-- <div class="recent-cause-funding">
                         <div class="fund-line">
@@ -205,6 +211,30 @@ is_hidden = 0
                     </div> -->
                 </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+
+                  <div class="modal-body">
+
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+            </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
         </div>
     </div>
 </div>
