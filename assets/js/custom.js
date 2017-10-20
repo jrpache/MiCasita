@@ -8,7 +8,7 @@
             Preloader
         ------------------------------------------------------------- */
         if ($('.preloader').length){
-            $(".preloader").delay(300).fadeOut("slow");
+            $(".preloader").delay(10).fadeOut("slow");
         }
     });
 
@@ -91,13 +91,13 @@
         /* -------------------------------------------------------------
             Common Accordian
         ------------------------------------------------------------- */
-		if ( $('#accordian').length){
-            $('#accordian').accordion({
-                collapsible: true,
-                icons: false,
-                heightStyle: "content"
-            });
-        }
+    		if ( $('#accordian').length){
+                $('#accordian').accordion({
+                    collapsible: true,
+                    icons: false,
+                    heightStyle: "content"
+                });
+            }
 
         /* -------------------------------------------------------------
             Scroll To Top
@@ -324,5 +324,13 @@
                 });
             }
         }
+        /* -------------------------------------------------------------
+            Popover menu initialaze
+        ------------------------------------------------------------- */
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        });
+
+
     });
 })(jQuery);

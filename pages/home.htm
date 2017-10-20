@@ -65,7 +65,7 @@ is_hidden = 0
                 <div class="fact-wrap">
                     <div class="fact-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
                     <div class="fact-details">
-                        <div class="fact-count">3,568</div>
+                        <div class="fact-count">{% content 'Total_ninos' %}</div>
                         <div class="fact-info">Total de Niños de la Casita desde su apertura en 2002 </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ is_hidden = 0
                 <div class="fact-wrap">
                     <div class="fact-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
                     <div class="fact-details">
-                        <div class="fact-count">12,358</div>
+                        <div class="fact-count">{% content 'Total_comidas_anual' %}</div>
                         <div class="fact-info">Desayunos, Almuerzos y Meriendas servidas anualmente</div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ is_hidden = 0
                 <div class="fact-wrap">
                     <div class="fact-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
                     <div class="fact-details">
-                        <div class="fact-count">1,500</div>
+                        <div class="fact-count">{% content 'Total_horas_donadas_anual' %}</div>
                         <div class="fact-info">Horas donadas anualmente por el Voluntariado</div>
                     </div>
                 </div>
@@ -95,7 +95,7 @@ is_hidden = 0
                 <div class="fact-wrap">
                     <div class="fact-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
                     <div class="fact-details">
-                        <div class="fact-count">7,348</div>
+                        <div class="fact-count">{% content 'Total_voluntarios' %}</div>
                         <div class="fact-info">Voluntarios y donantes que hacen posible la casita</div>
                     </div>
                 </div>
@@ -354,7 +354,14 @@ is_hidden = 0
                             <span class="meta-left"><i class="fa fa-tags"></i><a href="#">Children</a>, <a href="#">Sports</a>, <a href="#">Education</a></span>
                             <span class="meta-right"><i class="fa fa-comments-o"></i>16</span>
                         </div> -->
-                        <h3 class="title"><a href="#">Educacion</a></h3>
+
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
+                          Educacion
+                        </button>
+
+                        <!-- <h3 class="title"><a href="#">Educacion</a></h3> -->
+
+
                         <!-- <p class="category-meta"><i class="fa fa-folder-open" aria-hidden="true"></i><a href="#">Sports</a>, <a href="#">education</a>, <a href="#">Freedom</a></p> -->
                     </div>
                     <!-- <div class="post-author">
@@ -374,7 +381,12 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/2.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                        <h3 class="title"><a href="#">Salud y Nutrición</a></h3>
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
+                        Salud y Nutrición
+                      </button>
+
+                        <!-- <h3 class="title"><a href="#">Salud y Nutrición</a></h3> -->
+
                     </div>
                 </div>
                 <!-- /.end blog single -->
@@ -385,7 +397,13 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/3.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                        <h3 class="title"><a href="#">Red Familiar</a></h3>
+
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
+                        Red Familiar
+                      </button>
+
+                        <!-- <h3 class="title"><a href="#">Red Familiar</a></h3> -->
+
                     </div>
                 </div>
                 <!-- /.end blog single -->
@@ -396,7 +414,10 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/4.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                        <h3 class="title"><a href="#">Desarrollo Humano</a></h3>
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Buscamos potenciar las fortalezas y mejorar las debilidades de los chicos para que puedan insertarse en cualquier comunidad respetando y apoyando al otro.">
+                        Desarrollo Humano
+                      </button>
+                      <!-- <h3 class="title"><a href="#">Desarrollo Humano</a></h3> -->
                     </div>
                 </div>
                 <!-- /.end blog single -->
@@ -407,7 +428,12 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/5.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                        <h3 class="title"><a href="#">Sustentabilidad</a></h3>
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Tratamos de que todo el apoyo que se de dure en el tiempo y sea persitente y no se pierda.">
+                        Sustentabilidad
+                      </button>
+
+                        <!-- <h3 class="title"><a href="#">Sustentabilidad</a></h3> -->
+
                     </div>
                 </div>
                 <!-- /.end blog single -->
@@ -418,7 +444,10 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/6.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                        <h3 class="title"><a href="#">Voluntariado</a></h3>
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Nos preocupamos por conseguir una masa importante de gente que pueda apoyarnos mediante el Voluntariado tan importante para poder desarrollar todo este tipo de tareas.">
+                        Voluntariado
+                      </button>
+                      <!-- <h3 class="title"><a href="#">Voluntariado</a></h3> -->
                     </div>
                 </div>
                 <!-- /.end blog single -->
