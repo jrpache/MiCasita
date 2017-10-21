@@ -254,23 +254,23 @@ is_hidden = 0
                     <div class="col-sm-6 no-pad bg equal-height-inner">
                         <div class="slide-detels">
                             <div class="eventcount" id="count1"></div>
-                            <h3 class="slide-title">Apoyando la compra de materiales de estudio </h3>
-                            <p class="sort-content">Los niños necesitan de que Uds. vengan a la Kermese a realizarse el proximo mes el cual recaudaremos fondos para que la mochila de inicio de año este en condiciones</p>
+                            <h3 class="slide-title">{% content 'Objetivo1_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
                             <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>21 Setiembre, 2017</span>
-                                <span><i class="fa fa-clock-o"></i>10 : 30am</span>
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span>
                             </div>
                             <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>Matheu 1772, Partido de Tigre Tel, 011 731-8043</span>
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
                             </div>
                             <div class="speaker">
                                 <div class="speaker-text">
                                     <i class="fa fa-bullhorn"></i>Oradores
                                 </div>
                                 <div class="speaker-thumb">
-                                    <img src="{{ 'assets/images/event/speaker/1.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/2.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/3.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/1.jpg'|theme }}" alt="speaker1">
+                                    <img src="{{ 'assets/images/event/speaker/2.jpg'|theme }}" alt="speaker2">
+                                    <img src="{{ 'assets/images/event/speaker/3.jpg'|theme }}" alt="speaker3">
                                 </div>
                             </div>
                             <div class="join-list">
@@ -292,14 +292,14 @@ is_hidden = 0
                     <div class="col-sm-6 no-pad bg equal-height-inner">
                         <div class="slide-detels">
                             <div class="eventcount" id="count2"></div>
-                            <h3 class="slide-title">Materiales de construccion para mantenimiento</h3>
-                            <p class="sort-content">Daremos una charla inspiradora en la que podremos ordenar lo importante que son los valores y que nos ayudan a darle un sentido a la vida. Luego tendremos un almuerzo donde se recaudara fondos para poder comprar materiales de construccion, chapas, pintura, etc. </p>
+                            <h3 class="slide-title">{% content 'Objetivo2_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo2_descripcion' %}</p>
                             <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>9 Diciembre, 2017</span>
-                                <span><i class="fa fa-clock-o"></i>10 : 30am</span>
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo2_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span>
                             </div>
                             <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>Matheu 1772, Partido de Tigre Tel, 011 731-8043</span>
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo2_direccion' %}</span>
                             </div>
                             <div class="speaker">
                                 <div class="speaker-text">
@@ -312,7 +312,7 @@ is_hidden = 0
                                 </div>
                             </div>
                             <div class="join-list">
-                                <a class="btn" href="#">UNITE A LA FAMILIA</a>
+                                <a class="btn" href="#">DONAR</a>
                                 <div class="social-icon">
                                     <a href="#"><i class="fa fa-facebook-official"></i></a>
                                     <a href="#"><i class="fa fa-twitter-square"></i></a>
@@ -350,7 +350,7 @@ is_hidden = 0
                                 </div>
                             </div>
                             <div class="join-list">
-                                <a class="btn" href="#">UNITE A LA FAMILIA</a>
+                                <a class="btn" href="#">DONAR</a>
                                 <div class="social-icon">
                                     <a href="#"><i class="fa fa-facebook-official"></i></a>
                                     <a href="#"><i class="fa fa-twitter-square"></i></a>
@@ -385,7 +385,7 @@ is_hidden = 0
                             <span class="meta-right"><i class="fa fa-comments-o"></i>16</span>
                         </div> -->
 
-                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="EDUCACION" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
                           Educacion
                         </button>
 
@@ -411,7 +411,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/2.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="SALUD Y NUTRICION" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
                         Salud y Nutrición
                       </button>
 
@@ -428,7 +428,7 @@ is_hidden = 0
                     </div>
                     <div class="post-desk">
 
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="RED FAMILIAR" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
                         Red Familiar
                       </button>
 
@@ -444,7 +444,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/4.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Buscamos potenciar las fortalezas y mejorar las debilidades de los chicos para que puedan insertarse en cualquier comunidad respetando y apoyando al otro.">
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="DESARROLLO HUMANO" data-content="Buscamos potenciar las fortalezas y mejorar las debilidades de los chicos para que puedan insertarse en cualquier comunidad respetando y apoyando al otro.">
                         Desarrollo Humano
                       </button>
                       <!-- <h3 class="title"><a href="#">Desarrollo Humano</a></h3> -->
@@ -458,7 +458,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/5.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Tratamos de que todo el apoyo que se de dure en el tiempo y sea persitente y no se pierda.">
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="SUSTENTABILIDAD" data-content="Tratamos de que todo el apoyo que se de dure en el tiempo y sea persitente y no se pierda.">
                         Sustentabilidad
                       </button>
 
@@ -474,7 +474,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/6.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-content="Nos preocupamos por conseguir una masa importante de gente que pueda apoyarnos mediante el Voluntariado tan importante para poder desarrollar todo este tipo de tareas.">
+                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" data-title="VOLUNTARIADO" data-content="Nos preocupamos por conseguir una masa importante de gente que pueda apoyarnos mediante el Voluntariado tan importante para poder desarrollar todo este tipo de tareas.">
                         Voluntariado
                       </button>
                       <!-- <h3 class="title"><a href="#">Voluntariado</a></h3> -->

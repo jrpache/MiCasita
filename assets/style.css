@@ -2895,6 +2895,9 @@ ul.products {
     font-weight: bold;
     padding-top: 20px;
 }
+.footer-widget .footer-address{
+  padding-top: 20px;
+}
 .footer-top .footer-address .footer-map a {
     color: #7F7F7F;
 }
