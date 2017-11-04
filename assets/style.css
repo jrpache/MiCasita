@@ -210,7 +210,7 @@ input[type=text] {
     text-transform: uppercase;
 }
 .btn:hover {
-    background: #FF3450;
+    background: #AFB867;
     color: #fff;
     text-decoration: none;
 }
@@ -218,10 +218,10 @@ input[type=text] {
     background: #FF3450;
 }
 .btn-green {
-    background: #AFB867;
+    background: #FF3450;
 }
 .btn-red:hover {
-    background: #2867de;
+    background: #AFB867;
 }
 .btn-red-bg:hover {
     background: #fff;
