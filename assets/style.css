@@ -82,6 +82,7 @@ h6 {
 p {
     font-size: 14px;
     line-height: 22px;
+    text-align: justify;
 }
 a {
     color: #FF3450;
@@ -195,7 +196,7 @@ input[type=text] {
     z-index: 9;
 }
 .btn {
-    background: #2867de;
+    background: #b9c938;
     border: 0 none;
     border-radius: 2px;
     color: #ffffff;
@@ -517,7 +518,19 @@ input[type=text] {
 .slider-content-text {
     background-color: rgba(169, 169, 169, 0.7);
     border-radius:10px;
+    margin-left: 27%;
+    margin-right: 27%;
 }
+/*media query para acomodar el slider en mobile*/
+@media (max-width: 760px) {
+    .slider-content-text {
+        background-color: rgba(169, 169, 169, 0.7);
+        border-radius:10px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+/*FIN de media query!*/
 .home-slider .slider-content h2 {
     color: #ffffff;
     font-size: 48px;
@@ -577,7 +590,7 @@ input[type=text] {
     width: 100%;
 }
 .single-fact:nth-child(even) .facet-overlay {
-    background: rgba(40, 103, 222, 0.8);
+    background: rgba(175, 184, 103, 0.8);
 }
 .fact-wrap {
   display: inline-block;
@@ -984,7 +997,7 @@ ul.pagination li a a {
 .about-section .about-single .inner-title {
     border: 1px solid #ffffff;
     border-left: 0;
-    background-color: #2867de;
+    background-color: #b9c938;
     border-radius: 0px 100px 100px 0px;
     position: absolute;
     font-size: 24px;
@@ -1835,7 +1848,7 @@ ul.feature-list {
     padding: 0 0 20px;
 }
 .contact-main .form-title {
-    background: #2867de;
+    background: #b9c938;
     color: #ffffff;
     margin: 0;
     padding: 25px 35px;
