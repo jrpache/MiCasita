@@ -1020,7 +1020,7 @@ ul.pagination li a a {
 .about-section .about-single .inner-title {
     border: 1px solid #ffffff;
     border-left: 0;
-    background-color: #b9c938;
+    background-color: #afb867;  /* cambie color sp */
     border-radius: 0px 100px 100px 0px;
     position: absolute;
     font-size: 24px;
