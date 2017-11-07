@@ -544,13 +544,13 @@ input[type=text] {
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
 }
 /*media query para acomodar el slider en mobile*/
-@media (max-width: 760px) {
+@media (max-width: 768px) {
     .slider-content-text {
         background-color: rgba(169, 169, 169, 0.7);
         border-radius:10px;
         margin-left: 0%;
         margin-right: 0%;
-        padding-top: 10px;   /* Agrego Sergio */
+        /*padding-top: 10px;   /* Agrego Sergio */*/
     }
 }
 /*FIN de media query!*/
@@ -1033,7 +1033,7 @@ ul.pagination li a a {
     font-size: 18px;
     line-height: 30px;
     padding: 0 55px;
-    text-align: center;
+    text-align: justify;  /*Cambie de center a justify sergio */
 }
 .about-feature .feature-list {
     padding-bottom: 40px;
@@ -3011,7 +3011,7 @@ ul.products {
 ================================================================== */
 
 .preloader {
-    background: #2867DE;
+    background: #afb867;
     bottom: 0;
     height: 100%;
     left: 0;
