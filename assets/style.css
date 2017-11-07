@@ -196,7 +196,7 @@ input[type=text] {
     z-index: 9;
 }
 .btn {
-    background: #b9c938;
+    background: #2867de;
     border: 0 none;
     border-radius: 2px;
     color: #ffffff;
@@ -215,14 +215,35 @@ input[type=text] {
     color: #fff;
     text-decoration: none;
 }
+.btn-green {
+    background: #AFB867;
+    /*agrego esto para abajo*/
+    border: 0 none;
+    border-radius: 2px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    padding: 10px 15px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
 .btn-red {
     background: #FF3450;
+    color: #ffffff;
 }
-.btn-green {
+/*Agregue boton verde hover*/
+.btn-green:hover {
     background: #FF3450;
+    color: #ffffff;
 }
+/*fin boton verde hover */
 .btn-red:hover {
     background: #AFB867;
+    color: #ffffff;
 }
 .btn-red-bg:hover {
     background: #fff;
@@ -240,7 +261,7 @@ input[type=text] {
     padding: 20px;
 }
 .btn-donate {
-    background: #2867de;
+    background: #AFB867;
     color: #ffffff;
     display: block;
     font-weight: 700;
@@ -520,6 +541,7 @@ input[type=text] {
     border-radius:10px;
     margin-left: 27%;
     margin-right: 27%;
+    padding-bottom: 15px;  /* Agrego Sergio  */
 }
 /*media query para acomodar el slider en mobile*/
 @media (max-width: 760px) {
@@ -528,6 +550,7 @@ input[type=text] {
         border-radius:10px;
         margin-left: 0%;
         margin-right: 0%;
+        padding-top: 115px;   /* Agrego Sergio */
     }
 }
 /*FIN de media query!*/
