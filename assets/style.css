@@ -541,7 +541,7 @@ input[type=text] {
     border-radius:10px;
     margin-left: 27%;
     margin-right: 27%;
-    padding-bottom: 15px;  /* Agrego Sergio  */
+    padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
 }
 /*media query para acomodar el slider en mobile*/
 @media (max-width: 760px) {
@@ -550,7 +550,7 @@ input[type=text] {
         border-radius:10px;
         margin-left: 0%;
         margin-right: 0%;
-        padding-top: 115px;   /* Agrego Sergio */
+        padding-top: 10px;   /* Agrego Sergio */
     }
 }
 /*FIN de media query!*/
@@ -2001,6 +2001,7 @@ ul.feature-list {
     background: #ffffff;
     margin-bottom: 50px;
     overflow: hidden;
+    text-align: center;
 }
 .blog-single .thumb img {
     height: auto;
