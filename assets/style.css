@@ -407,6 +407,11 @@ input[type=text] {
 }
 .navbar-brand > img {
     max-height: 70px;
+    /* Cambio brand a la izquierda sergio */
+    margin-left: 40px;
+    margin-right: 30px;
+    /* FIN Cambio brand a la izquierda sergio */
+
 }
 #header-main-nav {
     margin-top: 25px
@@ -537,8 +542,8 @@ input[type=text] {
     padding-top: 60px;
 }
 .slider-content-text {
-    background-color: rgba(169, 169, 169, 0.7);
-    border-radius:10px;
+    background-color: rgba(000, 0, 0, 0.3);
+    border-radius: 2px; /* cambio sergio */
     margin-left: 27%;
     margin-right: 27%;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
@@ -546,8 +551,8 @@ input[type=text] {
 /*media query para acomodar el slider en mobile*/
 @media (max-width: 768px) {
     .slider-content-text {
-        background-color: rgba(169, 169, 169, 0.7);
-        border-radius:10px;
+        background-color: rgba(000, 0, 0, 0.3)   /*rgba(169, 169, 169, 0.7); cambio sergio */
+        border-radius: 2px; /* cambio sergio */
         margin-left: 0%;
         margin-right: 0%;
         /*padding-top: 10px;   /* Agrego Sergio */*/
