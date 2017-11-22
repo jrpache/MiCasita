@@ -10,14 +10,14 @@ is_hidden = 0
             <img alt="slide" src="{{ 'assets/images/slider/slider-1.jpg'|theme }}">
         </div>
         <div class="slider-content">
-            <div class="container">
-                <div class="row">
+            <div class="container boxleft">
+                <!-- <div class="row"> -->
                     <div class="col-sm-6 slider-content-text">
                         <h2>La Casa del Niño Nueva Familia es.... </h2>
                         <p style='font-size: 18px;'>Una asociación civil, sin fines de lucro, ecuménica y apolítica, que trabaja con niños y familias carenciadas en Rincón de Milberg, partido de Tigre, provincia de Buenos Aires.</p>
                         <a class="btn btn-green" href="#">DONAR</a>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@ is_hidden = 0
             <img alt="slide" src="{{ 'assets/images/slider/slider-2.jpg'|theme }}">
         </div>
         <div class="slider-content">
-            <div class="container">
+            <div class="container boxleft">
                 <div class="row">
                     <div class="col-sm-6 slider-content-text">
                         <h2>Ayudanos a ayudar</h2>
@@ -42,7 +42,7 @@ is_hidden = 0
             <img alt="slide" src="{{ 'assets/images/slider/slider-3.jpg'|theme }}">
         </div>
         <div class="slider-content">
-            <div class="container">
+            <div class="container boxleft">
                 <div class="row">
                     <div class="col-sm-6 slider-content-text">
                         <h2>Secundaria Nueva</h2>
@@ -56,15 +56,63 @@ is_hidden = 0
     </div>
 </div>
 
-<!-- Fun Fact -->
-<div class="fun-fact">
+
+<!-- Copia de Fan Fact Flexbox -->
+  <!-- <div class="fun-fact">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-sm-3 single-fact">
+                  <div class="facet-overlay"></div>
+                  <div class="fact-wrap">
+                      <div class="fact-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
+                      <div class="fact-details">
+                          <div class="fact-count">{% content 'Total_ninos' %}</div>
+                          <div class="fact-info">Total de Niños de la Casita desde su apertura en 2002 </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-3 single-fact">
+                  <div class="facet-overlay"></div>
+                  <div class="fact-wrap">
+                      <div class="fact-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+                      <div class="fact-details">
+                          <div class="fact-count">{% content 'Total_comidas_anual' %}</div>
+                          <div class="fact-info">Desayunos, Almuerzos y Meriendas servidas anualmente</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-3 single-fact">
+                  <div class="facet-overlay"></div>
+                  <div class="fact-wrap">
+                      <div class="fact-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                      <div class="fact-details">
+                          <div class="fact-count">{% content 'Total_horas_donadas_anual' %}</div>
+                          <div class="fact-info">Horas donadas anualmente por el Voluntariado</div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-sm-3 single-fact">
+                  <div class="facet-overlay"></div>
+                  <div class="fact-wrap">
+                      <div class="fact-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                      <div class="fact-details">
+                          <div class="fact-count">{% content 'Total_voluntarios' %}</div>
+                          <div class="fact-info">Voluntarios y donantes que hacen posible la casita</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> -->
+<!-- Fin Copia de Fan Fact Flexbox -->
+ <div class="fun-fact">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3 single-fact">
                 <div class="facet-overlay"></div>
                 <div class="fact-wrap">
-                    <div class="fact-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
-                    <div class="fact-details">
+                    <div class="col-sm-2 fact-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
+                    <div class="col-sm-10 fact-details">
                         <div class="fact-count">{% content 'Total_ninos' %}</div>
                         <div class="fact-info">Total de Niños de la Casita desde su apertura en 2002 </div>
                     </div>
@@ -73,8 +121,8 @@ is_hidden = 0
             <div class="col-sm-3 single-fact">
                 <div class="facet-overlay"></div>
                 <div class="fact-wrap">
-                    <div class="fact-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-                    <div class="fact-details">
+                    <div class="col-sm-2 fact-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+                    <div class="col-sm-10 fact-details">
                         <div class="fact-count">{% content 'Total_comidas_anual' %}</div>
                         <div class="fact-info">Desayunos, Almuerzos y Meriendas servidas anualmente</div>
                     </div>
@@ -83,8 +131,8 @@ is_hidden = 0
             <div class="col-sm-3 single-fact">
                 <div class="facet-overlay"></div>
                 <div class="fact-wrap">
-                    <div class="fact-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                    <div class="fact-details">
+                    <div class="col-sm-2 fact-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+                    <div class="col-sm-10 fact-details">
                         <div class="fact-count">{% content 'Total_horas_donadas_anual' %}</div>
                         <div class="fact-info">Horas donadas anualmente por el Voluntariado</div>
                     </div>
@@ -93,8 +141,8 @@ is_hidden = 0
             <div class="col-sm-3 single-fact">
                 <div class="facet-overlay"></div>
                 <div class="fact-wrap">
-                    <div class="fact-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                    <div class="fact-details">
+                    <div class="col-sm-2 fact-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
+                    <div class="col-sm-10 fact-details">
                         <div class="fact-count">{% content 'Total_voluntarios' %}</div>
                         <div class="fact-info">Voluntarios y donantes que hacen posible la casita</div>
                     </div>
@@ -102,7 +150,15 @@ is_hidden = 0
             </div>
         </div>
     </div>
-</div>
+  </div>
+
+<!-- Fun Fact -->
+
+
+
+
+<!-- FIN Fun Fact Original -->
+
 
 <!-- Intro -->
 <div class="intro pd-top-100 pd-bottom-100 text-center">

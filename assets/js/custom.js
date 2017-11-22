@@ -8,7 +8,7 @@
             Preloader
         ------------------------------------------------------------- */
         if ($('.preloader').length){
-            $(".preloader").delay(10).fadeOut("slow");
+            $(".preloader").delay(10).fadeOut("fast"); /*cambio sergio delay 1000x10 y slow x fast */
         }
     });
 

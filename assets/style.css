@@ -408,7 +408,7 @@ input[type=text] {
 .navbar-brand > img {
     max-height: 70px;
     /* Cambio brand a la izquierda sergio */
-    margin-left: 40px;
+    margin-left: 12%;
     margin-right: 30px;
     /* FIN Cambio brand a la izquierda sergio */
 
@@ -541,10 +541,14 @@ input[type=text] {
 .slider-content {
     padding-top: 60px;
 }
+
+.boxleft {
+    margin-left: 2%;
+}
 .slider-content-text {
     background-color: rgba(000, 0, 0, 0.3);
     border-radius: 2px; /* cambio sergio */
-    margin-left: 27%;
+    /*margin-left: 27%; camibo sp*/
     margin-right: 27%;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
 }
@@ -594,6 +598,7 @@ input[type=text] {
 /* ==================================================================
   5.0 Fun fact Section
 ================================================================== */
+
 
 .fun-fact {
     background-image: url("images/fun-fact.jpg");
@@ -1028,7 +1033,7 @@ ul.pagination li a a {
     background-color: #afb867;  /* cambie color sp */
     border-radius: 0px 100px 100px 0px;
     position: absolute;
-    font-size: 24px;
+    font-size: 16px; /* cambie tamano de 24 a 16 */
     color: #ffffff;
     padding: 23px 40px 23px 26px;
     bottom: 60px;
