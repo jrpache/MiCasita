@@ -69,7 +69,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    margin-top: 121px;
+    margin-top: 90px;
 }
 h1,
 h2,
@@ -412,7 +412,7 @@ input[type=text] {
 .navbar-brand > img {
     max-height: 70px;
     /* Cambio brand a la izquierda sergio */
-    margin-left: 12%;
+    margin-left: 9%;
     margin-right: 30px;
     /* FIN Cambio brand a la izquierda sergio */
 
@@ -526,7 +526,7 @@ input[type=text] {
 ================================================================== */
 
 .home-slider {
-    margin-top: -20px;
+    margin-top: 0px;  /* lo resetee a 0 de -21 para no cortar foto */
 }
 .home-slider .item {
     position: relative;
