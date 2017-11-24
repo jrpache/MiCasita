@@ -217,7 +217,7 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Viene hace 3 años a La Casita</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/i23aUei_7ig" data-target="#myModal">
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/i23aUei_7ig" data-target="#myModal">
                             Conoce su historia
                         </button>
                     </div>
@@ -236,7 +236,7 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Tiene 8 años y esta en tercer grado</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/fN6eaOR73SM" data-target="#myModal">
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/fN6eaOR73SM" data-target="#myModal">
                             Conoce su historia
                         </button>
                     </div>
@@ -255,7 +255,7 @@ is_hidden = 0
                         <h3 class="recent-cause-title"><a href="#">Entro en la Casita y es nuestro ejemplo</a></h3>
                         <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
                         <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
-                        <button type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/Jfrjeg26Cwk" data-target="#myModal">
                             Conoce su historia
                         </button>
                     </div>
@@ -386,23 +386,23 @@ is_hidden = 0
                     <div class="col-sm-6 no-pad bg equal-height-inner">
                         <div class="slide-detels">
                             <div class="eventcount" id="count3"></div>
-                            <h3 class="slide-title">Queremos ampliar nuestra Biblioteca</h3>
-                            <p class="sort-content">Los libros son la fuente de sabiduria y nuestro soporte para poder aprender y tener una base solida de conocimientos. </p>
+                            <h3 class="slide-title">{% content 'Objetivo3_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo3_descripcion' %}</p>
                             <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>10 Diciembre, 2017</span>
-                                <span><i class="fa fa-clock-o"></i>10 : 30am</span>
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo3_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span>
                             </div>
                             <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>Matheu 1772, Partido de Tigre Tel, 011 731-8043</span>
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo3_direccion' %}</span>
                             </div>
                             <div class="speaker">
                                 <div class="speaker-text">
                                     <i class="fa fa-bullhorn"></i>Oradores
                                 </div>
                                 <div class="speaker-thumb">
-                                    <img src="{{ 'assets/images/event/speaker/3.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/2.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/1.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/4.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/5.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/6.jpg'|theme }}" alt="speaker">
                                 </div>
                             </div>
                             <div class="join-list">
@@ -441,7 +441,7 @@ is_hidden = 0
                             <span class="meta-right"><i class="fa fa-comments-o"></i>16</span>
                         </div> -->
 
-                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="EDUCACION" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
+                        <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="EDUCACION" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
                           Educacion
                         </button>
 
@@ -467,7 +467,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/2.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="SALUD Y NUTRICION" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
+                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="SALUD Y NUTRICION" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
                         Salud y Nutrición
                       </button>
 
@@ -484,7 +484,7 @@ is_hidden = 0
                     </div>
                     <div class="post-desk">
 
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="RED FAMILIAR" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
+                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="RED FAMILIAR" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
                         Red Familiar
                       </button>
 
@@ -500,7 +500,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/4.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="DESARROLLO HUMANO" data-content="Buscamos potenciar las fortalezas y mejorar las debilidades de los chicos para que puedan insertarse en cualquier comunidad respetando y apoyando al otro.">
+                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="DESARROLLO HUMANO" data-content="Buscamos potenciar las fortalezas y mejorar las debilidades de los chicos para que puedan insertarse en cualquier comunidad respetando y apoyando al otro.">
                         Desarrollo Humano
                       </button>
                       <!-- <h3 class="title"><a href="#">Desarrollo Humano</a></h3> -->
@@ -514,7 +514,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/5.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="SUSTENTABILIDAD" data-content="Tratamos de que todo el apoyo que se de dure en el tiempo y sea persitente y no se pierda.">
+                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="SUSTENTABILIDAD" data-content="Tratamos de que todo el apoyo que se de dure en el tiempo y sea persitente y no se pierda.">
                         Sustentabilidad
                       </button>
 
@@ -530,7 +530,7 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/6.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="VOLUNTARIADO" data-content="Nos preocupamos por conseguir una masa importante de gente que pueda apoyarnos mediante el Voluntariado tan importante para poder desarrollar todo este tipo de tareas.">
+                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="VOLUNTARIADO" data-content="Nos preocupamos por conseguir una masa importante de gente que pueda apoyarnos mediante el Voluntariado tan importante para poder desarrollar todo este tipo de tareas.">
                         Voluntariado
                       </button>
                       <!-- <h3 class="title"><a href="#">Voluntariado</a></h3> -->

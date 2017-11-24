@@ -275,6 +275,10 @@ input[type=text] {
     color: #fff;
 }
 
+.btn-cause {
+  width: 100%;
+}
+
 /* ==================================================================
   3.0 Header Styles
 ================================================================== */
@@ -1285,7 +1289,7 @@ ul.feature-list {
 }
 .recent-cause-content {
     float: left;
-    margin-right: 30px;
+    /*margin-right: 30px; elimino sp*/
 }
 .recent-cause-list {
     margin-bottom: 50px;
