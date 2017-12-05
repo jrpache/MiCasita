@@ -69,7 +69,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 22px;
-    margin-top: 90px;
+    margin-top: 100px;  /*agrego sp*/
 }
 h1,
 h2,
@@ -552,20 +552,17 @@ input[type=text] {
 .slider-content-text {
     background-color: rgba(000, 0, 0, 0.3);
     border-radius: 2px; /* cambio sergio */
-    /*margin-left: 27%; camibo sp*/
-    margin-right: 27%;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
 }
 /*media query para acomodar el slider en mobile*/
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .slider-content-text {
-        background-color: rgba(000, 0, 0, 0.3)   /*rgba(169, 169, 169, 0.7); cambio sergio */
-        border-radius: 2px; /* cambio sergio */
+        background-color: rgba(000, 0, 0, 0.3)   rgba(169, 169, 169, 0.7); cambio sergio
+        border-radius: 2px;  cambio sergio
         margin-left: 0%;
         margin-right: 0%;
-        /*padding-top: 10px;   /* Agrego Sergio */*/
     }
-}
+}*/
 /*FIN de media query!*/
 .home-slider .slider-content h2 {
     color: #ffffff;
