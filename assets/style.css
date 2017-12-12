@@ -600,8 +600,65 @@ input[type=text] {
   5.0 Fun fact Section
 ================================================================== */
 
+/*Cambio de clases de FunFact*/
+.divNumeros{
+  background-color: #EB485F;
+  color: white;
+  height: 215px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+.divNumeros:nth-child(even){
+  background-color: #ABB271;
+}
 
-.fun-fact {
+.contenedor{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 767px){
+  .contenedor{
+    grid-template-columns: repeat(1, 4fr)
+  }
+}
+
+.icono{
+  display: grid;
+  color: white;
+  /*padding-left: 20px;*/
+  grid-template-rows: auto 30%;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.textoYNumeros{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 25% 20% auto 15%;
+  align-content: center;
+  justify-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  /*font-size: 48px;*/
+}
+
+p{
+  font-size: 14px;
+  text-align: center;
+}
+
+.fact-count {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+
+
+/*FIN Cambio de clases de FunFact*/
+
+/*.fun-fact {
     background-image: url("images/fun-fact.jpg");
 }
 .fun-fact {
@@ -655,7 +712,7 @@ input[type=text] {
     color: #fff;
     margin-top: 5px;
     position: relative;
-}
+}*/
 
 /* ==================================================================
   6.0 Equal Column Height Style
