@@ -606,7 +606,7 @@ input[type=text] {
   color: white;
   height: 215px;
   display: grid;
-  grid-template-columns: 15% 85%;
+  grid-template-columns: 20% 80%;
 }
 .divNumeros:nth-child(even){
   background-color: #ABB271;
@@ -641,7 +641,6 @@ input[type=text] {
   justify-items: center;
   padding-left: 15px;
   padding-right: 15px;
-  /*font-size: 48px;*/
 }
 
 p{
@@ -747,6 +746,14 @@ p{
 .photo-carousel .owl-dot {
     display: none !important;
 }
+/* agrego clase height de carousel */
+.photo-carousel .item{
+  height: 420px;
+  vertical-align: middle;
+}
+
+/* FIN agrego clase height de carousel */
+
 .photo-carousel .owl-controls .owl-prev {
     float: left;
     color: #f1f1f1;
@@ -769,7 +776,7 @@ p{
 }
 .photo-carousel .owl-controls .owl-prev:hover,
 .photo-carousel .owl-controls .owl-next:hover{
-    color: #2867DE;
+    color: #AFB867;
 }
 
 /* ==================================================================
@@ -1447,7 +1454,7 @@ ul.feature-list {
 }
 .event-carousel .owl-controls .owl-prev:hover,
 .event-carousel .owl-controls .owl-next:hover{
-    color: #2867DE;
+    color: #AFB867;
 }
 .event-carousel .slide-detels {
     height: auto;
