@@ -3,6 +3,54 @@ url = "/"
 layout = "default"
 is_hidden = 0
 ==
+<!--Fan Fact sin fondo gris cambio sergio  -->
+<div class="contenedor">
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-child fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_ninos' %}</p>
+      <p>Total de Niños de la Casita desde su apertura en 2002 </p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-cutlery fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_comidas_anual' %}</p>
+      <p>Desayunos, Almuerzos y Meriendas servidas anualmente</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-clock-o fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_horas_donadas_anual' %}</p>
+      <p>Horas donadas anualmente por el Voluntariado</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-users fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_voluntarios' %}</p>
+      <p>Voluntarios y donantes que hacen posible la casita</p>
+    </div>
+
+  </div>
+
+</div>
+<!--FIN Fan Fact sin fondo gris cambio sergio  -->
+
+
 <!-- Home Slider -->
 <div class="home-slider">
     <div class="item">
@@ -13,9 +61,9 @@ is_hidden = 0
             <div class="container boxleft">
                 <!-- <div class="row"> -->
                     <div class="col-sm-6 slider-content-text">
-                        <h2>La Casa del Niño Nueva Familia es.... </h2>
-                        <p style='font-size: 18px;'>Una asociación civil, sin fines de lucro, ecuménica y apolítica, que trabaja con niños y familias carenciadas en Rincón de Milberg, partido de Tigre, provincia de Buenos Aires.</p>
-                        <a class="btn btn-green" href="#">DONAR</a>
+                        <h2>La creatividad es la inteligencia divirtiéndose “Albert Einstein“</h2>
+                        <!-- <p style='font-size: 18px;'>La creatividad es la inteligencia divirtiéndose “ Albert Einstein</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
                     </div>
                 <!-- </div> -->
             </div>
@@ -29,9 +77,9 @@ is_hidden = 0
             <div class="container boxleft">
                 <!-- <div class="row"> -->
                     <div class="col-sm-6 slider-content-text">
-                        <h2>Ayudanos a ayudar</h2>
-                        <p style='font-size: 18px;'>Nos mueven las ganas de ver chicos alegres y con esperanza</p>
-                        <a class="btn btn-green" href="#">DONAR</a>
+                        <h2>“Si a un niño le enseñas a aprender creando curiosidad, continuará el proceso de aprendizaje durante su vida</h2>
+                        <!-- <p style='font-size: 18px;'>Nos mueven las ganas de ver chicos alegres y con esperanza</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
                     </div>
                 <!-- </div> -->
             </div>
@@ -45,9 +93,9 @@ is_hidden = 0
             <div class="container boxleft">
                 <!-- <div class="row"> -->
                     <div class="col-sm-6 slider-content-text">
-                        <h2>Secundaria Nueva. Gracias a todos!!!</h2>
-                        <p style='font-size: 18px;'>En marzo de este año inauguramos por fin , después de mucho esfuerzo departe de todos los que formamos parte de esta familia , en nuevo edificio de secundaria .Asi los 50 chicos que hoy acuden a la casita tienen su propio espacio</p>
-                        <a class="btn btn-green" href="#">DONAR</a>
+                        <h2>“Sorprendete con todo, no des nada por hecho, observa con detenimiento, pon el mayor interes, esas son las bases del aprendizaje”</h2>
+                        <!-- <p style='font-size: 18px;'>En marzo de este año inauguramos por fin , después de mucho esfuerzo departe de todos los que formamos parte de esta familia , en nuevo edificio de secundaria .Asi los 50 chicos que hoy acuden a la casita tienen su propio espacio</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
                     </div>
                 <!-- </div> -->
             </div>
@@ -56,116 +104,7 @@ is_hidden = 0
 </div>
 
 
- <!-- <div class="fun-fact">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 single-fact">
-                <div class="facet-overlay"></div>
-                <div class="fact-wrap">
-                    <div class="col-sm-2 fact-icon"><i class="fa fa-child" aria-hidden="true"></i></div>
-                    <div class="col-sm-10 fact-details">
-                        <div class="fact-count">{% content 'Total_ninos' %}</div>
-                        <div class="fact-info">Total de Niños de la Casita desde su apertura en 2002 </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 single-fact">
-                <div class="facet-overlay"></div>
-                <div class="fact-wrap">
-                    <div class="col-sm-2 fact-icon"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
-                    <div class="col-sm-10 fact-details">
-                        <div class="fact-count">{% content 'Total_comidas_anual' %}</div>
-                        <div class="fact-info">Desayunos, Almuerzos y Meriendas servidas anualmente</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 single-fact">
-                <div class="facet-overlay"></div>
-                <div class="fact-wrap">
-                    <div class="col-sm-2 fact-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
-                    <div class="col-sm-10 fact-details">
-                        <div class="fact-count">{% content 'Total_horas_donadas_anual' %}</div>
-                        <div class="fact-info">Horas donadas anualmente por el Voluntariado</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3 single-fact">
-                <div class="facet-overlay"></div>
-                <div class="fact-wrap">
-                    <div class="col-sm-2 fact-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                    <div class="col-sm-10 fact-details">
-                        <div class="fact-count">{% content 'Total_voluntarios' %}</div>
-                        <div class="fact-info">Voluntarios y donantes que hacen posible la casita</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-  </div> -->
 
-<!-- Fun Fact -->
-<!-- FIN Fun Fact Original -->
-
-<!--Fan Fact sin fondo gris cambio sergio  -->
-<div class="contenedor">
-
-  <div class="divNumeros">
-
-    <div class="icono">
-      <i class="fa fa-child fa-3x icono" aria-hidden="true"></i>
-    </div>
-
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_ninos' %}</p>
-      <p>Total de Niños de la Casita desde su apertura en 2002 </p>
-    </div>
-
-  </div>
-
-  <div class="divNumeros">
-
-    <div class="icono">
-      <i class="fa fa-cutlery fa-3x icono" aria-hidden="true"></i>
-    </div>
-
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_comidas_anual' %}</p>
-      <p>Desayunos, Almuerzos y Meriendas servidas anualmente</p>
-    </div>
-
-  </div>
-
-  <div class="divNumeros">
-
-    <div class="icono">
-      <i class="fa fa-clock-o fa-3x icono" aria-hidden="true"></i>
-    </div>
-
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_horas_donadas_anual' %}</p>
-      <p>Horas donadas anualmente por el Voluntariado</p>
-    </div>
-
-  </div>
-
-  <div class="divNumeros">
-
-    <div class="icono">
-      <i class="fa fa-users fa-3x icono" aria-hidden="true"></i>
-    </div>
-
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_voluntarios' %}</p>
-      <p>Voluntarios y donantes que hacen posible la casita</p>
-    </div>
-
-  </div>
-
-</div>
-
-
-
-<!--FIN Fan Fact sin fondo gris cambio sergio  -->
 
 
 <!-- Intro -->
@@ -560,36 +499,34 @@ is_hidden = 0
             </div>
             <div class="col-sm-12 total-photo">
                 <div class="photo-carousel">
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-1.jpg'|theme }}">
+                    <!-- <div class="item">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
+                    </div> -->
+
+
+                          {% for i in 1..10 %}
+                              <div class="item">
+                                  <img class="retina" alt="gallery" src="{{ 'themes/MiCasita/assets/images/gallery/index-gellary-' ~ i ~ '.jpg'}}">
+                              </div>
+                          {% endfor %}
+
+
+
+                    <!-- <div class="item">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/2.jpg' }}">
                     </div>
                     <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-2.jpg'|theme }}">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/3.jpg' }}">
                     </div>
                     <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-3.jpg'|theme }}">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/4.jpg' }}">
                     </div>
                     <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-4.jpg'|theme }}">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/5.jpg' }}">
                     </div>
                     <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-5.jpg'|theme }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-6.jpg'|theme }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-7.jpg'|theme }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-8.jpg'|theme }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-9.jpg'|theme }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'assets/images/gallery/index-gellary-10.jpg'|theme }}">
-                    </div>
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/6.jpg' }}">
+                    </div> -->
                 </div>
             </div>
         </div>

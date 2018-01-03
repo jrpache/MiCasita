@@ -403,6 +403,28 @@ input[type=text] {
     color: #dd4b39;
 }
 
+/*====== Agrego estilos sociales a navbar */
+.navbar-right .social .icon-facebook i {
+    color: #3b5998;
+}
+.navbar-right .social .icon-twitter i {
+    color: #55acee;
+}
+.navbar-right .social .icon-instagram i {
+    color: #cb2027;
+}
+.navbar-right .social .icon-linkedin i {
+    color: #0077B5;
+}
+
+/* Acomodo boton e iconos sociales */
+.social-button {
+  margin-right: 100px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+/* Fin Acomodo boton e iconos sociales SP*/
+
 /*====== Header Nav Menu ======*/
 
 .navbar-brand {
@@ -417,9 +439,9 @@ input[type=text] {
     /* FIN Cambio brand a la izquierda sergio */
 
 }
-#header-main-nav {
+/* #header-main-nav {
     margin-top: 25px
-}
+} */
 .header .main-nav .navbar-default {
     background-color: #fff;
     border: 0 none;
@@ -580,7 +602,7 @@ input[type=text] {
     display: none;
 }
 .home-slider.owl-theme .owl-dots {
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     position: absolute;
     -webkit-transform: translateX(-36px);
@@ -604,7 +626,7 @@ input[type=text] {
 .divNumeros{
   background-color: #EB485F;
   color: white;
-  height: 215px;
+  height: 150px;
   display: grid;
   grid-template-columns: 20% 80%;
 }
@@ -627,7 +649,7 @@ input[type=text] {
   display: grid;
   color: white;
   /*padding-left: 20px;*/
-  grid-template-rows: auto 30%;
+  grid-template-rows: auto 50%;
   align-items: center;
   justify-items: center;
 }
