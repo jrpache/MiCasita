@@ -144,6 +144,7 @@
         if ($('#event-carousel').length){
             $('#event-carousel').owlCarousel({
                 nav:true,
+                loop:true,
                 navText: [leftArrow, rightArrow],
                 items: 1
             });

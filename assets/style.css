@@ -554,6 +554,7 @@ input[type=text] {
     position: relative;
     overflow: hidden;
     height: 620px;
+    line-height: 620px;
 }
 .slider-image > img {
     height: 100%;
@@ -561,8 +562,9 @@ input[type=text] {
     position: absolute;
     object-fit: cover;
     object-position: 50% 50%;
-    top: 0;
-    width: 100%;
+    /* top: 0; */
+    /* width: 100%; */
+    vertical-align: middle;
 }
 .slider-content {
     padding-top: 60px;
