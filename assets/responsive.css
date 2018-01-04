@@ -7,8 +7,9 @@
     .nav-top .join-top {
         margin-left: 15px;
     }
-    .home-slider {
+    /* .home-slider {
       margin-top: 100px;
+      Esto rompia la foto*/
     }
 }
 @media only screen and (max-width:992px) {

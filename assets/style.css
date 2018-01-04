@@ -416,6 +416,7 @@ input[type=text] {
 .navbar-right .social .icon-linkedin i {
     color: #0077B5;
 }
+/*====== Fin Agrego estilos sociales a navbar */
 
 /* Acomodo boton e iconos sociales */
 .social-button {
@@ -553,18 +554,18 @@ input[type=text] {
 .home-slider .item {
     position: relative;
     overflow: hidden;
-    height: 620px;
-    line-height: 620px;
+    height: 820px;
+    line-height: 820px;
 }
 .slider-image > img {
     height: 100%;
     left: 0;
     position: absolute;
-    object-fit: cover;
-    object-position: 50% 50%;
+    /* object-fit: cover; */
+    /* object-position: 50% 50%; */
     /* top: 0; */
     /* width: 100%; */
-    vertical-align: middle;
+    /* vertical-align: middle; */
 }
 .slider-content {
     padding-top: 60px;
@@ -2369,7 +2370,7 @@ ul.feature-list {
     margin-bottom: 50px;
 }
 .widget .widget-title {
-    background: #2867de;
+    background: #AFB867;
     color: #ffffff;
     margin: 0;
     padding: 25px 35px;
@@ -3034,6 +3035,11 @@ ul.products {
 .footer-widget .footer-address{
   padding-top: 20px;
 }
+.footer-widget .footer-address p {
+  text-align: left;
+}
+
+
 .footer-top .footer-address .footer-map a {
     color: #7F7F7F;
 }
