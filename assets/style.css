@@ -555,16 +555,16 @@ input[type=text] {
     position: relative;
     overflow: hidden;
     height: 820px;
-    line-height: 820px;
+    /* line-height: 820px; */
 }
 .slider-image > img {
-    height: 100%;
+    height: auto;
     left: 0;
     position: absolute;
     /* object-fit: cover; */
     /* object-position: 50% 50%; */
     /* top: 0; */
-    /* width: 100%; */
+    width: 100%;
     /* vertical-align: middle; */
 }
 .slider-content {
