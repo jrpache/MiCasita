@@ -7,6 +7,12 @@
     .nav-top .join-top {
         margin-left: 15px;
     }
+    /* corro boton a la derecha en pantalla mediana */
+
+    .social-button {
+      margin-right: 0px;
+    }
+
     /* .home-slider {
       margin-top: 100px;
       Esto rompia la foto*/
