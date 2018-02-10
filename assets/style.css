@@ -773,9 +773,15 @@ p{
 }
 /* agrego clase height de carousel */
 .photo-carousel .item{
-  height: 420px;
-  vertical-align: middle;
+  height: 360px;
+  /* vertical-align: middle; */
 }
+.photo-carousel .item img {
+    /* border-radius: 80%; */
+    height: 360px;
+    margin: auto auto;
+}
+
 
 /* FIN agrego clase height de carousel */
 
@@ -3075,10 +3081,10 @@ ul.products {
 }
 .footer-bottom {
     border-top: 1px solid #555;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 .footer-bottom p {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 }
 .footer-bottom span {
     color: #7f7f7f;

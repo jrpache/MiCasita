@@ -108,10 +108,11 @@ is_hidden = 0
 
 
 <!-- Intro -->
+<a id="intros"></a>
+
 
 <div class="intro pd-top-100 pd-bottom-100 text-center">
   <!--Borrar anclaje  -->
-  <a name="intros"></a>
 
     <div class="container">
         <div class="row">
@@ -155,11 +156,9 @@ is_hidden = 0
 
 
 <!-- Recent Cause -->
-<div class="recent-cause pd-top-80 pd-bottom-50">
-<!--Borrar anclaje  -->
-  <a name="historias"></a>
+<a id="historias"></a>
 
-
+<div class="recent-cause pd-top-90 pd-bottom-50">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -251,9 +250,9 @@ is_hidden = 0
 </div>
 
 <!-- Event -->
-<a name="acciones"></a>
+<a id="acciones"></a>
 
-<div class="event-section pd-top-80">
+<div class="event-section pd-top-90">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -381,9 +380,9 @@ is_hidden = 0
 </div>
 
 <!-- Blog -->
-<a name="pilares"></a>
+<a id="pilares"></a>
 
-<div id="blog" class="blog-section pd-top-80 pd-bottom-50">
+<div id="blog" class="blog-section pd-top-90 pd-bottom-50">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -503,9 +502,9 @@ is_hidden = 0
 </div>
 
 <!-- Gallery -->
-<a name="fotos"></a>
+<a id="fotos"></a>
 
-<div class="home-gallery pd-top-80">
+<div class="home-gallery pd-top-90">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -516,31 +515,12 @@ is_hidden = 0
                     <!-- <div class="item">
                         <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
                     </div> -->
-
-
-                          {% for i in 1..10 %}
+                          {% for i in 1..15 %}
                               <div class="item">
-                                  <img class="retina" alt="gallery" src="{{ 'themes/MiCasita/assets/images/gallery/index-gellary-' ~ i ~ '.jpg'}}">
+                                  <img  alt="gallery" src="{{ 'storage/app/media/gallery/index-gallery-' ~ i ~ '.jpg' }}">
                               </div>
                           {% endfor %}
 
-
-
-                    <!-- <div class="item">
-                        <img alt="gallery" src="{{ 'storage/app/media/gallery/2.jpg' }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'storage/app/media/gallery/3.jpg' }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'storage/app/media/gallery/4.jpg' }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'storage/app/media/gallery/5.jpg' }}">
-                    </div>
-                    <div class="item">
-                        <img alt="gallery" src="{{ 'storage/app/media/gallery/6.jpg' }}">
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -548,7 +528,9 @@ is_hidden = 0
 </div>
 
 <!-- Clients -->
-<div class="clients pd-top-80 pd-bottom-85" data-animation="fadeIn">
+<a id="colaboradores"></a>
+
+<div class="clients pd-top-90 pd-bottom-85" data-animation="fadeIn">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
