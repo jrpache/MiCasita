@@ -555,12 +555,13 @@ input[type=text] {
     position: relative;
     overflow: hidden;
     height: 820px;
-    /* line-height: 820px; */
+    display: grid;
+    grid-template-rows: 40% 160px auto;
 }
 .slider-image > img {
-    height: auto;
+    /* height: auto; */
     left: 0;
-    position: absolute;
+    /* position: absolute; */
     /* object-fit: cover; */
     /* object-position: 50% 50%; */
     /* top: 0; */
@@ -568,30 +569,26 @@ input[type=text] {
     /* vertical-align: middle; */
 }
 .slider-content {
-    padding-top: 60px;
+  /* display: grid;
+  grid-template-rows: 20% 160px 40px auto; */
+    /* padding-top: 60px; */
 }
 
 .boxleft {
+    display: grid;
     margin-left: 2%;
+    grid-row-start: 3;
+
 }
 .slider-content-text {
-    background-color: rgba(000, 0, 0, 0.3);
+    background-color: rgba(171, 171, 171, 0.5);
     border-radius: 2px; /* cambio sergio */
+    padding-top: 15px;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
 }
-/*media query para acomodar el slider en mobile*/
-/*@media (max-width: 768px) {
-    .slider-content-text {
-        background-color: rgba(000, 0, 0, 0.3)   rgba(169, 169, 169, 0.7); cambio sergio
-        border-radius: 2px;  cambio sergio
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-}*/
-/*FIN de media query!*/
 .home-slider .slider-content h2 {
     color: #ffffff;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 15px;
     margin-top: 0;
@@ -605,14 +602,14 @@ input[type=text] {
     display: none;
 }
 .home-slider.owl-theme .owl-dots {
-    bottom: 30px;
+    bottom: 40px;
     left: 50%;
     position: absolute;
     -webkit-transform: translateX(-36px);
     transform: translateX(-36px);
 }
 .home-slider.owl-theme .owl-dots .owl-dot span {
-    background: #fff;
+    background: #ABB271;  /*color de puntos que era blanco*/
     height: 15px;
     width: 15px;
 }
@@ -1603,6 +1600,9 @@ ul.feature-list {
   19.0 Event Details
 ================================================================== */
 
+.event-section{
+  background-color: #f3f3f3;
+}
 .event-summary {
     margin: 45px 0;
 }
@@ -2195,7 +2195,7 @@ ul.feature-list {
 ================================================================== */
 
 .blog-section {
-    background: #f3f3f3;
+    background: #fff;
 }
 .blog-list {
     background: #fff;

@@ -2,6 +2,13 @@
  * Responsive Mobile  Query CSS
 ================================================================== */
 
+@media only screen and (max-width:1428px) {
+  .home-slider .item {
+    height: 680px;
+
+
+}
+
 @media only screen and (max-width:1200px) {
     /* ========= top bar ==========*/
     .nav-top .join-top {
@@ -13,9 +20,8 @@
       margin-right: 0px;
     }
 
-    /* .home-slider {
-      margin-top: 100px;
-      Esto rompia la foto*/
+    .home-slider .item {
+      height: 620px;
     }
 }
 @media only screen and (max-width:992px) {
@@ -111,6 +117,10 @@
     .footer-top .footer-logo p {
         margin-bottom: 15px;
     }
+    .home-slider .item {
+      height: 500px;
+    }
+
 }
 @media only screen and (min-width:768px) {
     /* ========= Navmenu =============*/
@@ -181,6 +191,12 @@
         left: -100%;
         margin-left: 10px;
     }
+    /* ========= Slider ================== */
+
+    .home-slider .item {
+      height: 370px;
+    }
+
 
     /* ========= Blog comment =============*/
     .blog-comment .media-left,

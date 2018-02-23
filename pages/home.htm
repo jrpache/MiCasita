@@ -3,59 +3,13 @@ url = "/"
 layout = "default"
 is_hidden = 0
 ==
-<!--Fan Fact sin fondo gris cambio sergio  -->
-<div class="contenedor">
-
-  <div class="divNumeros">
-    <div class="icono">
-      <i class="fa fa-child fa-3x icono" aria-hidden="true"></i>
-    </div>
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_ninos' %}</p>
-      <p>Total de Niños de la Casita desde su apertura en 2002 </p>
-    </div>
-  </div>
-
-  <div class="divNumeros">
-    <div class="icono">
-      <i class="fa fa-cutlery fa-3x icono" aria-hidden="true"></i>
-    </div>
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_comidas_anual' %}</p>
-      <p>Desayunos, Almuerzos y Meriendas servidas anualmente</p>
-    </div>
-  </div>
-
-  <div class="divNumeros">
-    <div class="icono">
-      <i class="fa fa-clock-o fa-3x icono" aria-hidden="true"></i>
-    </div>
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_horas_donadas_anual' %}</p>
-      <p>Horas donadas anualmente por el Voluntariado</p>
-    </div>
-  </div>
-
-  <div class="divNumeros">
-    <div class="icono">
-      <i class="fa fa-users fa-3x icono" aria-hidden="true"></i>
-    </div>
-    <div class="textoYNumeros">
-      <p class="fact-count">{% content 'Total_voluntarios' %}</p>
-      <p>Voluntarios y donantes que hacen posible la casita</p>
-    </div>
-
-  </div>
-
-</div>
-<!--FIN Fan Fact sin fondo gris cambio sergio  -->
 
 
 <!-- Home Slider -->
 <div class="home-slider">
     <div class="item">
         <div class="slider-image">
-            <img class="retina" alt="slide-1" src="{{ 'assets/images/slider/slider-1.jpg'|theme }}">
+            <img alt="slide-1" src="{{ 'assets/images/slider/slider-1.jpg'|theme }}">
         </div>
         <div class="slider-content">
             <div class="container boxleft">
@@ -103,6 +57,54 @@ is_hidden = 0
     </div>
 </div>
 
+<!-- Fin Home Slider -->
+
+<!--Fan Fact sin fondo gris cambio sergio  -->
+<div class="contenedor">
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-child fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_ninos' %}</p>
+      <p>Total de Niños de la Casita desde su apertura en 2002 </p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-cutlery fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_comidas_anual' %}</p>
+      <p>Desayunos, Almuerzos y Meriendas servidas anualmente</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-clock-o fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_horas_donadas_anual' %}</p>
+      <p>Horas donadas anualmente por el Voluntariado</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-users fa-3x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_voluntarios' %}</p>
+      <p>Voluntarios y donantes que hacen posible la casita</p>
+    </div>
+
+  </div>
+
+</div>
+<!--FIN Fan Fact sin fondo gris cambio sergio  -->
 
 
 
@@ -249,137 +251,7 @@ is_hidden = 0
     </div>
 </div>
 
-<!-- Event -->
-<a id="acciones"></a>
-
-<div class="event-section pd-top-90">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="section-title">ACCIONES, Gracias!  <i class="fa fa-star"></i></h2>
-            </div>
-            <div id="event-carousel" class="event-carousel owl-carousel" style="clear: left;">
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                        <img src="{{ 'assets/images/event/event-1.jpg'|theme }}" alt="carousel">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count1"></div>
-                            <h3 class="slide-title">{% content 'Objetivo1_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span>
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
-                            </div>
-                            <div class="speaker">
-                                <div class="speaker-text">
-                                    <i class="fa fa-bullhorn"></i>Oradores
-                                </div>
-                                <div class="speaker-thumb">
-                                    <img src="{{ 'assets/images/event/speaker/1.jpg'|theme }}" alt="speaker1">
-                                    <img src="{{ 'assets/images/event/speaker/2.jpg'|theme }}" alt="speaker2">
-                                    <img src="{{ 'assets/images/event/speaker/3.jpg'|theme }}" alt="speaker3">
-                                </div>
-                            </div>
-                            <div class="join-list">
-                                <a class="btn" href="#">DONAR</a>
-                                <div class="social-icon">
-                                  <a class="icon-facebook" href="#"><i class="fa fa-facebook-square"></i></a>
-                                  <a class="icon-twitter" href="#"><i class="fa fa-twitter-square"></i></a>
-                                  <a class="icon-instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                  <a class="icon-linkedin" href="#"><i class="fa fa-linkedin-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                        <img src="{{ 'assets/images/event/event-2.jpg'|theme }}" alt="carousel">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count2"></div>
-                            <h3 class="slide-title">{% content 'Objetivo2_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo2_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo2_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span>
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo2_direccion' %}</span>
-                            </div>
-                            <div class="speaker">
-                                <div class="speaker-text">
-                                    <i class="fa fa-bullhorn"></i>Oradores
-                                </div>
-                                <div class="speaker-thumb">
-                                    <img src="{{ 'assets/images/event/speaker/4.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/5.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/6.jpg'|theme }}" alt="speaker">
-                                </div>
-                            </div>
-                            <div class="join-list">
-                                <a class="btn" href="#">DONAR</a>
-                                <div class="social-icon">
-                                    <a href="#"><i class="fa fa-facebook-official"></i></a>
-                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus-square"></i></a>
-                                    <a href="#"><i class="fa fa-share-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                        <img src="{{ 'assets/images/event/event-3.jpg'|theme }}" alt="carousel">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count3"></div>
-                            <h3 class="slide-title">{% content 'Objetivo3_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo3_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo3_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span>
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo3_direccion' %}</span>
-                            </div>
-                            <div class="speaker">
-                                <div class="speaker-text">
-                                    <i class="fa fa-bullhorn"></i>Oradores
-                                </div>
-                                <div class="speaker-thumb">
-                                    <img src="{{ 'assets/images/event/speaker/4.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/5.jpg'|theme }}" alt="speaker">
-                                    <img src="{{ 'assets/images/event/speaker/6.jpg'|theme }}" alt="speaker">
-                                </div>
-                            </div>
-                            <div class="join-list">
-                                <a class="btn" href="#">DONAR</a>
-                                <div class="social-icon">
-                                    <a href="#"><i class="fa fa-facebook-official"></i></a>
-                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus-square"></i></a>
-                                    <a href="#"><i class="fa fa-share-square"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Blog -->
+<!-- Blog Pilares-->
 <a id="pilares"></a>
 
 <div id="blog" class="blog-section pd-top-90 pd-bottom-50">
@@ -500,6 +372,141 @@ is_hidden = 0
         </div>
     </div>
 </div>
+<!-- FIN Blog Pilares-->
+
+<!-- Event Acciones Gracias -->
+<a id="acciones"></a>
+
+<div class="event-section pd-top-90">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-title">ACCIONES, Gracias!  <i class="fa fa-star"></i></h2>
+            </div>
+            <div id="event-carousel" class="event-carousel owl-carousel" style="clear: left;">
+                <div class="item equal-height-wrap">
+                    <div class="col-sm-6 no-pad equal-height-inner">
+                        <img src="{{ 'storage/app/media/acciones/acciones1.jpg'}}" alt="acciones 1">
+                    </div>
+                    <div class="col-sm-6 no-pad bg equal-height-inner">
+                        <div class="slide-detels">
+                            <div class="eventcount" id="count1"></div>
+                            <h3 class="slide-title">{% content 'Objetivo1_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span>
+                            </div>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
+                            </div>
+                            <div class="speaker">
+                                <div class="speaker-text">
+                                    <i class="fa fa-bullhorn"></i>Oradores
+                                </div>
+                                <div class="speaker-thumb">
+                                    <img src="{{ 'assets/images/event/speaker/1.jpg'|theme }}" alt="speaker1">
+                                    <img src="{{ 'assets/images/event/speaker/2.jpg'|theme }}" alt="speaker2">
+                                    <img src="{{ 'assets/images/event/speaker/3.jpg'|theme }}" alt="speaker3">
+                                </div>
+                            </div>
+                            <div class="join-list">
+                                <a class="btn" href="#">DONAR</a>
+                                <div class="social-icon">
+                                  <a class="icon-facebook" href="#"><i class="fa fa-facebook-square"></i></a>
+                                  <a class="icon-twitter" href="#"><i class="fa fa-twitter-square"></i></a>
+                                  <a class="icon-instagram" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                  <a class="icon-linkedin" href="#"><i class="fa fa-linkedin-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item equal-height-wrap">
+                    <div class="col-sm-6 no-pad equal-height-inner">
+                      <img src="{{ 'storage/app/media/acciones/acciones2.jpg'}}" alt="acciones 2">
+                    </div>
+                    <div class="col-sm-6 no-pad bg equal-height-inner">
+                        <div class="slide-detels">
+                            <div class="eventcount" id="count2"></div>
+                            <h3 class="slide-title">{% content 'Objetivo2_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo2_descripcion' %}</p>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo2_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span>
+                            </div>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo2_direccion' %}</span>
+                            </div>
+                            <div class="speaker">
+                                <div class="speaker-text">
+                                    <i class="fa fa-bullhorn"></i>Oradores
+                                </div>
+                                <div class="speaker-thumb">
+                                    <img src="{{ 'assets/images/event/speaker/4.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/5.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/6.jpg'|theme }}" alt="speaker">
+                                </div>
+                            </div>
+                            <div class="join-list">
+                                <a class="btn" href="#">DONAR</a>
+                                <div class="social-icon">
+                                    <a href="#"><i class="fa fa-facebook-official"></i></a>
+                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                                    <a href="#"><i class="fa fa-share-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item equal-height-wrap">
+                    <div class="col-sm-6 no-pad equal-height-inner">
+                      <img src="{{ 'storage/app/media/acciones/acciones3.jpg'}}" alt="acciones 3">
+                    </div>
+                    <div class="col-sm-6 no-pad bg equal-height-inner">
+                        <div class="slide-detels">
+                            <div class="eventcount" id="count3"></div>
+                            <h3 class="slide-title">{% content 'Objetivo3_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo3_descripcion' %}</p>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo3_fecha' %}</span>
+                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span>
+                            </div>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo3_direccion' %}</span>
+                            </div>
+                            <div class="speaker">
+                                <div class="speaker-text">
+                                    <i class="fa fa-bullhorn"></i>Oradores
+                                </div>
+                                <div class="speaker-thumb">
+                                    <img src="{{ 'assets/images/event/speaker/4.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/5.jpg'|theme }}" alt="speaker">
+                                    <img src="{{ 'assets/images/event/speaker/6.jpg'|theme }}" alt="speaker">
+                                </div>
+                            </div>
+                            <div class="join-list">
+                                <a class="btn" href="#">DONAR</a>
+                                <div class="social-icon">
+                                    <a href="#"><i class="fa fa-facebook-official"></i></a>
+                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                                    <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                                    <a href="#"><i class="fa fa-share-square"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Event Acciones Gracias -->
+
+
+
 
 <!-- Gallery -->
 <a id="fotos"></a>
