@@ -232,11 +232,19 @@ input[type=text] {
     text-align: center;
     text-transform: uppercase;
 }
+
 .btn-red {
     background: #FF3450;
     color: #ffffff;
     margin-left: 129px;
     margin-right: -70px;
+}
+
+@media (max-width: 1210px) {
+  .btn-red {
+    margin-left: 18px;
+    margin-right: 25px;
+  }
 }
 /*Agregue boton verde hover*/
 .btn-green:hover {
