@@ -209,9 +209,8 @@ input[type=text] {
     position: relative;
     text-align: center;
     text-transform: uppercase;
-    margin-left: 129px;
-    margin-right: -70px;
 }
+
 .btn:hover {
     background: #AFB867;
     color: #fff;
@@ -236,6 +235,8 @@ input[type=text] {
 .btn-red {
     background: #FF3450;
     color: #ffffff;
+    margin-left: 129px;
+    margin-right: -70px;
 }
 /*Agregue boton verde hover*/
 .btn-green:hover {
