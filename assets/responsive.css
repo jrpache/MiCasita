@@ -84,6 +84,13 @@
     }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .photo-carousel .item img{
+    height: 290px;
+  }
+}
+
+
 @media only screen and (min-width: 768px) and (max-width:992px) {
     /* ========= Navbar =============*/
     .navbar-brand {
@@ -222,6 +229,10 @@
     /* ========= Event Carousel =============*/
     .equal-height-inner > img {
         position: relative;
+    }
+    /* ========= Foto Carousel =============*/
+    .photo-carousel .item img{
+      height: 260px;
     }
 
     /* ========= Shop =============*/
