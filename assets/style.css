@@ -232,12 +232,15 @@ input[type=text] {
     text-align: center;
     text-transform: uppercase;
 }
+/* Agrego Jorgito para juntar a la derecha junto a media Query */
 .btn-red {
     background: #FF3450;
     color: #ffffff;
     margin-left: 129px;
-    margin-right: -70px;
+    /* margin-right: -70px; */
 }
+/* Fin Agrego Jorgito para juntar a la derecha junto a media Query */
+
 /*Agregue boton verde hover*/
 .btn-green:hover {
     background: #FF3450;
@@ -423,7 +426,7 @@ input[type=text] {
 
 /* Acomodo boton e iconos sociales */
 .social-button {
-  margin-right: 100px;
+  margin-right: 15px;
   padding-top: 22px;
   padding-bottom: 22px;
 }
@@ -557,19 +560,19 @@ input[type=text] {
 .home-slider .item {
     position: relative;
     overflow: hidden;
-    height: 820px;
+    height: 680px;
     display: grid;
     grid-template-rows: 40% 160px auto;
 }
 .slider-image > img {
-    /* height: auto; */
+    /* height: 820px; */
     left: 0;
     /* position: absolute; */
     /* object-fit: cover; */
     /* object-position: 50% 50%; */
     /* top: 0; */
     width: 100%;
-    /* vertical-align: middle; */
+    /* vertical-align: bottom; */
 }
 .slider-content {
   /* display: grid;
@@ -642,11 +645,6 @@ input[type=text] {
   grid-template-columns: repeat(4, 1fr);
 }
 
-@media only screen and (max-width: 767px){
-  .contenedor{
-    grid-template-columns: repeat(1, 4fr)
-  }
-}
 
 .icono{
   display: grid;

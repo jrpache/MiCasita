@@ -2,28 +2,23 @@
  * Responsive Mobile  Query CSS
 ================================================================== */
 
-@media only screen and (max-width:1428px) {
-  .home-slider .item {
-    height: 680px;
-
-
-}
 
 @media only screen and (max-width:1200px) {
     /* ========= top bar ==========*/
     .nav-top .join-top {
         margin-left: 15px;
     }
-    /* corro boton a la derecha en pantalla mediana */
-
-    .social-button {
-      margin-right: 0px;
-    }
-
-    .home-slider .item {
+    /* .home-slider .item {
       height: 620px;
-    }
+    } */
 }
+@media (max-width: 1200px) {
+  .btn-red {
+    margin-left: 18px;
+    /* margin-right: 15px; */
+  }
+}
+
 @media only screen and (max-width:992px) {
     /* ========= Slider =============*/
     .home-slider {
@@ -88,6 +83,7 @@
         padding: 20px 68px;
     }
 }
+
 @media only screen and (min-width: 768px) and (max-width:992px) {
     /* ========= Navbar =============*/
     .navbar-brand {
@@ -196,8 +192,10 @@
     .home-slider .item {
       height: 370px;
     }
-
-
+    /* ========= Fun fuct numbers ================== */
+    .contenedor{
+      grid-template-columns: repeat(1, 4fr)
+    }
     /* ========= Blog comment =============*/
     .blog-comment .media-left,
     .blog-comment .media-body {
