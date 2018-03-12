@@ -560,7 +560,7 @@ input[type=text] {
 .home-slider .item {
     position: relative;
     overflow: hidden;
-    height: 680px;
+    height: 620px;
     display: grid;
     grid-template-rows: 40% 160px auto;
 }

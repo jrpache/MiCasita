@@ -3,6 +3,14 @@
 ================================================================== */
 
 
+@media only screen and (min-width:1440px) {
+    /* ========= top bar ==========*/
+    .home-slider .item {
+      height: 780px;
+    }
+}
+
+
 @media only screen and (max-width:1200px) {
     /* ========= top bar ==========*/
     .nav-top .join-top {
@@ -24,9 +32,12 @@
     .home-slider {
         margin-top: 80px;
     }
-    .slider-content {
-        padding-top: 40px;
+    .home-slider .item{
+    grid-template-rows: 20% 160px auto;
     }
+    /* .slider-content {
+        padding-top: 40px;
+    } */
     .event-carousel .slide-detels {
         padding: 80px 50px;
     }
@@ -121,7 +132,7 @@
         margin-bottom: 15px;
     }
     .home-slider .item {
-      height: 500px;
+      height: 480px;
     }
 
 }
@@ -259,12 +270,33 @@
         width: 100%;
     }
 }
+
+@media only screen and (max-width: 576px){
+.home-slider .item {
+    height: 260px;
+}
+.home-slider .slider-content h2 {
+  font-size: 20px;
+}
+.home-slider.owl-theme .owl-dots{
+  bottom: 14px;
+}
+
+}
 @media only screen and (max-width:500px) {
 	/* ========= Event Carousel =============*/
     .event-carousel .slide-detels {
         padding: 50px 30px;
     }
 }
+@media only screen and (min-width: 360px) and (max-width:576px) {
+  /* ========= Slider =============*/
+  .home-slider .item {
+      height: 220px;
+  }
+}
+
+
 @media only screen and (max-width:375px) {
     /* ========= Newsletter =============*/
     .newsletter-section .newsletter-form .search-button {
@@ -272,7 +304,6 @@
         padding-left: 0;
         padding-top: 15px;
     }
-
     /* ========= Cart =============*/
     .cart-item .cart-thumbnail {
         width: 40%;
@@ -290,10 +321,10 @@
 
     /* ========= Slider =============*/
     .home-slider .item {
-        height: 550px;
+        height: 190px;
     }
     .home-slider .slider-content h2 {
-        font-size: 36px;
+        font-size: 16px;
     }
     .home-slider .slider-content p {
         opacity: 1;
@@ -319,9 +350,18 @@
         font-size: 11px;
         padding: 0 5px;
     }
-
+    .navbar-brand {
+      padding: 15px 0px 0px 0px;
+    }
     /* ========= Slider =============*/
-    .slider-content {
-        padding-top: 35px;
+    /* .home-slider .item{
+    grid-template-rows: 0.5% 160px auto;
+    } */
+    .home-slider .slider-content h2 {
+        font-size: 8px;
+    }
+
+    .home-slider .item {
+        height: 156px;
     }
 }
