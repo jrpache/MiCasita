@@ -2535,6 +2535,35 @@ ul.feature-list {
     margin-bottom: 45px;
     opacity: 0.8;
 }
+/* ==================================================================
+  31.1 Donate
+================================================================== */
+
+.thumbnail .thumb_donate{
+  padding-top: 10px;
+  height: 40px;
+}
+
+.donate_system {
+  text-align: center;
+}
+
+.donate_system .btn-primary{
+  margin-right: 30px;
+}
+
+.donate_system h3 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.donate_system p {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.donate_system .bank p {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 /* ==================================================================
   32.0 Archive Page
@@ -3137,7 +3166,7 @@ ul.products {
 .preloader .loader-inner {
     left: 50%;
     position: absolute;
-    top: 45%;
+    top: 50%;
 }
 .sk-folding-cube {
     margin: 20px auto;
