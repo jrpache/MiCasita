@@ -562,7 +562,7 @@ input[type=text] {
     overflow: hidden;
     height: 620px;
     display: grid;
-    grid-template-rows: 40% 160px auto;
+    grid-template-rows: 30% 160px auto;
 }
 .slider-image > img {
     /* height: 820px; */
@@ -574,11 +574,11 @@ input[type=text] {
     width: 100%;
     /* vertical-align: bottom; */
 }
-.slider-content {
-  /* display: grid;
+/* .slider-content {
+  display: grid;
   grid-template-rows: 20% 160px 40px auto; */
-    /* padding-top: 60px; */
-}
+    /* padding-top: 60px;
+} */
 
 .boxleft {
     display: grid;
