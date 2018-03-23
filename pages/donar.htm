@@ -4,6 +4,66 @@ layout = "default"
 meta_title = "Donar"
 is_hidden = 0
 ==
+
+function onStart(){
+
+   $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
+
+   //********************
+   //Donar 500
+   $preference500_data = array(
+        "items" => array(
+            array(
+                "title" => "Donar por unica vez $ 500",
+                "quantity" => 1,
+                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price" => 500.00
+            )
+        )
+    );
+    $preference500= $mp->create_preference ($preference500_data);
+    // dd($preference500);
+    $this['preference500ID'] = $preference500['response']['sandbox_init_point'];
+    //dd($this['preference500ID']);
+
+    //********************
+    //Donar 1000
+    $preference1000_data = array(
+        "items" => array(
+            array(
+                "title" => "Donar por unica vez $ 1000",
+                "quantity" => 1,
+                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price" => 1000.00
+            )
+        )
+    );
+    $preference1000 = $mp->create_preference ($preference1000_data);
+    // dd($preference1000);
+    $this['preference1000ID'] = $preference1000['response']['sandbox_init_point'];
+    //dd($this['preference1000ID']);
+
+    //********************
+    //Donar 2000
+    $preference2000_data = array(
+        "items" => array(
+            array(
+                "title" => "Donar por unica vez $ 2000",
+                "quantity" => 1,
+                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price" => 2000.00
+            )
+        )
+    );
+    $preference2000 = $mp->create_preference ($preference2000_data);
+    // dd($preference2000);
+    $this['preference2000ID'] = $preference2000['response']['sandbox_init_point'];
+    //dd($this['preference2000ID']);
+}
+
+
+==
+
     <!-- page title -->
     <div class="page-title-section">
         <div class="page-title-wrap">
@@ -25,9 +85,9 @@ is_hidden = 0
                 <h3>Quiero donar por unica vez</h3>
                 <p>Cliqueando en cada boton Ud. donara por unica vez mediante Mercado Pago</p>
                 <p>
-                  <a href="\vendor\mercadopago\dx-php\controllers\one_time_500.php" class="btn btn-primary" role="button">$ 500</a>
-                  <a href="#" class="btn btn-primary" role="button">$ 1000</a>
-                  <a href="#" class="btn btn-primary" role="button">$ 2000</a>
+                  <a href="{{ preference500ID }}" class="btn btn-primary" role="button">$ 500</a>
+                  <a href="{{ preference1000ID }}" class="btn btn-primary" role="button">$ 1000</a>
+                  <a href="{{ preference2000ID }}" class="btn btn-primary" role="button">$ 2000</a>
                 </p>
               </div>
             </div>
@@ -37,7 +97,8 @@ is_hidden = 0
               <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
               <div class="caption">
                 <h3>Quiero donar mensualmente un monto fijo</h3>
-                <p>Cliqueando en cada boton Ud. donara un monto fijo mensual mediante Mercado Pago</p>
+                <p>Cliqueando en cada boton Ud. donara un monto fijo mensual mediante Mercado Pago <br>
+                Por el momento esta opcion no esta disponible a la brevedad se activara gracias...</p>
                 <p>
                   <a href="#" class="btn btn-primary" role="button">$ 500</a>
                   <a href="#" class="btn btn-primary" role="button">$ 1000</a>

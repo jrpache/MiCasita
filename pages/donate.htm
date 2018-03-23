@@ -7,23 +7,58 @@ is_hidden = 0
 function onStart(){
 
 
-    $mp = new MP ("5833503713118210", "b25dzyI3SkvYT66hiNyWNFhsDWOL3zoD");
-    $preference_data = array(
+   $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
+
+   //********************
+   //Donar 500
+   $preference500_data = array(
         "items" => array(
             array(
-                "title" => "DONAR  $ 50",
+                "title" => "DONAR  $ 500",
                 "quantity" => 1,
                 "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price" => 50.00
+                "unit_price" => 500.00
             )
         )
     );
-    $preference = $mp->create_preference ($preference_data);
-    //  dd($preference);
+    $preference500= $mp->create_preference ($preference500_data);
+    // dd($preference500);
+    $this['preference500ID'] = $preference500['response']['sandbox_init_point'];
+    //dd($this['preference500ID']);
 
-    $this['preferenceID'] = $preference['response']['init_point'];
-    //dd($this['preferenceID']);
+    //********************
+    //Donar 1000
+    $preference1000_data = array(
+        "items" => array(
+            array(
+                "title" => "DONAR  $ 1000",
+                "quantity" => 1,
+                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price" => 1000.00
+            )
+        )
+    );
+    $preference1000 = $mp->create_preference ($preference1000_data);
+    // dd($preference1000);
+    $this['preference1000ID'] = $preference1000['response']['sandbox_init_point'];
+    //dd($this['preference1000ID']);
 
+    //********************
+    //Donar 2000
+    $preference2000_data = array(
+        "items" => array(
+            array(
+                "title" => "DONAR  $ 2000",
+                "quantity" => 1,
+                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                "unit_price" => 2000.00
+            )
+        )
+    );
+    $preference2000 = $mp->create_preference ($preference2000_data);
+    // dd($preference2000);
+    $this['preference2000ID'] = $preference2000['response']['sandbox_init_point'];
+    //dd($this['preference2000ID']);
 }
 
 
@@ -53,12 +88,12 @@ function onStart(){
 
             <div class="row">
                 <div class="tw-element  col-md-3 margin: 0 auto; tw-animate-gen" style="" data-animation="expandUp" data-animation-delay="0" data-animation-offset="90%">
+                  <h3>DONAR $500 ARS</h3>
                     <div class="waves-title">
-                        <h3>DONAR $50 ARS</h3>
                         <div class="title-bg" style="width: 322px;"></div>
                     </div>
                     <p>
-                        <a class="blue-ar-l-rn-none" href="{{ preferenceID }}" name="MP-payButton">
+                        <a class="blue-ar-l-rn-none" href="{{ preference500ID }}" name="MP-payButton">
                             <img class="alignnone size-full wp-image-1016" src="https://remarargentina.org/wp-content/uploads/2017/04/BOTON-DONAR-1.png"
                                 alt="BOTON-DONAR-1" width="150" height="39">
                         </a>
@@ -87,11 +122,11 @@ function onStart(){
                 </div>
                 <div class="tw-element  col-md-3 tw-animate-gen" style="" data-animation="expandUp" data-animation-delay="0" data-animation-offset="90%">
                     <div class="waves-title">
-                        <h3>DONAR $100 ARS</h3>
+                        <h3>DONAR $1000 ARS</h3>
                         <div class="title-bg" style="width: 315px;"></div>
                     </div>
                     <p>
-                        <a class="green-tr-l-rn-arall" href="https://www.mercadopago.com/mla/checkout/start?pref_id=251168248-df31a114-eb6c-49fa-8893-304198390e6d"
+                        <a class="green-tr-l-rn-arall" href="{{ preference1000ID }}"
                             name="MP-payButton">
                             <img class="alignnone size-full wp-image-1016" src="https://remarargentina.org/wp-content/uploads/2017/04/BOTON-DONAR-1.png"
                                 alt="BOTON-DONAR-1" width="150" height="39">
@@ -121,11 +156,11 @@ function onStart(){
                 </div>
                 <div class="tw-element  col-md-3 tw-animate-gen" style="" data-animation="expandUp" data-animation-delay="0" data-animation-offset="90%">
                     <div class="waves-title">
-                        <h3>DONAR $200 ARS</h3>
+                        <h3>DONAR $2000 ARS</h3>
                         <div class="title-bg" style="width: 313px;"></div>
                     </div>
                     <p>
-                        <a class="blue-ar-l-rn-none" href="https://www.mercadopago.com/mla/checkout/start?pref_id=251168248-ae927ab6-b682-4f41-bc94-13086ba3b0cc"
+                        <a class="blue-ar-l-rn-none" href="{{ preference2000ID }}"
                             name="MP-payButton">
                             <img class="alignnone size-full wp-image-1016" src="https://remarargentina.org/wp-content/uploads/2017/04/BOTON-DONAR-1.png"
                                 alt="BOTON-DONAR-1" width="150" height="39">
