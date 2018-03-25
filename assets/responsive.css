@@ -291,7 +291,7 @@
 @media only screen and (min-width: 360px) and (max-width:576px) {
   /* ========= Slider =============*/
   .home-slider .item {
-      height: 220px;
+      height: 145px;
   }
 }
 
@@ -320,7 +320,7 @@
 
     /* ========= Slider =============*/
     .home-slider .item {
-        height: 190px;
+        height: 106px;
     }
     .home-slider .slider-content h2 {
         font-size: 16px;
@@ -358,9 +358,5 @@
     } */
     .home-slider .slider-content h2 {
         font-size: 8px;
-    }
-
-    .home-slider .item {
-        height: 156px;
     }
 }
