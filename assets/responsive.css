@@ -21,7 +21,7 @@
     }
     .btn-red {
       margin-left: 18px;
-
+    }
 }
 @media (max-width: 1200px) {
   .home-slider .item {
@@ -280,6 +280,10 @@
 .home-slider.owl-theme .owl-dots{
   bottom: 14px;
 }
+/* ========= Slider =============*/
+.home-slider .item {
+    height: 200px;
+}
 
 }
 @media only screen and (max-width:500px) {
@@ -287,12 +291,11 @@
     .event-carousel .slide-detels {
         padding: 50px 30px;
     }
-}
-@media only screen and (min-width: 360px) and (max-width:576px) {
-  /* ========= Slider =============*/
-  .home-slider .item {
-      height: 145px;
-  }
+    /* ========= Slider =============*/
+    .home-slider .item {
+        height: 150px;
+    }
+
 }
 
 
@@ -311,6 +314,7 @@
         width: 60%;
     }
 }
+
 @media only screen and (max-width: 360px) {
     /* ========= Top Nav =============*/
     .nav-top .phone,
@@ -320,7 +324,7 @@
 
     /* ========= Slider =============*/
     .home-slider .item {
-        height: 106px;
+        height: 138px;
     }
     .home-slider .slider-content h2 {
         font-size: 16px;
@@ -335,8 +339,16 @@
     .event-carousel .slide-detels .join-list {
         margin-top: 80px;
     }
+    .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 0.5;
+    }
+    .home-slider.owl-theme .owl-dots {
+    bottom: 3px;
+    }
 }
-@media only screen and (max-width:320px) {
+
+@media only screen and (max-width: 320px) {
     /* ========= Top Nav =============*/
     .nav-top .phone,
     .nav-top .email {
@@ -349,14 +361,33 @@
         font-size: 11px;
         padding: 0 5px;
     }
-    .navbar-brand {
-      padding: 15px 0px 0px 0px;
+    .home-slider .item {
+        height: 128px;
     }
-    /* ========= Slider =============*/
-    /* .home-slider .item{
-    grid-template-rows: 0.5% 160px auto;
-    } */
     .home-slider .slider-content h2 {
         font-size: 8px;
     }
+    .navbar-brand {
+      padding: 15px 0px 0px 0px;
+    }
+  }
+
+
+@media only screen and (max-width: 290px) {
+  /* ========= Slider =============*/
+  .home-slider .item {
+      height: 99px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar-brand img {
+    -webkit-transform: scale(0.7); /* Saf3.1+, Chrome */
+       -moz-transform: scale(0.7); /* FF3.5+ */
+        -ms-transform: scale(0.7); /* IE9 */
+         -o-transform: scale(0.7); /* Opera 10.5+ */
+            transform: scale(0.7);/* IE6–IE9 */
+               filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713,SizingMethod='auto expand');
+    margin: 0px;
+  }​
 }
