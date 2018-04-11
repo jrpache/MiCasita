@@ -59,6 +59,70 @@ function onStart(){
     // dd($preference2000);
     $this['preference2000ID'] = $preference2000['response']['sandbox_init_point'];
     //dd($this['preference2000ID']);
+
+    //subscription
+    $start_date = Carbon\Carbon::now();
+    $start_date->addHour(1);
+    $end_date = Carbon\Carbon::now();
+    $end_date->addMonths(11);
+
+    $start_date = date("Y-m-d\TH:i:s.000P",strtotime($start_date));
+    $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
+
+    $preapproval_data_500 = array(
+      "payer_email" => "info@nuevafamilia.org",
+      "back_url" => "http://lacasita.ong/donar",
+      "reason" => "Suscripcion mensual",
+      "external_reference" => "OP-1234",
+      "auto_recurring" => array(
+      "frequency" => 1,
+      "frequency_type" => "months",
+      "transaction_amount" => 500,
+      "currency_id" => "ARS",
+      "start_date" => $start_date,
+      "end_date" =>  $end_date
+    )
+    );
+
+    $preapproval = $mp->create_preapproval_payment($preapproval_data_500);
+    $this['preapproval500ID'] = $preapproval['response']['sandbox_init_point'];
+
+    $preapproval_data_1000 = array(
+      "payer_email" => "info@nuevafamilia.org",
+      "back_url" => "http://lacasita.ong/donar",
+      "reason" => "Suscripcion mensual",
+      "external_reference" => "OP-1234",
+      "auto_recurring" => array(
+      "frequency" => 1,
+      "frequency_type" => "months",
+      "transaction_amount" => 1000,
+      "currency_id" => "ARS",
+      "start_date" => $start_date,
+      "end_date" =>  $end_date
+    )
+    );
+
+    $preapproval = $mp->create_preapproval_payment($preapproval_data_1000);
+    $this['preapproval1000ID'] = $preapproval['response']['sandbox_init_point'];
+
+    $preapproval_data_2000 = array(
+      "payer_email" => "info@nuevafamilia.org",
+      "back_url" => "http://lacasita.ong/donar",
+      "reason" => "Suscripcion mensual",
+      "external_reference" => "OP-1234",
+      "auto_recurring" => array(
+      "frequency" => 1,
+      "frequency_type" => "months",
+      "transaction_amount" => 2000,
+      "currency_id" => "ARS",
+      "start_date" => $start_date,
+      "end_date" =>  $end_date
+    )
+    );
+
+    $preapproval = $mp->create_preapproval_payment($preapproval_data_2000);
+    $this['preapproval2000ID'] = $preapproval['response']['sandbox_init_point'];
+
 }
 
 
@@ -100,9 +164,9 @@ function onStart(){
                 <p>Cliqueando en cada boton Ud. donara un monto fijo mensual mediante Mercado Pago <br>
                 Por el momento esta opcion no esta disponible a la brevedad se activara gracias...</p>
                 <p>
-                  <a href="#" class="btn btn-primary" role="button">$ 500</a>
-                  <a href="#" class="btn btn-primary" role="button">$ 1000</a>
-                  <a href="#" class="btn btn-primary" role="button">$ 2000</a>
+                  <a href="{{ preapproval500ID }}" class="btn btn-primary" role="button">$ 500</a>
+                  <a href="{{ preapproval1000ID }}" class="btn btn-primary" role="button">$ 1000</a>
+                  <a href="{{ preapproval2000ID }}" class="btn btn-primary" role="button">$ 2000</a>
                 </p>
               </div>
             </div>
