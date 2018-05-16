@@ -130,6 +130,12 @@ input[type=text] {
     appearance: none;
 }
 
+.background-imageCh {
+  height:349px;
+  background-size:cover;
+  background-position:center;"
+}
+
 /* ==================================================================
   2.0 Common styles
 ================================================================== */
@@ -1386,7 +1392,7 @@ ul.feature-list {
 }
 .recent-cause-list img {
     width: 100%;
-    height: 400px;
+    height: 349px;
 }
 .recent-cause-summary {
     background: #fff;
@@ -1399,6 +1405,7 @@ ul.feature-list {
     font-weight: 700;
     line-height: 30px;
     margin-top: 0;
+    text-align: center;
 }
 .recent-cause-title a {
     color: #333;
