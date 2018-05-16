@@ -2,6 +2,16 @@ title = "Contact"
 url = "/contact"
 layout = "default"
 is_hidden = 0
+
+[genericForm]
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
 ==
 <!-- Page title -->
 <div class="page-title-section">
@@ -40,7 +50,9 @@ is_hidden = 0
             </div>
             <div class="col-sm-6 contact-main mg-bottom-50">
                 <h3 class="form-title">Formulario de contacto</h3>
-                <form class="contact-form" action="#" method="POST">
+                
+                {% component 'genericForm' %}
+                <!-- <form class="contact-form" action="#" method="POST">
                     <label class="contact-title" for="message">Mensage</label>
                     <textarea id="message" name="message" class="input-message" rows="7" cols="30" placeholder="Escriba aqui su mensage ..."></textarea>
                     <label class="contact-title" for="name">Nombre completo</label>
@@ -50,7 +62,7 @@ is_hidden = 0
                     <label class="contact-title" for="Website">Telefono</label>
                     <input id="Website" name="website" class="input" type="text" placeholder="+54 000 000-0000" />
                     <input class="btn" type="submit" value="Enviar" />
-                </form>
+                </form> -->
             </div>
         </div>
     </div>

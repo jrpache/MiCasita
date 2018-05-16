@@ -30,7 +30,7 @@ is_hidden = 0
         <div class="slider-content">
             <div class="container boxleft">
                 <!-- <div class="row"> -->
-                    <div class="col-sm-8 col-xs-10 content-text">
+                    <div class="col-sm-8 col-xs-10 slider-content-text">
                         <h2>“Si a un niño le enseñas a aprender creando curiosidad, continuará el proceso de aprendizaje durante su vida</h2>
                         <!-- <p style='font-size: 18px;'>Nos mueven las ganas de ver chicos alegres y con esperanza</p> -->
                         <!-- <a class="btn btn-green" href="#">DONAR</a> -->
@@ -46,7 +46,7 @@ is_hidden = 0
         <div class="slider-content">
             <div class="container boxleft">
                 <!-- <div class="row"> -->
-                    <div class="col-sm-8 col-xs-10 content-text">
+                    <div class="col-sm-8 col-xs-10 slider-content-text">
                         <h2>“Sorprendete con todo, no des nada por hecho, observa con detenimiento, pon el mayor interés, esas son las bases del aprendizaje”</h2>
                         <!-- <p style='font-size: 18px;'>En marzo de este año inauguramos por fin , después de mucho esfuerzo departe de todos los que formamos parte de esta familia , en nuevo edificio de secundaria .Asi los 50 chicos que hoy acuden a la casita tienen su propio espacio</p> -->
                         <!-- <a class="btn btn-green" href="#">DONAR</a> -->
@@ -121,7 +121,8 @@ is_hidden = 0
         <div class="row">
             <div class="col-sm-4">
                 <h1 class="intro-title">SOBRE NOSOTROS</h1>
-                <p>Somos una ONG, integrada por un equipo de profesionales y voluntarios, que trabaja desde 1999 por la inclusión social y el desarrollo humano y comunitario de niños y familias en situación de vulnerabilidad, para fomentar la igualdad de oportunidades en el barrio en Rincon de Milberg Tigre.</p>
+                <p>Somos una ONG, integrada por un equipo de profesionales y voluntarios, que trabaja desde 1999 por la inclusión social y el desarrollo humano y comunitario de niños y familias en situación de vulnerabilidad, para fomentar la igualdad de oportunidades en el barrio en Rincon de Milberg Tigre. La Casa del Niño “Nueva Familia” es un hogar diurno para niños que tienen entre 6 y 16 años.
+                    Funcionamos en 2 turnos, mañana y tarde, a contra turno escolar. La asistencia a la escuela oficial es requisito indispensable de ingreso y permanencia. Brindamos a los niños el apoyo escolar, la contención, la alimentación y el esparcimiento necesarios para su formación y para completar sus ciclos escolares. También realizamos talleres didácticos, (matemáticas, artes, manualidades, y educación física entre otros) fundamentales para que los chicos aprendan a pensar, desarrollen sus talentos, compartan y se integren con sus pares.</p>
             </div>
             <div class="col-sm-4">
                 <h1 class="intro-title">MISION</h1>
@@ -272,9 +273,10 @@ is_hidden = 0
                             <span class="meta-right"><i class="fa fa-comments-o"></i>16</span>
                         </div> -->
 
-                        <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="EDUCACION" data-content="Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.">
-                          Educacion
-                        </button>
+                        <!-- <div> -->
+                          <div class="postTitle">EDUCACION</div>
+                          <p>Efectuamos un trabajo fundamental en el apoyo curricular y docente con programas acordes a la edad con el fin de poder asegurar los conocimientos firmes para poder progresar.</p>
+                        <!-- </div> -->
 
                         <!-- <h3 class="title"><a href="#">Educacion</a></h3> -->
 
@@ -298,10 +300,8 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/2.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
-                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="SALUD Y NUTRICION" data-content="Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.">
-                        Salud y Nutrición
-                      </button>
-
+                      <div class="postTitle">SALUD Y NUTRICION</div>
+                        <p>Nos preocupamos de hacer un seguimiento del estado de salud general haciendo hincapie en la salud bucal enseñando el correcto cuidado y limpieza de dientes.</p>
                         <!-- <h3 class="title"><a href="#">Salud y Nutrición</a></h3> -->
 
                     </div>
@@ -314,10 +314,12 @@ is_hidden = 0
                         <img alt="blog" src="{{ 'assets/images/blog/3.jpg'|theme }}">
                     </div>
                     <div class="post-desk">
+                      <div class="postTitle">RED FAMILIAR</div>
+                      <p>Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.</p>
 
-                      <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="RED FAMILIAR" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
+                      <!-- <button type="button" class="btn btn-cause" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-title="RED FAMILIAR" data-content="Somos en centro educativo que intenta poder ver las realidades del entramado intrafamiliar para poder apoyar y dar un aporte significativo.">
                         Red Familiar
-                      </button>
+                      </button> -->
 
                         <!-- <h3 class="title"><a href="#">Red Familiar</a></h3> -->
 
@@ -382,7 +384,7 @@ is_hidden = 0
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="section-title">ACCIONES, Gracias!  <i class="fa fa-star"></i></h2>
+                <h2 class="section-title">ACCIONES!  <i class="fa fa-star"></i></h2>
             </div>
             <div id="event-carousel" class="event-carousel owl-carousel" style="clear: left;">
                 <div class="item equal-height-wrap">
@@ -396,12 +398,12 @@ is_hidden = 0
                             <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
                             <div class="slide-meta">
                                 <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span>
+                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
                             </div>
                             <div class="slide-meta">
                                 <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
                             </div>
-                            <div class="speaker">
+                            <!-- <div class="speaker">
                                 <div class="speaker-text">
                                     <i class="fa fa-bullhorn"></i>Oradores
                                 </div>
@@ -410,8 +412,8 @@ is_hidden = 0
                                   <img src="{{ 'storage/app/media/acciones/speakeracciones1/2.jpg' }}" alt="speaker2">
                                   <img src="{{ 'storage/app/media/acciones/speakeracciones1/3.jpg' }}" alt="speaker3">
                                 </div>
-                            </div>
-                            <div class="join-list">
+                            </div> -->
+                            <!-- <div class="join-list">
                                 <a class="btn" href="#">DONAR</a>
                                 <div class="social-icon">
                                   <a class="icon-facebook" target="_blank" href="https://www.facebook.com/lacasita.ong"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -419,7 +421,7 @@ is_hidden = 0
                                   <a class="icon-instagram" target="_blank" href="https://www.instagram.com/lacasita.ong"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                                   <a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/company/casa-del-ni%C3%B1o-nueva-familia"><i class="fa fa-linkedin-square fa-2x"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -434,12 +436,12 @@ is_hidden = 0
                             <p class="sort-content">{% content 'Objetivo2_descripcion' %}</p>
                             <div class="slide-meta">
                                 <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo2_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span>
+                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span> -->
                             </div>
                             <div class="slide-meta">
                                 <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo2_direccion' %}</span>
                             </div>
-                            <div class="speaker">
+                            <!-- <div class="speaker">
                                 <div class="speaker-text">
                                     <i class="fa fa-bullhorn"></i>Oradores
                                 </div>
@@ -457,7 +459,7 @@ is_hidden = 0
                                   <a class="icon-instagram" target="_blank" href="https://www.instagram.com/lacasita.ong"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                                   <a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/company/casa-del-ni%C3%B1o-nueva-familia"><i class="fa fa-linkedin-square fa-2x"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -472,12 +474,12 @@ is_hidden = 0
                             <p class="sort-content">{% content 'Objetivo3_descripcion' %}</p>
                             <div class="slide-meta">
                                 <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo3_fecha' %}</span>
-                                <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span>
+                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span> -->
                             </div>
                             <div class="slide-meta">
                                 <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo3_direccion' %}</span>
                             </div>
-                            <div class="speaker">
+                            <!-- <div class="speaker">
                                 <div class="speaker-text">
                                     <i class="fa fa-bullhorn"></i>Oradores
                                 </div>
@@ -495,7 +497,7 @@ is_hidden = 0
                                   <a class="icon-instagram" target="_blank" href="https://www.instagram.com/lacasita.ong"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
                                   <a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/company/casa-del-ni%C3%B1o-nueva-familia"><i class="fa fa-linkedin-square fa-2x"></i></a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
