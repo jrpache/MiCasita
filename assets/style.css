@@ -116,7 +116,7 @@ img {
     padding: 0;
 }
 .bg {
-    background: #AFB867;
+    background: white;
 }
 img.left {
     margin: 0 15px 15px 0;
@@ -1502,8 +1502,8 @@ ul.feature-list {
     padding-right: 10px;
 }
 .event-carousel .slide-detels i {
-    background: #AFB867;
-    color: #ffffff;
+    /* background: #AFB867;
+    color: #ffffff; */
     padding-right: 5px;
 }
 .eventcount {
@@ -1534,19 +1534,16 @@ ul.feature-list {
     padding-right: 9px;
 }
 .event-carousel .slide-detels .slide-title {
-    color: #ffffff;
+    color: #484848;
     font-weight: 700;
     line-height: 30px;
     margin: 0;
     padding-bottom: 15px;
 }
 .event-carousel .slide-detels .slide-meta {
-    color: #ffffff;
+    color: #484848;
 }
 .event-carousel .slide-detels .sort-content {
-    color: #333333;
-    background-color: white;
-    opacity: 0.8;
     padding-bottom: 15px;
 }
 .event-carousel .slide-detels .join-list {
@@ -2566,7 +2563,11 @@ ul.feature-list {
 }
 
 .donate_system .btn-primary{
-  margin-right: 30px;
+   margin: 10px;
+}
+
+.donate_system .btn-primary a {
+   color: white;
 }
 
 .donate_system h3 {

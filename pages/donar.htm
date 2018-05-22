@@ -23,7 +23,7 @@ function onStart(){
     );
     $preference500= $mp->create_preference ($preference500_data);
     // dd($preference500);
-    $this['preference500ID'] = $preference500['response']['sandbox_init_point'];
+    $this['preference500ID'] = $preference500['response']['init_point'];
     //dd($this['preference500ID']);
 
     //********************
@@ -40,7 +40,7 @@ function onStart(){
     );
     $preference1000 = $mp->create_preference ($preference1000_data);
     // dd($preference1000);
-    $this['preference1000ID'] = $preference1000['response']['sandbox_init_point'];
+    $this['preference1000ID'] = $preference1000['response']['init_point'];
     //dd($this['preference1000ID']);
 
     //********************
@@ -57,7 +57,7 @@ function onStart(){
     );
     $preference2000 = $mp->create_preference ($preference2000_data);
     // dd($preference2000);
-    $this['preference2000ID'] = $preference2000['response']['sandbox_init_point'];
+    $this['preference2000ID'] = $preference2000['response']['init_point'];
     //dd($this['preference2000ID']);
 
     //subscription
@@ -85,7 +85,7 @@ function onStart(){
     );
 
     $preapproval = $mp->create_preapproval_payment($preapproval_data_500);
-    $this['preapproval500ID'] = $preapproval['response']['sandbox_init_point'];
+    $this['preapproval500ID'] = $preapproval['response']['init_point'];
 
     $preapproval_data_1000 = array(
       "payer_email" => "info@nuevafamilia.org",
@@ -103,7 +103,7 @@ function onStart(){
     );
 
     $preapproval = $mp->create_preapproval_payment($preapproval_data_1000);
-    $this['preapproval1000ID'] = $preapproval['response']['sandbox_init_point'];
+    $this['preapproval1000ID'] = $preapproval['response']['init_point'];
 
     $preapproval_data_2000 = array(
       "payer_email" => "info@nuevafamilia.org",
@@ -121,7 +121,7 @@ function onStart(){
     );
 
     $preapproval = $mp->create_preapproval_payment($preapproval_data_2000);
-    $this['preapproval2000ID'] = $preapproval['response']['sandbox_init_point'];
+    $this['preapproval2000ID'] = $preapproval['response']['init_point'];
 
 }
 
@@ -130,12 +130,12 @@ function onStart(){
 
     <!-- page title -->
     <div class="page-title-section">
-        <div class="page-title-wrap">
-            <div class="page-title-overlay"></div>
-            <div class="page-title-info">
-                <h1 class="page-title">Donar</h1>
-            </div>
+      <div class="page-title-wrap">
+        <div class="page-title-overlay"></div>
+        <div class="page-title-info">
+          <h1 class="page-title">Donar</h1>
         </div>
+      </div>
     </div>
 
     <!-- shop page -->
@@ -144,14 +144,14 @@ function onStart(){
         <div class="row donate_system">
           <div class="col-sm-6 col-md-4">
             <div class="thumbnail">
-              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago"  class="thumb_donate">
+              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
               <div class="caption">
                 <h3>Quiero donar por unica vez</h3>
                 <p>Cliqueando en cada boton Ud. donara por unica vez mediante Mercado Pago</p>
                 <p>
-                  <a href="{{ preference500ID }}" class="btn btn-primary" role="button">$ 500</a>
-                  <a href="{{ preference1000ID }}" class="btn btn-primary" role="button">$ 1000</a>
-                  <a href="{{ preference2000ID }}" class="btn btn-primary" role="button">$ 2000</a>
+                    <button type="button" class="btn btn-lg btn-primary"><a href="{{ preference500ID }}" role="button">$ 500</a></button>
+                    <button type="button" class="btn btn-lg btn-primary"><a href="{{ preference1000ID }}" role="button">$ 1000</a></button>
+                    <button type="button" class="btn btn-lg btn-primary"><a href="{{ preference2000ID }}" role="button">$ 2000</a></button>
                 </p>
               </div>
             </div>
@@ -161,12 +161,11 @@ function onStart(){
               <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
               <div class="caption">
                 <h3>Quiero donar mensualmente un monto fijo</h3>
-                <p>Cliqueando en cada boton Ud. donara un monto fijo mensual mediante Mercado Pago <br>
-                Por el momento esta opcion no esta disponible a la brevedad se activara gracias...</p>
+                <p>Cliqueando en cada boton Ud. donara un monto fijo mensual mediante Mercado Pago</p>
                 <p>
-                  <a href="{{ preapproval500ID }}" class="btn btn-primary" role="button">$ 500</a>
-                  <a href="{{ preapproval1000ID }}" class="btn btn-primary" role="button">$ 1000</a>
-                  <a href="{{ preapproval2000ID }}" class="btn btn-primary" role="button">$ 2000</a>
+                  <button type="button" class="btn btn-lg btn-primary"><a href="{{ preapproval500ID }}" role="button">$ 500</a></button>
+                  <button type="button" class="btn btn-lg btn-primary"><a href="{{ preapproval1000ID }}" role="button">$ 1000</a></button>
+                  <button type="button" class="btn btn-lg btn-primary"><a href="{{ preapproval2000ID }}" role="button">$ 2000</a></button>
                 </p>
               </div>
             </div>
@@ -175,7 +174,7 @@ function onStart(){
             <div class="thumbnail">
               <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo mercado pago" class="thumb_donate">
               <div class="caption bank">
-                <h3>Si queres hacer el deposito bancario directo desde tu cuenta de banco te damos los datos de  La Casita:</h3>
+                <h3>Si queres hacer el deposito bancario directo desde tu cuenta de banco te damos los datos de La Casita:</h3>
                 <p>CTA CORRIENTE NR. 0832/02100016/94</p>
                 <p>TITULAR: CASA DEL NIÑO NUEVA FAMILIA</p>
                 <p>CBU: 0150832902000100016941</p>
