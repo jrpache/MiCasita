@@ -832,6 +832,11 @@ p{
     -webkit-filter: none;
     filter: none;
 }
+.card-block {
+    min-height: 145px;
+    width: 190px;
+}
+
 
 /* ==================================================================
   9.0 Call to Action Section
@@ -1381,7 +1386,7 @@ ul.feature-list {
     color: #333;
 }
 .recent-cause {
-    background: #f3f3f3;
+    background: #ffffff;
 }
 .recent-cause-content {
     float: left;
@@ -1534,7 +1539,7 @@ ul.feature-list {
     padding-right: 9px;
 }
 .event-carousel .slide-detels .slide-title {
-    color: #484848;
+    color: #333333;
     font-weight: 700;
     line-height: 30px;
     margin: 0;
@@ -1566,7 +1571,7 @@ ul.feature-list {
     margin-left: 20px;
 }
 .event-carousel .slide-detels .social-icon i {
-    color: #ffffff;
+    color: #333333;
     line-height: 25px;
     font-size: 18px;
     font-weight: 400;
@@ -2123,6 +2128,7 @@ ul.feature-list {
 .blog-single .post-desk {
     border-bottom: 1px solid #e7e7e7;
     padding: 30px;
+    min-height: 226px;
 }
 .blog-single .post-desk .post-meta {
     padding-bottom: 15px;
@@ -2210,7 +2216,7 @@ ul.feature-list {
 ================================================================== */
 
 .blog-section {
-    background: #fff;
+    background: #f3f3f3;
 }
 .blog-list {
     background: #fff;
