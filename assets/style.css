@@ -247,6 +247,8 @@ input[type=text] {
 }
 /* Fin Agrego Jorgito para juntar a la derecha junto a media Query */
 
+
+
 /*Agregue boton verde hover*/
 .btn-green:hover {
     background: #FF3450;
@@ -485,7 +487,10 @@ input[type=text] {
     border-bottom: 1px solid #e7e7e7;
     line-height: 50px;
     min-width: 200px;
+    margin-left: 2px;
 }
+
+
 .navbar-nav > li > .dropdown-menu,
 .dropdown-submenu > .dropdown-menu {
     border-top: 1px solid #e7e7e7;
@@ -597,6 +602,7 @@ input[type=text] {
     border-radius: 2px; /* cambio sergio */
     padding-top: 15px;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
+    border-radius: 10px;
 }
 .home-slider .slider-content h2 {
     color: #ffffff;
@@ -777,7 +783,7 @@ p{
 }
 /* agrego clase height de carousel */
 .photo-carousel .item{
-  height: 360px;
+  /* height: 360px; */
   /* vertical-align: middle; */
 }
 .photo-carousel .item img {
@@ -791,7 +797,7 @@ p{
 
 .photo-carousel .owl-controls .owl-prev {
     float: left;
-    color: #f1f1f1;
+    color: #AFB867;
     font-size: 36px;
     line-height: 43px;
     position: absolute;
@@ -800,7 +806,7 @@ p{
     margin-top: -15px;
 }
 .photo-carousel .owl-controls .owl-next {
-    color: #f1f1f1;
+    color: #AFB867;
     font-size: 36px;
     line-height: 36px;
     float: right;
@@ -814,6 +820,9 @@ p{
     color: #AFB867;
 }
 
+.items .colaboradores {
+  width: 50px;
+}
 /* ==================================================================
   8.0 Clients Section
 ================================================================== */
@@ -822,9 +831,9 @@ p{
     background: #f3f3f3;
 }
 .clients img {
-    background: #fff;
+    /* background: #fff; */
     float: left;
-    margin: 15px;
+    /* margin: 15px; */
     max-width: 197px;
     padding: 0 26px;
 }
@@ -832,10 +841,39 @@ p{
     -webkit-filter: none;
     filter: none;
 }
-.card-block {
-    min-height: 145px;
-    width: 190px;
+.clients .photo-carousel .item img {
+    /* border-radius: 80%; */
+    height: 150px;
+    margin: auto auto;
 }
+.partner .owl-controls .owl-prev {
+    float: left;
+    color: #AFB867;
+    font-size: 36px;
+    line-height: 43px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    margin-top: -15px;
+}
+.partner .owl-controls .owl-next {
+    color: #AFB867;
+    font-size: 36px;
+    line-height: 36px;
+    float: right;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    margin-top: -15px;
+}
+
+
+.partner .owl-controls .owl-prev:hover,
+.partner .owl-controls .owl-next:hover{
+    color: #AFB867;
+}
+
+
 
 
 /* ==================================================================

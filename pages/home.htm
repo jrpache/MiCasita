@@ -556,65 +556,35 @@ is_hidden = 0
 <a id="colaboradores"></a>
 
 <div class="clients pd-top-90 pd-bottom-85" data-animation="fadeIn">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="section-title">NUESTROS COLABORADORES <i class="fa fa-user"></i></h2>
-            </div>
-              <!-- <div class="container-fluid">
-                <h2>Bootstrap Horizontal Scrolling with Flexbox</h2>
-                <div class="row flex-row flex-nowrap">
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card card-block">Card</div>
-                  </div>
-                </div>
-              </div> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="section-title">NUESTROS COLABORADORES <i class="fa fa-user"></i></h2>
+      </div>
 
-            <div class="col-sm-12">
-                <img src="{{ 'assets/images/partner/1.png'|theme }}" alt="client">
-                <img src="{{ 'assets/images/partner/2.png'|theme }}" alt="client">
-                <img src="{{ 'assets/images/partner/3.png'|theme }}" alt="client">
-                <img src="{{ 'assets/images/partner/4.png'|theme }}" alt="client">
-                <img src="{{ 'assets/images/partner/5.png'|theme }}" alt="client">
+      <div class="col-sm-12">
+
+        <div class="col-sm-12 total-photo">
+            <div class="partner">
+                <!-- <div class="item">
+                    <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
+                </div> -->
+                      {% for i in 1..15 %}
+                          <div class="item colaboradores">
+                              <img  alt="colaboradores" src="{{ 'storage/app/media/colaboradores/' ~ i ~ '.jpg' }}">
+                          </div>
+                      {% endfor %}
+
+            </div>
         </div>
+        <!-- <img src="{{ 'assets/images/partner/1.png'|theme }}" alt="client">
+        <img src="{{ 'assets/images/partner/2.png'|theme }}" alt="client">
+        <img src="{{ 'assets/images/partner/3.png'|theme }}" alt="client">
+        <img src="{{ 'assets/images/partner/4.png'|theme }}" alt="client">
+        <img src="{{ 'assets/images/partner/5.png'|theme }}" alt="client"> -->
+      </div>
     </div>
-</div>
+  </div>
 
 <!-- Call to action -->
 <!-- <div class="call-to-action pd-top-80 pd-bottom-100">
