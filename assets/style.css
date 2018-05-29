@@ -1520,7 +1520,7 @@ ul.feature-list {
     font-size: 36px;
     line-height: 43px;
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 5px;
 }
 .event-carousel .owl-controls .owl-next {
@@ -1529,7 +1529,7 @@ ul.feature-list {
     line-height: 43px;
     float: right;
     position: absolute;
-    top: 50%;
+    top: 70%;
     right: 5px;
 }
 .event-carousel .owl-controls .owl-prev:hover,
