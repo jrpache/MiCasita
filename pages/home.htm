@@ -3,8 +3,37 @@ url = "/"
 layout = "default"
 is_hidden = 0
 ==
+<?php
+function onStart()
+{
+    //gallery
+    $galleryFiles = array();
+    $galleryFolder = opendir('storage/app/media/gallery/');
+
+    while(false != ($file = readdir($galleryFolder))) {
+        if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+            $galleryFiles[] = $file; // put in array.
+        }
+    }
+    closedir($galleryFolder);
+    $this['gallery'] = $galleryFiles;
+
+    
+    //colaboradores
+    $colabFiles = array();
+    $colabFolder = opendir('storage/app/media/colaboradores/'); 
+    while(false != ($file = readdir($colabFolder))) { 
+        if(($file != ".") and ($file != "..") and ($file != "index.php")) { 
+            $colabFiles[] = $file; // put in array. 
+        } 
+    } 
+    closedir($colabFolder); 
+    $this['colaboradores'] = $colabFiles;
 
 
+}
+?>
+==
 <!-- Home Slider -->
 <div class="home-slider">
     <div class="item">
@@ -540,12 +569,11 @@ is_hidden = 0
                     <!-- <div class="item">
                         <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
                     </div> -->
-                          {% for i in 1..25 %}
-                              <div class="item">
-                                  <img  alt=".  fotos de 1 a 25" src="{{ 'storage/app/media/gallery/' ~ i ~ '.jpg' }}">
-                              </div>
-                          {% endfor %}
-
+                    {% for image in gallery %}
+                    <div class="item">
+                        <img alt="" src="{{ 'storage/app/media/gallery/' ~ image }}">
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -569,12 +597,11 @@ is_hidden = 0
                 <!-- <div class="item">
                     <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
                 </div> -->
-                      {% for i in 1..15 %}
-                          <div class="item colaboradores">
-                              <img  alt="colaboradores" src="{{ 'storage/app/media/colaboradores/' ~ i ~ '.jpg' }}">
-                          </div>
-                      {% endfor %}
-
+                    {% for image in colaboradores %}
+                    <div class="item">
+                        <img alt="" src="{{ 'storage/app/media/colaboradores/' ~ image }}">
+                    </div>
+                    {% endfor %}
             </div>
         </div>
         <!-- <img src="{{ 'assets/images/partner/1.png'|theme }}" alt="client">
