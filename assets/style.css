@@ -1444,7 +1444,7 @@ ul.feature-list {
     background: #ffffff;
 }
 .recent-cause-content {
-    float: left;
+    /* float: left; */
     /*margin-right: 30px; elimino sp*/
 }
 .recent-cause-list {
