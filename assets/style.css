@@ -140,6 +140,23 @@ input[type=text] {
   2.0 Common styles
 ================================================================== */
 
+.navbar-header .donar {
+  display: none;
+}
+
+@media only screen and (max-width: 758px) {
+.navbar-header .donar {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 5px 2px 5px;
+  margin-top: 24px;
+  }
+}
+
+.contactoFormulario {
+  margin-top: 12px;
+}
+
 .list-style-none {
     list-style: none;
     margin: 0;
