@@ -19,7 +19,12 @@ function onStart(){
                 "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
                 "unit_price" => 500.00
             )
-        )
+        ),
+	      "back_urls" => array(
+		    "success" => "http://lacasita.ong/",
+		    "failure" => "http://lacasita.ong/",
+		    "pending" => "http://lacasita.ong/"
+	      )
     );
     $preference500= $mp->create_preference ($preference500_data);
     // dd($preference500);
@@ -36,7 +41,12 @@ function onStart(){
                 "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
                 "unit_price" => 1000.00
             )
-        )
+        ),
+	      "back_urls" => array(
+		    "success" => "http://lacasita.ong/",
+		    "failure" => "http://lacasita.ong/",
+		    "pending" => "http://lacasita.ong/"
+      )
     );
     $preference1000 = $mp->create_preference ($preference1000_data);
     // dd($preference1000);
@@ -53,6 +63,11 @@ function onStart(){
                 "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
                 "unit_price" => 2000.00
             )
+        ),
+	      "back_urls" => array(
+		    "success" => "http://lacasita.ong/",
+		    "failure" => "http://lacasita.ong/",
+		    "pending" => "http://lacasita.ong/"
         )
     );
     $preference2000 = $mp->create_preference ($preference2000_data);
@@ -64,7 +79,7 @@ function onStart(){
     $start_date = Carbon\Carbon::now();
     $start_date->addHour(1);
     $end_date = Carbon\Carbon::now();
-    $end_date->addMonths(11);
+    $end_date->addMonths(12);
 
     $start_date = date("Y-m-d\TH:i:s.000P",strtotime($start_date));
     $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
@@ -175,6 +190,7 @@ function onStart(){
               <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo mercado pago" class="thumb_donate">
               <div class="caption bank">
                 <h3>Si queres hacer el deposito bancario directo desde tu cuenta de banco te damos los datos de La Casita:</h3>
+                <p>----------------------------------</p>
                 <p>CTA CORRIENTE NR. 0832/02100016/94</p>
                 <p>TITULAR: CASA DEL NIÑO NUEVA FAMILIA</p>
                 <p>CBU: 0150832902000100016941</p>

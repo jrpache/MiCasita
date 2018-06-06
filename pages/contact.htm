@@ -4,15 +4,18 @@ layout = "default"
 is_hidden = 0
 
 [genericForm]
-messages_success = "Your form was successfully submitted"
-messages_errors = "There were errors with your submission"
+rules[name] = "required"
+rules[email] = "required|email"
+rules_messages[email] = "Debe ingresar un email valido"
+rules_messages[name] = "Debe ingresar su Nombre"
+messages_success = "Su correo ha siso enviado correctamente a la brevedad nos comunicaremos con Ud."
+messages_errors = "Verifique haber puesto nombre y correo validos"
 mail_enabled = 1
-mail_subject = "notificacion"
+mail_subject = "notificacion contacto La Casita"
 mail_recipients[] = "proagua2@gmail.com"
-mail_recipients[] = "proagua@vera.com.uy"
 mail_resp_field = "proagua2@gmail.com"
 mail_resp_from = "proagua2@gmail.com"
-redirect = "/"
+reset_form = 1
 inline_errors = "disabled"
 sanitize_data = "disabled"
 anonymize_ip = "disabled"
@@ -52,7 +55,7 @@ recaptcha_size = "normal"
                         <br>
                         <i class="fa fa-phone"></i><a href="tel:+54 011 731-8043">+54 011 731 8043</a>
                         <br>
-                        <i class="fa fa-envelope"></i>info@nuevafamilia.org</p>
+                        <i class="fa fa-envelope"></i>contact@lacasita.ong</p>
                 </div>
 
             </div>
