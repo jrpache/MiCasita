@@ -2616,7 +2616,7 @@ ul.feature-list {
 
 .thumbnail .thumb_donate{
   padding-top: 10px;
-  height: 40px;
+  height: 35px;
 }
 
 .donate_system {
@@ -2636,13 +2636,39 @@ ul.feature-list {
   padding-bottom: 10px;
 }
 .donate_system p {
-  padding-top: 20px;
+  padding-top: 5px;
   padding-bottom: 10px;
 }
 .donate_system .bank p {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+/* equal height  */
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+
+.thumbnail {
+  height: 100%;
+}
+
+/* extra positioning */
+.thumbnail {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail .caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+/* end equal height  */
+
 
 /* ==================================================================
   32.0 Archive Page
@@ -2656,6 +2682,10 @@ ul.feature-list {
   33.0 Shop Page
 ================================================================== */
 
+
+.container-fluid .thumbnail  p {
+  font-size: 12px;
+}
 ul.products {
     list-style: none;
     margin: 0;
