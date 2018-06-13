@@ -798,14 +798,10 @@ p{
 .photo-carousel .owl-dot {
     display: none !important;
 }
-/* agrego clase height de carousel */
-.photo-carousel .item{
-  /* height: 360px; */
-  /* vertical-align: middle; */
-}
+
 .photo-carousel .item img {
     /* border-radius: 80%; */
-    height: 360px;
+    /* height: 360px; */
     margin: auto auto;
 }
 

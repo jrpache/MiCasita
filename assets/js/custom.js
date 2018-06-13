@@ -164,9 +164,12 @@
                         items:1
                     },
                     600:{
+                        items:2
+                    },
+                    900:{
                         items:3
                     },
-                    1000:{
+                    1100:{
                         items:4
                     }
                 }
@@ -185,7 +188,7 @@
                 navText: [leftArrow, rightArrow],
                 responsive:{
                     0:{
-                        items:3
+                        items:1
                     },
                     600:{
                         items:4
