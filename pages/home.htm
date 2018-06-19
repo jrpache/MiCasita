@@ -16,6 +16,7 @@ function onStart()
         }
     }
     closedir($galleryFolder);
+    natsort($galleryFiles);
     $this['gallery'] = $galleryFiles;
 
 
@@ -28,7 +29,9 @@ function onStart()
         }
     }
     closedir($colabFolder);
+    natsort($colabFiles);
     $this['colaboradores'] = $colabFiles;
+
 
 
 }
