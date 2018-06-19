@@ -18,16 +18,16 @@ function onStart()
     closedir($galleryFolder);
     $this['gallery'] = $galleryFiles;
 
-    
+
     //colaboradores
     $colabFiles = array();
-    $colabFolder = opendir('storage/app/media/colaboradores/'); 
-    while(false != ($file = readdir($colabFolder))) { 
-        if(($file != ".") and ($file != "..") and ($file != "index.php")) { 
-            $colabFiles[] = $file; // put in array. 
-        } 
-    } 
-    closedir($colabFolder); 
+    $colabFolder = opendir('storage/app/media/colaboradores/');
+    while(false != ($file = readdir($colabFolder))) {
+        if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+            $colabFiles[] = $file; // put in array.
+        }
+    }
+    closedir($colabFolder);
     $this['colaboradores'] = $colabFiles;
 
 
@@ -419,7 +419,7 @@ function onStart()
     </div>
 </div>
 
-<
+
 
 <!-- Event Acciones Gracias -->
 <a id="acciones"></a>
@@ -545,6 +545,45 @@ function onStart()
                         </div>
                     </div>
                 </div>
+                <div class="item equal-height-wrap">
+                    <div class="col-sm-6 no-pad equal-height-inner">
+                      <img src="{{ 'storage/app/media/acciones/acciones4.jpg'}}" alt="acciones 4">
+                    </div>
+                    <div class="col-sm-6 no-pad bg equal-height-inner">
+                        <div class="slide-detels">
+                            <div class="eventcount" id="count4"></div>
+                            <h3 class="slide-title">{% content 'Objetivo4_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo4_descripcion' %}</p>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo4_fecha' %}</span>
+                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span> -->
+                            </div>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo4_direccion' %}</span>
+                            </div>
+                            <!-- <div class="speaker">
+                                <div class="speaker-text">
+                                    <i class="fa fa-bullhorn"></i>Oradores
+                                </div>
+                                <div class="speaker-thumb">
+                                  <img src="{{ 'storage/app/media/acciones/speakeracciones3/1.jpg' }}" alt="speaker1">
+                                  <img src="{{ 'storage/app/media/acciones/speakeracciones3/2.jpg' }}" alt="speaker2">
+                                  <img src="{{ 'storage/app/media/acciones/speakeracciones3/3.jpg' }}" alt="speaker3">
+                                </div>
+                            </div>
+                            <div class="join-list">
+                                <a class="btn" href="#">DONAR</a>
+                                <div class="social-icon">
+                                  <a class="icon-facebook" target="_blank" href="https://www.facebook.com/lacasita.ong"><i class="fa fa-facebook-square fa-2x"></i></a>
+                                  <a class="icon-twitter" target="_blank" href="https://twitter.com/lacasitaong"><i class="fa fa-twitter-square fa-2x"></i></a>
+                                  <a class="icon-instagram" target="_blank" href="https://www.instagram.com/lacasita.ong"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+                                  <a class="icon-linkedin" target="_blank" href="https://www.linkedin.com/company/casa-del-ni%C3%B1o-nueva-familia"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
         </div>

@@ -1529,7 +1529,7 @@ ul.feature-list {
 }
 .event-carousel .owl-controls .owl-prev {
     float: left;
-    color: #f1f1f1;
+    color: #AFB867;
     font-size: 36px;
     line-height: 43px;
     position: absolute;
@@ -1537,7 +1537,7 @@ ul.feature-list {
     left: 5px;
 }
 .event-carousel .owl-controls .owl-next {
-    color: #f1f1f1;
+    color: #AFB867;
     font-size: 36px;
     line-height: 43px;
     float: right;
@@ -1547,7 +1547,7 @@ ul.feature-list {
 }
 .event-carousel .owl-controls .owl-prev:hover,
 .event-carousel .owl-controls .owl-next:hover{
-    color: #AFB867;
+    color: #f1f1f1;
 }
 .event-carousel .slide-detels {
     height: auto;
@@ -1601,6 +1601,7 @@ ul.feature-list {
 }
 .event-carousel .slide-detels .sort-content {
     padding-bottom: 15px;
+    text-align: left;
 }
 .event-carousel .slide-detels .join-list {
     clear: left;
