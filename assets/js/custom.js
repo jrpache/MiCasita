@@ -35,6 +35,10 @@
             $('#main-navbar .dropdown').on('mouseleave',function(){
                 $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
             });
+            $('#main-navbar .dropdown').on('click',function(){
+                $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+            });
+
         } else {
             $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
                 event.preventDefault();
@@ -43,6 +47,13 @@
                 $(this).parent().toggleClass('open');
             });
         }
+        // $("#main-nav a").click(function() {
+        //   var id =  $(this).attr('href');
+        //   $(location).attr('href', '/');
+        //   $('html, body').animate({
+        //     scrollTop: $(id).offset().top-100
+        //   }, 700);
+        // });
 
         /* -------------------------------------------------------------
             Fact Counter
