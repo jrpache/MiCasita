@@ -8,7 +8,7 @@
             Preloader
         ------------------------------------------------------------- */
         if ($('.preloader').length){
-            $(".preloader").delay(10).fadeOut("fast"); /*cambio sergio delay 1000x10 y slow x fast */
+            $(".preloader").delay(1000).fadeOut("fast"); /*cambio sergio delay 1000x10 y slow x fast */
         }
     });
 
@@ -19,7 +19,7 @@
         ------------------------------------------------------------- */
         if($(window).width() > 768) {
             $("#header--fixed").headroom({
-              "offset": 150,
+              "offset": 100,
               "tolerance": 5,
               "classes": {
                 "initial": "animated",
