@@ -477,10 +477,10 @@ function onStart()
         <div class="col-sm-12 total-photo">
             <div class="partner">
                     {% for i in 0..colaboradores|length -1 %}
-                   <div class="item">
+                   <div class="item" style="text-align: center">
                      <a href=""><img alt="" src="{{ 'storage/app/media/colaboradores/' ~ colaboradores[i] }}"></a>
                       <div class="carousel-caption" id="nombre_partner">
-                        <span>
+                        <span style="display: block">
                           {{ nombres[i] }}
                         </span>
                       </div>

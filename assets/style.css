@@ -856,10 +856,11 @@ p{
 }
 .clients img {
     /* background: #fff; */
-    float: left;
+    /* float: left; */
     /* margin: 15px; */
     max-width: 197px;
     padding: 0 26px;
+    margin: 0 auto;
 }
 .clients img:hover {
     -webkit-filter: none;
@@ -2631,7 +2632,7 @@ ul.feature-list {
   text-align: center;
 }
 .donate-spacing {
-  margin-bottom: 8px;
+  margin-bottom: 25px;
 }
 
 .donate_system .btn-primary{
