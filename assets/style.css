@@ -149,7 +149,7 @@ input[type=text] {
   display: inline-block;
   font-size: 10px;
   padding: 2px 5px 2px 5px;
-  margin-top: 24px;
+  margin-top: 20px;
   }
 }
 
@@ -2192,7 +2192,7 @@ ul.feature-list {
 .blog-single .post-desk {
     border-bottom: 1px solid #e7e7e7;
     padding: 30px;
-    min-height: 226px;
+    min-height: 313px
 }
 .blog-single .post-desk .post-meta {
     padding-bottom: 15px;

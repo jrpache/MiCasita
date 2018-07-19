@@ -229,6 +229,8 @@
     .blog-comment .media-body {
         padding: 20px 0 0;
     }
+    /* ==========Correcion Blog========= */
+
 
     /* ========= Equal Height =============*/
     .equal-height-wrap,
@@ -246,8 +248,8 @@
     .equal-height-inner > img {
         position: relative;
     }
-    /* ========= Foto Carousel =============*/
-    .photo-carousel .item img{
+      /* ========= Foto Carousel =============*/
+      .photo-carousel .item img{
       height: 260px;
     }
 
@@ -274,6 +276,22 @@
     .related-cause-content {
         width: 100%;
     }
+}
+
+@media only screen and (max-width: 1199px) {
+ .blog-single .post-desk {
+    min-height: 400px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 768px){
+ .blog-single .post-desk {
+    min-height: 554px;
+  }
+}
+@media only screen and (max-width: 767px){
+ .blog-single .post-desk {
+    min-height: 250px;
+  }
 }
 
 @media only screen and (max-width: 576px){
@@ -397,3 +415,5 @@
     margin: 0px;
   }​
 }
+
+@media only screen and (max-width:767px) {
