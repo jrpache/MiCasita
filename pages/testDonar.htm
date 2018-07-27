@@ -4,11 +4,6 @@ layout = "default"
 meta_title = "Donar"
 is_hidden = 0
 ==
-function onStart(){
-
-
-}
-==
 
     <!-- page title -->
     <div class="page-title-section">
@@ -30,28 +25,32 @@ function onStart(){
               <div class="caption">
                 <h4>Quiero donar por unica vez</h4>
                 <p>Cliqueando en cada boton usted donara por unica vez mediante Mercado Pago</p>
-                <!-- <p> -->
                   <div class="row display-flex">
-
-
+                    <!-- form buttons unicavez -->
                     <form action='/donacion' method='post'>
                       <input type='hidden'  name='monto' value='500.00' />
-                      <input type='hidden' name='type' value='mensual' />
-                      <button type="submit" class="btn btn-lg btn-primary">$ 500</button>                    
+                      <input type='hidden' name='forma_pago' value='unicavez' />
+                      <button type="submit" class="btn btn-lg btn-primary">$ 500</button>
                     </form>
-                    
+
                     <form action='/donacion' method='post'>
                       <input type='hidden' name='monto' value='1000.00' />
+                      <input type='hidden' name='forma_pago' value='unicavez' />
                       <button type="submit" class="btn btn-lg btn-primary">$ 1000</button>
                     </form>
-                  
+
                     <form action='/donacion' method='post'>
                       <input type='hidden' name='monto' value='2000.00' />
+                      <input type='hidden' name='forma_pago' value='unicavez' />
                       <button type="submit" class="btn btn-lg btn-primary">$ 2000</button>
                     </form>
-                  </div>
+                    <form class="monto_variable" action='/donacion' method='post'>
+                        <input type="number" min="50" step="50" name="monto" class="form-control" placeholder="Otro monto a donar...">
+                        <input type='hidden' name='forma_pago' value='unicavez' />
+                    </form>
 
-                <!-- </p> -->
+                  </div>
+                  <!-- end form buttons unicavez -->
               </div>
             </div>
           </div>
@@ -61,17 +60,39 @@ function onStart(){
               <div class="caption">
                 <h4>Quiero donar mensualmente un monto fijo</h4>
                 <p>Cliqueando en cada boton usted donara un monto fijo mensual mediante Mercado Pago</p>
-                <!-- <p> -->
                 <div class="row display-flex">
+                  <!-- form buttons mensual -->
+                  <form action='/donacion' method='post'>
+                    <input type='hidden'  name='monto' value='500.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 500</button>
+                  </form>
 
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval500ID }}" role="button">$ 500</a></button>
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval1000ID }}" role="button">$ 1000</a></button>
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval2000ID }}" role="button">$ 2000</a></button>
-                <!-- </p> -->
+                  <form action='/donacion' method='post'>
+                    <input type='hidden' name='monto' value='1000.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 1000</button>
+                  </form>
+
+                  <form action='/donacion' method='post'>
+                    <input type='hidden' name='monto' value='2000.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 2000</button>
+                  </form>
+
+                  <form class="monto_variable" action='/donacion' method='post'>
+                      <input type="number" min="50" step="50" name="monto" class="form-control" placeholder="Otro monto a donar...">
+                      <input type='hidden' name='forma_pago' value='mensual' />
+                  </form>
+
+                </div>
+                <!-- end form buttons mensual -->
+
                 </div>
               </div>
             </div>
           </div>
+          <div class="row display-flex donate_system">
           <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
             <div class="thumbnail">
               <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo ICBC" class="thumb_donate">
@@ -90,12 +111,76 @@ function onStart(){
               <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo ICBC" class="thumb_donate">
               <div class="caption bank">
                 <h4>Si queres donar con tarjetas de crédito <b>VISA:</b></h4>
-                <p>POR TEL&EacuteFONO:</p>
-                <p>Llamando al (54-11)  / 5137- 1154  de L. a V. de 9 a 17hs.</p>
-                <p>POR E-MAIL</p>
-                <p>ESCRIBI&EacuteNDONOS A: contacto@lacasita.ong</p>
+                <button type="submit" class="btn btn-lg btn-primary" id="donar-visa" href="#" data-toggle="modal" data-target="#contacto-modal">CLICK PARA DONAR</button>
+                <div class="texto-donar-visa">
+                  <p> Dejá tus datos con confianza, este sitio es 100% seguro.</p>
+                  <p>Si preferís, también podés comunicarte con nosotros al teléfono:</p>
+                  <p>(54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
+                  <p>o enviando un e-mail a contacto@lacasita.ong</p>
+                </div>
+
+                <div id="contacto-modal" class="modal fade" tabindex="-1" role="dialog">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Datos Personales:</h4>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" method="POST">
+                          <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="name" value="" class="form-control" placeholder="Ingresar nombre completo...">
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" value="" class="form-control" placeholder="Ingresar Email...">
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <label for="direction">Direccion</label>
+                            <input type="text" name="direction" value="" class="form-control" placeholder="Ingresar direccion...">
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <label for="phone">Telefono</label>
+                            <input type="tel" name="phone" value="" class="form-control" placeholder="Ingresar Telefono...">
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <label for="id">Nro de Documento</label>
+                            <input type="number" name="id" value="" class="form-control" placeholder="Ingresar DNI, Cuil, Cuit...">
+                          </div><!-- /.form-group -->
+
+                          <h4>Datos para la Donacion:</h4>
+                          <hr>
+                          <div class="form-group">
+                            <label for="donation">Monto a donar</label>
+                            <input type="number" step="50" name="monto" class="form-control" placeholder="Ingresar monto a donar...">
+                          </div><!-- /.form-group -->
+                          <div class="form-group">
+                            <label for="donation">Numero de tarjeta</label>
+                            <input type="number" name="donation" name="nrotarjeta" class="form-control" placeholder="Ingresar numero de tarjeta sin codigo de seguridad...">
+                          </div><!-- /.form-group -->
+                          <div class="checkboxes">
+                            <div class="row">
+                              <div class="col-sm-6">
+                                <label><input type="checkbox" name="forma_pago" value="unicavez">  Quiero donar por unica vez</label>
+                              </div>
+                              <div class="col-sm-6">
+                                <label><input type="checkbox" name="forma_pago" value="mensual">  Quiero donar mensualmente</label>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div><!-- /.modal-body -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Enviar</button>
+                      </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+
               </div>
             </div>
+          </div>
           </div>
 
         </div>

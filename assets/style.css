@@ -310,6 +310,38 @@ input[type=text] {
   width: 100%;
 }
 
+.modal-body{
+  padding: 15px
+}
+.modal-header {
+  background-color: #AFB867
+}
+.modal-title {
+  color: #ffffff;
+}
+
+.modal-body h4 {
+  background-color: #AFB867;
+  color: #ffffff;
+  padding: 12px;
+}
+
+#contacto-modal {
+  text-align: left;
+}
+
+#donar-visa {
+  color: #ffffff;
+  font-size: 18px;
+  font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+
+  margin-top: 2px;
+  margin-bottom: 10px
+
+}
+
 /* ==================================================================
   3.0 Header Styles
 ================================================================== */
@@ -2680,6 +2712,11 @@ ul.feature-list {
   height: 100%;
 }
 /* end equal height  */
+
+.monto_variable {
+  margin-top: auto;
+  margin-bottom: auto;
+}
 
 
 /* ==================================================================

@@ -9,63 +9,64 @@ function onStart(){
    $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
 
    $monto = $_POST['monto'];
+   $forma_pago = $_POST['forma_pago'];
+   //dd($forma_pago);
 
-   $preference_data = array(
-        "items" => array(
-            array(
-                "title" => "Donar por unica vez",
-                "quantity" => 1,
-                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price" => (int)$monto
-            )
-        ),
-	      "back_urls" => array(
-		    "success" => "http://lacasita.ong/stateconfirm",
-		    "failure" => "http://lacasita.ong/",
-		    "pending" => "http://lacasita.ong/"
-	      )
-    );
-    $preference= $mp->create_preference ($preference_data);
-    // dd($preference);
-    
-    $preferenceID = $preference['response']['init_point'];
-    
+   if ($forma_pago == "unicavez") {
+       //dd($forma_pago);
+       $preference_data = array(
+            "items" => array(
+                array(
+                    "title" => "Donar por unica vez",
+                    "quantity" => 1,
+                    "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
+                    "unit_price" => (int)$monto
+                )
+            ),
+           "back_urls" => array(
+           "success" => "http://lacasita.ong/stateconfirm",
+           "failure" => "http://lacasita.ong/",
+           "pending" => "http://lacasita.ong/"
+           )
+        );
+        $preference= $mp->create_preference ($preference_data);
+        // dd($preference);
+        $preferenceID = $preference['response']['init_point'];
+        return Redirect::to($preferenceID);
+   }
+   elseif ($forma_pago == "mensual") {
+       //dd($forma_pago);
+       //subscription
+       $monto = $_POST['monto'];
 
+       $start_date = Carbon\Carbon::now();
+       $start_date->addHour(1);
+       $end_date = Carbon\Carbon::now();
+       $end_date->addMonths(12);
 
+       $start_date = date("Y-m-d\TH:i:s.000P",strtotime($start_date));
+       $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
 
-/*  COMPLETAR LA SUSCRIPCION ***************
-    //subscription
-    $montoS = $_POST['montoS'];
+       $preapproval_data = array(
+         "payer_email" => "contacto@lacasita.ong",
+         "back_url" => "http://lacasita.ong/stateconfirm",
+         "reason" => "Suscripcion mensual",
+         "external_reference" => "OP-1234",
+         "auto_recurring" => array(
+         "frequency" => 1,
+         "frequency_type" => "months",
+         "transaction_amount" => (int)$monto,
+         "currency_id" => "ARS",
+         "start_date" => $start_date,
+         "end_date" =>  $end_date
+       )
+       );
 
-    $start_date = Carbon\Carbon::now();
-    $start_date->addHour(1);
-    $end_date = Carbon\Carbon::now();
-    $end_date->addMonths(12);
+       $preapproval = $mp->create_preapproval_payment($preapproval_data);
+       $preapprovalID = $preapproval['response']['init_point'];
+       //dd($preapprovalID);
+       return Redirect::to($preapprovalID);
+   }
 
-    $start_date = date("Y-m-d\TH:i:s.000P",strtotime($start_date));
-    $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
-
-    $preapproval_data = array(
-      "payer_email" => "contacto@lacasita.ong",
-      "back_url" => "http://lacasita.ong/stateconfirm",
-      "reason" => "Suscripcion mensual",
-      "external_reference" => "OP-1234",
-      "auto_recurring" => array(
-      "frequency" => 1,
-      "frequency_type" => "months",
-      "transaction_amount" => (int)$montoS,
-      "currency_id" => "ARS",
-      "start_date" => $start_date,
-      "end_date" =>  $end_date
-    )
-    );
-
-    $preapproval = $mp->create_preapproval_payment($preapproval_data);
-    $preapprovalID = $preapproval['response']['init_point'];
-    dd($preapprovalID);
-*/
-
-
-    return Redirect::to($preferenceID);
 }
 ==
