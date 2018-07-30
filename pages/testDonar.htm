@@ -3,9 +3,38 @@ url = "/testDonar"
 layout = "default"
 meta_title = "Donar"
 is_hidden = 0
-==
 
-    <!-- page title -->
+[emptyForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules[dni] = "required"
+rules[monto_donacion] = "required"
+rules[forma_pago] = "required"
+rules_messages[name] = "Debe ingresar su Nombre"
+rules_messages[email] = "Debe ingresar un email valido"
+rules_messages[phone] = "Debe ingresar su numero Telefónico"
+rules_messages[dni] = "Debe ingresar su DNI, Cuil, Cuit..."
+rules_messages[monto_donacion] = "Debe ingresar monto a donar"
+rules_messages[forma_pago] = "Debe ingresar si dona por unica vez o mensualmente"
+messages_success = "Muchas Gracias su solicitud ha siso enviada correctamente a la brevedad nos comunicaremos con Ud."
+messages_errors = "Verifique haber puesto nombre, correo, telefono, dni y monto validos"
+mail_enabled = 1
+mail_subject = "notificacion donacion por Visa a La Casita"
+mail_recipients[] = "proagua2@gmail.com"
+mail_recipients[] = "contacto@lacasita.ong"
+mail_resp_field = "proagua2@gmail.com"
+mail_resp_from = "proagua2@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "dark"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+==
+<!-- page title -->
     <div class="page-title-section">
       <div class="page-title-wrap">
         <div class="page-title-overlay"></div>
@@ -112,76 +141,18 @@ is_hidden = 0
               <div class="caption bank">
                 <h4>Si queres donar con tarjetas de crédito <b>VISA:</b></h4>
                 <button type="submit" class="btn btn-lg btn-primary" id="donar-visa" href="#" data-toggle="modal" data-target="#contacto-modal">CLICK PARA DONAR</button>
+                {% component 'emptyForm' %}
+
                 <div class="texto-donar-visa">
                   <p> Dejá tus datos con confianza, este sitio es 100% seguro.</p>
                   <p>Si preferís, también podés comunicarte con nosotros al teléfono:</p>
                   <p>(54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
                   <p>o enviando un e-mail a contacto@lacasita.ong</p>
                 </div>
+              </div><!-- /.caption bank-->
 
-                <div id="contacto-modal" class="modal fade" tabindex="-1" role="dialog">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Datos Personales:</h4>
-                      </div>
-                      <div class="modal-body">
-                        <form action="" method="POST">
-                          <div class="form-group">
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" value="" class="form-control" placeholder="Ingresar nombre completo...">
-                          </div><!-- /.form-group -->
-                          <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" value="" class="form-control" placeholder="Ingresar Email...">
-                          </div><!-- /.form-group -->
-                          <div class="form-group">
-                            <label for="direction">Direccion</label>
-                            <input type="text" name="direction" value="" class="form-control" placeholder="Ingresar direccion...">
-                          </div><!-- /.form-group -->
-                          <div class="form-group">
-                            <label for="phone">Telefono</label>
-                            <input type="tel" name="phone" value="" class="form-control" placeholder="Ingresar Telefono...">
-                          </div><!-- /.form-group -->
-                          <div class="form-group">
-                            <label for="id">Nro de Documento</label>
-                            <input type="number" name="id" value="" class="form-control" placeholder="Ingresar DNI, Cuil, Cuit...">
-                          </div><!-- /.form-group -->
-
-                          <h4>Datos para la Donacion:</h4>
-                          <hr>
-                          <div class="form-group">
-                            <label for="donation">Monto a donar</label>
-                            <input type="number" step="50" name="monto" class="form-control" placeholder="Ingresar monto a donar...">
-                          </div><!-- /.form-group -->
-                          <div class="form-group">
-                            <label for="donation">Numero de tarjeta</label>
-                            <input type="number" name="donation" name="nrotarjeta" class="form-control" placeholder="Ingresar numero de tarjeta sin codigo de seguridad...">
-                          </div><!-- /.form-group -->
-                          <div class="checkboxes">
-                            <div class="row">
-                              <div class="col-sm-6">
-                                <label><input type="checkbox" name="forma_pago" value="unicavez">  Quiero donar por unica vez</label>
-                              </div>
-                              <div class="col-sm-6">
-                                <label><input type="checkbox" name="forma_pago" value="mensual">  Quiero donar mensualmente</label>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div><!-- /.modal-body -->
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-dismiss="modal">Enviar</button>
-                      </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- /.modal -->
-
-              </div>
-            </div>
-          </div>
-          </div>
+            </div><!-- /.thumbnail-->
+          </div> <!--  /.donate-spacing -->
 
         </div>
       </div>
