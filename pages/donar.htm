@@ -3,144 +3,40 @@ url = "/donar"
 layout = "default"
 meta_title = "Donar"
 is_hidden = 0
+
+[emptyForm visaForm]
+rules[name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules[dni] = "required"
+rules[monto_donacion] = "required"
+rules[forma_pago] = "required"
+rules_messages[name.required] = "Debe ingresar su Nombre"
+rules_messages[email.required] = "Debe ingresar un email"
+rules_messages[email.email] = "Debe ingresar un email valido"
+rules_messages[phone.required] = "Debe ingresar su numero Telefónico"
+rules_messages[dni.required] = "Debe ingresar su DNI, Cuil, Cuit..."
+rules_messages[nrotarjeta.required] = "Debe ingresar numero tarjeta SIN codigo de seguridad"
+rules_messages[monto_donacion.required] = "Debe ingresar monto a donar"
+rules_messages[forma_pago.required] = "Debe ingresar si dona por unica vez o mensualmente"
+messages_success = "Muchas Gracias su solicitud ha siso enviada correctamente a la brevedad nos comunicaremos con Ud."
+messages_errors = "Verifique haber puesto nombre, correo, telefono, dni, monto y numero de tarjeta validos"
+mail_enabled = 1
+mail_subject = "notificacion donacion por Visa a La Casita"
+mail_recipients[] = "proagua2@gmail.com"
+mail_recipients[] = "contacto@lacasita.ong"
+mail_resp_field = "proagua2@gmail.com"
+mail_resp_from = "proagua2@gmail.com"
+reset_form = 1
+inline_errors = "display"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "dark"
+recaptcha_type = "image"
+recaptcha_size = "normal"
 ==
-function onStart(){
-
-   $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
-
-   //********************
-   //Donar 500
-   $preference500_data = array(
-        "items" => array(
-            array(
-                "title" => "Donar por unica vez $ 500",
-                "quantity" => 1,
-                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price" => 500.00
-            )
-        ),
-	      "back_urls" => array(
-		    "success" => "http://lacasita.ong/stateconfirm",
-		    "failure" => "http://lacasita.ong/",
-		    "pending" => "http://lacasita.ong/"
-	      )
-    );
-    $preference500= $mp->create_preference ($preference500_data);
-    // dd($preference500);
-    $this['preference500ID'] = $preference500['response']['init_point'];
-    //dd($this['preference500ID']);
-
-    //********************
-    //Donar 1000
-    $preference1000_data = array(
-        "items" => array(
-            array(
-                "title" => "Donar por unica vez $ 1000",
-                "quantity" => 1,
-                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price" => 1000.00
-            )
-        ),
-	      "back_urls" => array(
-		    "success" => "http://lacasita.ong/stateconfirm",
-		    "failure" => "http://lacasita.ong/",
-		    "pending" => "http://lacasita.ong/"
-      )
-    );
-    $preference1000 = $mp->create_preference ($preference1000_data);
-    // dd($preference1000);
-    $this['preference1000ID'] = $preference1000['response']['init_point'];
-    //dd($this['preference1000ID']);
-
-    //********************
-    //Donar 2000
-    $preference2000_data = array(
-        "items" => array(
-            array(
-                "title" => "Donar por unica vez $ 2000",
-                "quantity" => 1,
-                "currency_id" => "ARS", // Available currencies at: https://api.mercadopago.com/currencies
-                "unit_price" => 2000.00
-            )
-        ),
-	      "back_urls" => array(
-		    "success" => "http://lacasita.ong/stateconfirm",
-		    "failure" => "http://lacasita.ong/",
-		    "pending" => "http://lacasita.ong/"
-        )
-    );
-    $preference2000 = $mp->create_preference ($preference2000_data);
-    // dd($preference2000);
-    $this['preference2000ID'] = $preference2000['response']['init_point'];
-    //dd($this['preference2000ID']);
-
-    //subscription
-    $start_date = Carbon\Carbon::now();
-    $start_date->addHour(1);
-    $end_date = Carbon\Carbon::now();
-    $end_date->addMonths(12);
-
-    $start_date = date("Y-m-d\TH:i:s.000P",strtotime($start_date));
-    $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
-
-    $preapproval_data_500 = array(
-      "payer_email" => "contacto@lacasita.ong",
-      "back_url" => "http://lacasita.ong/stateconfirm",
-      "reason" => "Suscripcion mensual",
-      "external_reference" => "OP-1234",
-      "auto_recurring" => array(
-      "frequency" => 1,
-      "frequency_type" => "months",
-      "transaction_amount" => 500,
-      "currency_id" => "ARS",
-      "start_date" => $start_date,
-      "end_date" =>  $end_date
-    )
-    );
-
-    $preapproval = $mp->create_preapproval_payment($preapproval_data_500);
-    $this['preapproval500ID'] = $preapproval['response']['init_point'];
-
-    $preapproval_data_1000 = array(
-      "payer_email" => "contacto@lacasita.ong",
-      "back_url" => "http://lacasita.ong/stateconfirm",
-      "reason" => "Suscripcion mensual",
-      "external_reference" => "OP-1234",
-      "auto_recurring" => array(
-      "frequency" => 1,
-      "frequency_type" => "months",
-      "transaction_amount" => 1000,
-      "currency_id" => "ARS",
-      "start_date" => $start_date,
-      "end_date" =>  $end_date
-    )
-    );
-
-    $preapproval = $mp->create_preapproval_payment($preapproval_data_1000);
-    $this['preapproval1000ID'] = $preapproval['response']['init_point'];
-
-    $preapproval_data_2000 = array(
-      "payer_email" => "contacto@lacasita.ong",
-      "back_url" => "http://lacasita.ong/stateconfirm",
-      "reason" => "Suscripcion mensual",
-      "external_reference" => "OP-1234",
-      "auto_recurring" => array(
-      "frequency" => 1,
-      "frequency_type" => "months",
-      "transaction_amount" => 2000,
-      "currency_id" => "ARS",
-      "start_date" => $start_date,
-      "end_date" =>  $end_date
-    )
-    );
-
-    $preapproval = $mp->create_preapproval_payment($preapproval_data_2000);
-    $this['preapproval2000ID'] = $preapproval['response']['init_point'];
-
-}
-==
-
-    <!-- page title -->
+<!-- page title -->
     <div class="page-title-section">
       <div class="page-title-wrap">
         <div class="page-title-overlay"></div>
@@ -160,15 +56,32 @@ function onStart(){
               <div class="caption">
                 <h4>Quiero donar por unica vez</h4>
                 <p>Cliqueando en cada boton usted donara por unica vez mediante Mercado Pago</p>
-                <!-- <p> -->
                   <div class="row display-flex">
+                    <!-- form buttons unicavez -->
+                    <form action='/donacion' method='post'>
+                      <input type='hidden'  name='monto' value='500.00' />
+                      <input type='hidden' name='forma_pago' value='unicavez' />
+                      <button type="submit" class="btn btn-lg btn-primary">$ 500</button>
+                    </form>
 
-                    <button type="button"   class="btn btn-lg btn-primary"><a target="_blank" href="{{ preference500ID }}" role="button">$ 500</a></button>
-                    <button type="button"  class="btn btn-lg btn-primary"><a target="_blank" href="{{ preference1000ID }}" role="button">$ 1000</a></button>
-                    <button type="button"  class="btn btn-lg btn-primary"><a target="_blank" href="{{ preference2000ID }}" role="button">$ 2000</a></button>
+                    <form action='/donacion' method='post'>
+                      <input type='hidden' name='monto' value='1000.00' />
+                      <input type='hidden' name='forma_pago' value='unicavez' />
+                      <button type="submit" class="btn btn-lg btn-primary">$ 1000</button>
+                    </form>
+
+                    <form action='/donacion' method='post'>
+                      <input type='hidden' name='monto' value='2000.00' />
+                      <input type='hidden' name='forma_pago' value='unicavez' />
+                      <button type="submit" class="btn btn-lg btn-primary">$ 2000</button>
+                    </form>
+                    <form class="monto_variable" action='/donacion' method='post'>
+                        <input type="number" min="50" step="50" name="monto" class="form-control" placeholder="Otro monto a donar...">
+                        <input type='hidden' name='forma_pago' value='unicavez' />
+                    </form>
+
                   </div>
-
-                <!-- </p> -->
+                  <!-- end form buttons unicavez -->
               </div>
             </div>
           </div>
@@ -178,17 +91,39 @@ function onStart(){
               <div class="caption">
                 <h4>Quiero donar mensualmente un monto fijo</h4>
                 <p>Cliqueando en cada boton usted donara un monto fijo mensual mediante Mercado Pago</p>
-                <!-- <p> -->
                 <div class="row display-flex">
+                  <!-- form buttons mensual -->
+                  <form action='/donacion' method='post'>
+                    <input type='hidden'  name='monto' value='500.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 500</button>
+                  </form>
 
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval500ID }}" role="button">$ 500</a></button>
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval1000ID }}" role="button">$ 1000</a></button>
-                  <button type="button" class="btn btn-lg btn-primary"><a target="_blank" href="{{ preapproval2000ID }}" role="button">$ 2000</a></button>
-                <!-- </p> -->
+                  <form action='/donacion' method='post'>
+                    <input type='hidden' name='monto' value='1000.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 1000</button>
+                  </form>
+
+                  <form action='/donacion' method='post'>
+                    <input type='hidden' name='monto' value='2000.00' />
+                    <input type='hidden' name='forma_pago' value='mensual' />
+                    <button type="submit" class="btn btn-lg btn-primary">$ 2000</button>
+                  </form>
+
+                  <form class="monto_variable" action='/donacion' method='post'>
+                      <input type="number" min="50" step="50" name="monto" class="form-control" placeholder="Otro monto a donar...">
+                      <input type='hidden' name='forma_pago' value='mensual' />
+                  </form>
+
+                </div>
+                <!-- end form buttons mensual -->
+
                 </div>
               </div>
             </div>
           </div>
+          <div class="row display-flex donate_system">
           <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
             <div class="thumbnail">
               <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo ICBC" class="thumb_donate">
@@ -207,13 +142,19 @@ function onStart(){
               <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo ICBC" class="thumb_donate">
               <div class="caption bank">
                 <h4>Si queres donar con tarjetas de crédito <b>VISA:</b></h4>
-                <p>POR TEL&EacuteFONO:</p>
-                <p>Llamando al (54-11)  / 5137- 1154  de L. a V. de 9 a 17hs.</p>
-                <p>POR E-MAIL</p>
-                <p>ESCRIBI&EacuteNDONOS A: contacto@lacasita.ong</p>
-              </div>
-            </div>
-          </div>
+                <button type="submit" class="btn btn-lg btn-primary" id="donar-visa" href="#" data-toggle="modal" data-target="#contacto-modal">CLICK PARA DONAR</button>
+                {% component 'visaForm' %}
+
+                <div class="texto-donar-visa">
+                  <p> Dejá tus datos con confianza, este sitio es 100% seguro.</p>
+                  <p>Si preferís, también podés comunicarte con nosotros al teléfono:</p>
+                  <p>(54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
+                  <p>o enviando un e-mail a contacto@lacasita.ong</p>
+                </div>
+              </div><!-- /.caption bank-->
+
+            </div><!-- /.thumbnail-->
+          </div> <!--  /.donate-spacing -->
 
         </div>
       </div>
