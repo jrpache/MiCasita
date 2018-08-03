@@ -330,16 +330,18 @@ input[type=text] {
   text-align: left;
 }
 
+#donar-cena {
+  font-size: 15px;
+}
+
 #donar-visa {
   color: #ffffff;
   font-size: 18px;
   font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-
   margin-top: 2px;
   margin-bottom: 10px
-
 }
 
 /* ==================================================================
