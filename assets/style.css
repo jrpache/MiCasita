@@ -3327,7 +3327,7 @@ ul.products {
     z-index: 1999;
 }
 .preloader .loader-inner {
-    left: 50%;
+    left: 49%;
     position: absolute;
     top: 55%;
 }

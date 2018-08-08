@@ -309,7 +309,11 @@
     height: 200px;
 }
 
+.preloader .loader-inner {
+    left: 45%;
 }
+}
+
 @media only screen and (max-width:500px) {
 	/* ========= Event Carousel =============*/
     .event-carousel .slide-detels {
