@@ -344,6 +344,10 @@ input[type=text] {
   margin-bottom: 10px
 }
 
+#texto-cena p {
+  text-align: center;
+}
+
 /* ==================================================================
   3.0 Header Styles
 ================================================================== */
@@ -3329,7 +3333,7 @@ ul.products {
 .preloader .loader-inner {
     left: 49%;
     position: absolute;
-    top: 55%;
+    top: 43%;
 }
 .sk-folding-cube {
     margin: 20px auto;
