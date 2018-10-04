@@ -4,8 +4,33 @@ layout = "default"
 meta_title = "Donar"
 is_hidden = 0
 
+[emptyForm cenaAnual]
+group = "Cena Anual 2018"
+rules[name] = "required"
+rules[email] = "required|email"
+rules[phone] = "required"
+rules_messages[name.required] = "Debe ingresar su Nombre"
+rules_messages[email.required] = "Debe ingresar un email"
+rules_messages[email.email] = "Debe ingresar un email valido"
+rules_messages[phone.required] = "Debe ingresar su numero Telefónico"
+messages_success = "Muchas Gracias su solicitud ha siso enviada correctamente a la brevedad nos comunicaremos con Ud."
+messages_errors = "Verifique haber puesto nombre, correo, telefono y numero de invitados validos"
+mail_enabled = 1
+mail_subject = "Cena Anual 2018"
+mail_recipients[] = "proagua2@gmail.com"
+mail_recipients[] = "contacto@lacasita.ong"
+mail_resp_field = "proagua2@gmail.com"
+mail_resp_from = "proagua2@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
 [emptyForm visaForm]
-group = "donacion por Visa"
+group = "Donar mensual por Visa"
 rules[name] = "required"
 rules[email] = "required|email"
 rules[phone] = "required"
@@ -36,31 +61,6 @@ recaptcha_enabled = 0
 recaptcha_theme = "dark"
 recaptcha_type = "image"
 recaptcha_size = "normal"
-
-[emptyForm cenaAnual]
-group = "Cena Anual 2018"
-rules[name] = "required"
-rules[email] = "required|email"
-rules[phone] = "required"
-rules_messages[name.required] = "Debe ingresar su Nombre"
-rules_messages[email.required] = "Debe ingresar un email"
-rules_messages[email.email] = "Debe ingresar un email valido"
-rules_messages[phone.required] = "Debe ingresar su numero Telefónico"
-messages_success = "Muchas Gracias su solicitud ha siso enviada correctamente a la brevedad nos comunicaremos con Ud."
-messages_errors = "Verifique haber puesto nombre, correo, telefono y numero de invitados validos"
-mail_enabled = 1
-mail_subject = "Cena Anual 2018"
-mail_recipients[] = "proagua2@gmail.com"
-mail_recipients[] = "contacto@lacasita.ong"
-mail_resp_field = "proagua2@gmail.com"
-mail_resp_from = "proagua2@gmail.com"
-reset_form = 1
-inline_errors = "disabled"
-sanitize_data = "disabled"
-anonymize_ip = "disabled"
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "normal"
 ==
 <!-- page title -->
     <div class="page-title-section">
@@ -75,30 +75,31 @@ recaptcha_size = "normal"
     <!-- shop page -->
     <div class="shop-page pd-top-40 pd-bottom-60">
       <div class="container">
-        <div class="col-sm-12 col-md-12 col-xs-12 donate-spacing">
-          <div class="thumbnail">
-            <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo Visa" class="thumb_donate">
-            <div class="caption bank">
-              <h3>Cena Anual a beneficio $ 2.500 - 11 de octubre de 2018</h3>
-              <h4>Se puede pagar hasta en 3 cuotas sin interes</h4>
-              <div class="row">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-xs-12 donate-spacing">
+            <div class="thumbnail">
+              <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo Visa" class="thumb_donate">
+              <div class="caption bank">
+                <h3>Cena Anual a beneficio $ 2.500 - 11 de octubre de 2018</h3>
+                <h4>Se puede pagar hasta en 3 cuotas sin interes</h4>
+                <div class="row">
                   <button type="submit" class="btn  btn-primary" id="donar-cena" href="#" data-toggle="modal" data-target="#contacto-modal">RESERVA TU LUGAR $2.500</button>
                   {% component 'cenaAnual' %}
-              </div>
-              <div class="texto-donar-visa" id="texto-cena">
-                <p>Si queres reservar una mesa para empresa, envianos un e-mail a contacto@lacasita.ong</p>
-                <p>Si preferís, también podés comunicarte con nosotros al teléfono: (54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
-              </div>
-            </div><!-- /.caption bank-->
-          </div><!-- /.thumbnail-->
-        </div> <!--  /.donate-spacing -->
-        <!-- <div class="display-flex donate-spacing"> -->
-        <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing" >
-          <div class="thumbnail">
-            <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
-            <div class="caption bank">
-              <h4>Quiero donar por unica vez</h4>
-              <p>Cliqueando en cada boton usted donara un monto por unica vez mediante Mercado Pago</p>
+                </div>
+                <div  id="texto-cena">
+                  <p>Si queres reservar una mesa para empresa, envianos un e-mail a contacto@lacasita.ong</p>
+                  <p>Si preferís, también podés comunicarte con nosotros al teléfono: (54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
+                </div>
+              </div><!-- /.caption bank -->
+            </div><!-- /.thumbnail-->
+          </div> <!--  /.donate-spacing -->
+          <!-- <div class="display-flex donate-spacing"> -->
+          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+            <div class="thumbnail">
+              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
+              <div class="caption bank">
+                <h4>Quiero donar por unica vez</h4>
+                <p>Cliqueando en cada boton usted donara un monto por unica vez mediante Mercado Pago</p>
                 <div class="display-flex">
                   <!-- form buttons unicavez -->
                   <div class="row">
@@ -123,90 +124,73 @@ recaptcha_size = "normal"
                         <button type="submit" class="btn  btn-primary">$ 2000</button>
                       </form>
                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 col-xs-12 col-lg-12">
+                      <form class="monto_variable" action='/donacion' method='post'>
+                        <input type="number" class="btn  btn-primary btn-block" min="50" step="50" name="monto" placeholder="Otro monto a donar...">
+                        <input type='hidden' name='forma_pago' value='unicavez' />
+                      </form>  <!-- end form buttons unicavez class="form-control btn btn-primary"-->
                     </div>
-                    <div class="row">
-                      <!-- <div class="col-md-12 col-xs-12 col-lg-12"> -->
-                        <form class="monto_variable" action='/donacion' method='post'>
-                            <input type="number" class="btn  btn-primary btn-block" min="50" step="50" name="monto"  placeholder="Otro monto a donar...">
-                            <input type='hidden' name='forma_pago' value='unicavez' />
-                        </form>  <!-- end form buttons unicavez class="form-control btn btn-primary"-->
-                      <!-- </div> -->
-                    </div>
+                  </div>
                 </div>  <!-- end div display-flex -->
-            </div>  <!-- end div caption -->
-          </div>  <!-- end div thumbnail -->
-        </div>  <!-- end div donate-spacing -->
+              </div>  <!-- end div caption -->
+            </div>  <!-- end div thumbnail -->
+          </div>  <!-- end div donate-spacing -->
           <!-- fin cuadro de donacion -->
-        <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
-          <div class="thumbnail">
-            <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
-            <div class="caption">
-              <h4>Quiero donar mensualmente un monto fijo</h4>
-              <p>Cliqueando en cada boton usted donara un monto fijo mensual mediante Mercado Pago</p>
-              <div class="display-flex">
-                <!-- form buttons mensual -->
+          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+            <div class="thumbnail">
+              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
+              <div class="caption bank">
+                <h4>Quiero donar mensualmente un monto fijo</h4>
+                <p>Cliqueando en el boton usted donara un monto fijo mensual mediante Mercado Pago</p>
+                <p>Ese pago mensual sirve para asegurar que se cumplan todos nuestros objetivos con La Casita</p>
+                <!-- <p>Los niños podran apreciar vuestra colaboracion</p> -->
                 <div class="row">
-                  <div class="col-md-4 col-xs-12">
-                    <form action='/donacion' method='post'>
-                      <input type='hidden'  name='monto' value='500.00' />
-                      <input type='hidden' name='forma_pago' value='mensual' />
-                      <button type="submit" class="btn btn-primary">$ 500</button>
-                    </form>
-                  </div>
-                  <div class="col-md-4 col-xs-12">
-                    <form action='/donacion' method='post'>
-                      <input type='hidden' name='monto' value='1000.00' />
-                      <input type='hidden' name='forma_pago' value='mensual' />
-                      <button type="submit" class="btn btn-primary">$ 1000</button>
-                    </form>
-                  </div>
-                  <div class="col-md-4 col-xs-12">
-                    <form action='/donacion' method='post'>
-                      <input type='hidden' name='monto' value='2000.00' />
-                      <input type='hidden' name='forma_pago' value='mensual' />
-                      <button type="submit" class="btn btn-primary">$ 2000</button>
-                    </form>
+                  <div class="col-md-12">
+                    <a class="btn btn-primary btn-block" href="/donar_mensualmente" role="button">Donar mensualmente</a>
                   </div>
                 </div>
-                  <div class="row">
-                    <form class="monto_variable" action='/donacion' method='post'>
-                      <input type="number" class="btn btn-primary btn-block" min="50" step="50" name="monto" class="form-control" placeholder="Otro monto a donar...">
-                      <input type='hidden' name='forma_pago' value='mensual' />
-                    </form>  <!-- end form buttons mensual -->
-                  </div>
-              </div>   <!-- end div display-flex -->
-            </div>   <!-- end div caption -->
-          </div>   <!-- end div thumbnail -->
-        </div>   <!-- end div donate-spacing -->
+
+
+              </div>   <!-- end div caption -->
+            </div>   <!-- end div thumbnail -->
+          </div>   <!-- end div donate-spacing -->
           <!-- fin cuadro de donacion -->
-        <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
-          <div class="thumbnail">
-            <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo ICBC" class="thumb_donate">
-            <div class="caption bank">
-              <h4>Si queres hacer el deposito bancario directo desde tu cuenta de banco te damos los datos de La Casita:</h4>
-              <p>CTA CORRIENTE NR. 0832/02100016/94</p>
-              <p>TITULAR: CASA DEL NIÑO NUEVA FAMILIA</p>
-              <p>CBU: 0150832902000100016941</p>
-              <p>ALIAS PARA TRANSFERENCIAS: SUMATE.Y.DONA</p>
-              <p>CUIT: 30 70752599 8</p>
+          <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>
+          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+            <div class="thumbnail">
+              <img src="themes\MiCasita\assets\logo\ICBC_logo.png" alt="logo ICBC" class="thumb_donate">
+              <div class="caption bank">
+                <h4>Si queres hacer el deposito bancario directo desde tu cuenta de banco te damos los datos de La Casita:</h4>
+                <p>CTA CORRIENTE NR. 0832/02100016/94</p>
+                <p>TITULAR: CASA DEL NIÑO NUEVA FAMILIA</p>
+                <p>CBU: 0150832902000100016941</p>
+                <p>ALIAS PARA TRANSFERENCIAS: SUMATE.Y.DONA</p>
+                <p>CUIT: 30 70752599 8</p>
+              </div>
             </div>
           </div>
+          <!-- fin cuadro de donacion -->
+          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+            <div class="thumbnail">
+              <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo Visa" class="thumb_donate">
+              <div class="caption bank">
+                <h4>Si queres donar con tarjetas de crédito <b>VISA:</b></h4>
+                <div class="row">
+                  <button type="submit" class="btn btn-primary" id="donar-visa" href="#" data-toggle="modal" data-target="#contacto-modal-donarVisa">CLICK PARA DONAR</button>
+                  {% component 'visaForm' %}
+                </div>
+                <div>
+                  <p> Dejá tus datos con confianza, este sitio es 100% seguro.</p>
+                  <p>Si preferís, también podés comunicarte con nosotros al teléfono:</p>
+                  <p>(54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
+                  <p>o enviando un e-mail a contacto@lacasita.ong</p>
+                </div>
+              </div> <!-- /.caption bank-->
+            </div> <!-- /.thumbnail-->
+          </div> <!--  /.donate-spacing -->
+          <!-- fin cuadro de donacion -->
         </div>
-        <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
-          <div class="thumbnail">
-            <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo ICBC" class="thumb_donate">
-            <div class="caption bank">
-              <h4>Si queres donar con tarjetas de crédito <b>VISA:</b></h4>
-              <button type="submit" class="btn btn-primary" id="donar-visa" href="#" data-toggle="modal" data-target="#contacto-modal">CLICK PARA DONAR</button>
-              {% component 'visaForm' %}
-              <div class="texto-donar-visa">
-                <p> Dejá tus datos con confianza, este sitio es 100% seguro.</p>
-                <p>Si preferís, también podés comunicarte con nosotros al teléfono:</p>
-                <p>(54-11) / 5137-1154  de L. a V. de 9 a 17 hs.</p>
-                <p>o enviando un e-mail a contacto@lacasita.ong</p>
-              </div>
-            </div> <!-- /.caption bank-->
-          </div> <!-- /.thumbnail-->
-        </div> <!--  /.donate-spacing -->
       </div> <!--  /.container -->
     </div>  <!-- end shop page -->

@@ -1,0 +1,95 @@
+title = "donar_mensualmente"
+url = "/donar_mensualmente"
+layout = "default"
+is_hidden = 0
+
+
+
+==
+<!-- page title -->
+    <div class="page-title-section">
+      <div class="page-title-wrap">
+        <div class="page-title-overlay"></div>
+        <div class="page-title-info">
+          <h1 class="page-title">Donar Mensualmente</h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- shop page -->
+<div class="shop-page pd-top-40 pd-bottom-60">
+  <div class="container">
+      <div class="row">
+      <div class="col-sm-3 col-md-3">
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+        <div class="thumbnail">
+          <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
+          <div class="caption bank">
+            <h4>Quiero donar mensualmente un monto fijo</h4>
+            <div class="contaienr">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Datos Personales:</h4>
+              </div>
+              <div class="form_donar_mensualmente">
+                <form action="/donacion" method="POST">
+                  <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" name="name" class="form-control" placeholder="Ingresar nombre completo...">
+                  </div><!-- /.form-group -->
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Ingresar Email...">
+                  </div><!-- /.form-group -->
+                  <h4>Monto a donar mensulamente:</h4>
+                  <hr>
+                    <!-- <div class="col-md-4 col-xs-6"> -->
+                      <div class="funkyradio">
+                        <div class="funkyradio-success">
+                          <input type="radio" name="monto" value="500.00" id="radio1" />
+                          <input type='hidden' name='forma_pago' value='mensual' />
+                          <label for="radio1">$ 500</label>
+                        </div>
+                        <div class="funkyradio-success">
+                          <input type="radio" name="monto" value="1000.00"  id="radio2" />
+                          <input type='hidden' name='forma_pago' value='mensual' />
+                          <label for="radio2">$ 1000</label>
+                        </div>
+                        <div class="funkyradio-success">
+                          <input type="radio" name="monto" value="2000.00"  id="radio3" />
+                          <input type='hidden' name='forma_pago' value='mensual' />
+                          <label for="radio3">$ 2000</label>
+                        </div>
+                        <div class="funkyradio-success">
+                          <input type="radio" name="monto" value="2500.00"  id="radio4" />
+                          <input type='hidden' name='forma_pago' value='mensual' />
+                          <label for="radio4">$ 2500</label>
+                        </div>
+                      </div>
+                    <!-- </div> -->
+
+                    <!-- <div class="col-md-12"> -->
+                      <button type="submit" id="btn-donar-mensualmente"class="btn  btn-primary">DONAR</button>
+                    <!-- </div> -->
+                </form>
+              </div>
+              <!-- div_donar_mensualmente -->
+            </div>
+            <!-- container -->
+          </div>
+          <!-- /.caption bank-->
+        </div>
+        <!-- /.thumbnail-->
+      </div>
+      <!--  /.donate-spacing -->
+      <div class="col-sm-3 col-md-3">
+
+      </div>
+   </div>
+  <!--  /.row -->
+  </div>
+  <!--  /.container -->
+</div>
+<!-- end shop page -->

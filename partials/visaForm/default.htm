@@ -3,7 +3,14 @@
 
     {{ form_token() }}
 
-    <div id="contacto-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="form-group">
+        {% partial '@recaptcha' %}
+    </div>
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
+
+
+    <div id="contacto-modal-donarVisa" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -53,7 +60,8 @@
                   </div>
                 </div>
               </div>
-              <div id="{{ __SELF__ }}_forms_flash"></div>
+
+              <!-- aca estaba _forms_flash -->
 
             </form>
           </div><!-- /.modal-body -->

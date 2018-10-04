@@ -9,6 +9,8 @@ function onStart(){
    $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
 
    $monto = $_POST['monto'];
+   $name = $_POST['name'];
+   $email = $_POST['email'];
    $forma_pago = $_POST['forma_pago'];
    //dd($forma_pago);
 
@@ -37,7 +39,6 @@ function onStart(){
    elseif ($forma_pago == "mensual") {
        //dd($forma_pago);
        //subscription
-       $monto = $_POST['monto'];
 
        $start_date = Carbon\Carbon::now();
        $start_date->addHour(1);
@@ -48,10 +49,10 @@ function onStart(){
        $end_date  = date("Y-m-d\TH:i:s.000P",strtotime($end_date));
 
        $preapproval_data = array(
-         "payer_email" => "contacto@lacasita.ong",
+         "payer_email" => $email,
          "back_url" => "http://lacasita.ong/stateconfirm",
-         "reason" => "Suscripcion mensual",
-         "external_reference" => "OP-1234",
+         "reason" => "Suscripcion mensual a la Casita",
+         "external_reference" => $name,
          "auto_recurring" => array(
          "frequency" => 1,
          "frequency_type" => "months",
