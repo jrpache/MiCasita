@@ -3,7 +3,6 @@
 
     {{ form_token() }}
 
-    <div id="{{ __SELF__ }}_forms_flash"></div>
 
     <div class="form-group contactoFormulario">
         <label for="name">Nombre:</label>
@@ -28,6 +27,8 @@
     <div class="form-group contactoFormulario">
         {% partial '@recaptcha' %}
     </div>
+
+    <div id="{{ __SELF__ }}_forms_flash"></div>
 
     <button id="simpleContactSubmitButton" type="submit" class="btn btn-default">Enviar</button>
 
