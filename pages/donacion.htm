@@ -63,10 +63,6 @@ function onStart(){
            "start_date" => $start_date,
            "end_date" =>  $end_date
          ),
-         "metadata" => array(
-           "name" => $name,
-           "cuit" => $cuit
-         )
        );
        $preapproval = $mp->create_preapproval_payment($preapproval_data);
        $preapprovalID = $preapproval['response']['init_point'];
