@@ -78,6 +78,11 @@ is_hidden = 0
                     <!-- <div class="col-md-12"> -->
                       <button type="submit" id="btn-donar-mensualmente"class="btn  btn-primary">DONAR</button>
                     <!-- </div> -->
+                    {% flash %}
+                        <div class="alert alert-{{ type }}">
+                            {{ message }}
+                        </div>
+                    {% endflash %}
                 </form>
               </div>
               <!-- div_donar_mensualmente -->

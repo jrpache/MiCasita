@@ -68,7 +68,13 @@ function onStart(){
           "cuit" => $cuit
         )
        );
-       $preapproval = $mp->create_preapproval_payment($preapproval_data);
+       try{
+
+         $preapproval = $mp->create_preapproval_payment($preapproval_data);
+       } catch ( \Exception $e ){
+         Flash::error('Ha ocurrido un error intente nuevamente.');
+         return Redirect::to('donar/mensual');
+       }
        $preapprovalID = $preapproval['response']['init_point'];
        //dd($preapprovalID);
        return Redirect::to($preapprovalID);
