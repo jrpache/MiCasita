@@ -11,7 +11,11 @@ function onStart(){
    $monto = $_POST['monto'];
    $name = $_POST['name'];
    $email = $_POST['email'];
-   $cuit = $_POST['cuit'];
+
+   if (isset($_POST['cuit'])) {
+     $cuit = $_POST['cuit'];
+    }
+
    $forma_pago = $_POST['forma_pago'];
    //dd($forma_pago);
 

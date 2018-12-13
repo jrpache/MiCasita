@@ -1617,7 +1617,7 @@ ul.feature-list {
 .event-carousel .slide-detels {
     height: auto;
     overflow: hidden;
-    padding: 80px 60px;
+    padding: 60px 60px 120px 60px;
 }
 .event-carousel .slide-detels .slide-meta > span {
     padding-right: 10px;

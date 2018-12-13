@@ -1,0 +1,510 @@
+title = "Inicio Nueva Familia"
+url = "/inicio"
+layout = "default"
+is_hidden = 0
+
+[builderList]
+modelClass = "Lacasita\Acciones\Models\Accion"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "order"
+sortDirection = "asc"
+==
+
+<?php
+function onStart()
+{
+    //gallery
+    $galleryFiles = array();
+    $galleryFolder = opendir('storage/app/media/gallery/');
+
+    while(false != ($file = readdir($galleryFolder))) {
+        if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+            $galleryFiles[] = $file; // put in array.
+        }
+    }
+    closedir($galleryFolder);
+    natsort($galleryFiles);
+    $this['gallery'] = $galleryFiles;
+
+    //set time local Argentina
+
+
+    //colaboradores
+    $nombres = array();
+    $colabFiles = array();
+    $colabFolder = opendir('storage/app/media/colaboradores/');
+    while(false != ($file = readdir($colabFolder))) {
+        if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+            $colabFiles[] = $file; // put in array.
+            $nombres[] = preg_split("/[_.]+/", "$file")[1];
+        }
+    }
+    closedir($colabFolder);
+    natsort($colabFiles);
+    $this['colaboradores'] = $colabFiles;
+    $this['nombres'] = $nombres;
+
+
+
+}
+?>
+==
+<!-- Home Slider -->
+<div class="home-slider">
+    <div class="item">
+        <div class="slider-image">
+            <img alt="slide-1" src="{{ 'assets/images/slider/slider-1.jpg'|theme }}">
+        </div>
+        <div class="slider-content">
+            <div class="container boxleft">
+                <!-- <div class="row"> -->
+                    <div class="col-sm-8 col-xs-10 slider-content-text">
+                        <h2>“La creatividad es la inteligencia divirti&eacutendose” Albert Einstein</h2>
+                        <!-- <p style='font-size: 18px;'>La creatividad es la inteligencia divirtiéndose “ Albert Einstein</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="slider-image">
+            <img class="retina" alt="slide-2" src="{{ 'assets/images/slider/slider-2.jpg'|theme }}">
+        </div>
+        <div class="slider-content">
+            <div class="container boxleft">
+                <!-- <div class="row"> -->
+                    <div class="col-sm-8 col-xs-10 slider-content-text">
+                        <h2>“Si a un ni&ntildeo le ense&ntildeas a aprender creando curiosidad, continuar&aacute el proceso de aprendizaje durante su vida”</h2>
+                        <!-- “<p style='font-size: 18px;'>Nos mueven las ganas de ver chicos alegres y con esperanza</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="slider-image">
+            <img class="retina" alt="slide-3" src="{{ 'assets/images/slider/slider-3.jpg'|theme }}">
+        </div>
+        <div class="slider-content">
+            <div class="container boxleft">
+                <!-- <div class="row"> -->
+                    <div class="col-sm-8 col-xs-10 slider-content-text">
+                        <h2>“Sorprendete con todo, no des nada por hecho, observa con detenimiento, pon el mayor inter&eacutes, esas son las bases del aprendizaje”</h2>
+                        <!-- <p style='font-size: 18px;'>En marzo de este a&ntildeo inauguramos por fin , después de mucho esfuerzo departe de todos los que formamos parte de esta familia , en nuevo edificio de secundaria .Asi los 50 chicos que hoy acuden a la casita tienen su propio espacio</p> -->
+                        <!-- <a class="btn btn-green" href="#">DONAR</a> -->
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Fin Home Slider -->
+
+<!--Fan Fact sin fondo gris cambio sergio  -->
+<div class="contenedor">
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-child fa-2x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_ninos' %}</p>
+      <p>Total de Ni&ntildeos de la Casita desde su apertura en 2002 </p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-cutlery fa-2x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_comidas_anual' %}</p>
+      <p>Desayunos, Almuerzos y Meriendas servidas anualmente</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-clock-o fa-2x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_horas_donadas_anual' %}</p>
+      <p>Horas donadas anualmente por el Voluntariado</p>
+    </div>
+  </div>
+
+  <div class="divNumeros">
+    <div class="icono">
+      <i class="fa fa-users fa-2x icono" aria-hidden="true"></i>
+    </div>
+    <div class="textoYNumeros">
+      <p class="fact-count">{% content 'Total_voluntarios' %}</p>
+      <p>Voluntarios y donantes que hacen posible la casita</p>
+    </div>
+  </div>
+</div>
+<!--FIN Fan Fact sin fondo gris cambio sergio  -->
+
+
+<a id="intros"></a>
+
+<!-- Intro -->
+<div class="linea" style="margin-top:30px;"></div>
+<div class="intro pd-top-30 pd-bottom-50 text-center">
+  <!--Borrar anclaje  -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="intro-title">SOBRE NOSOTROS</h1>
+        <p>Somos una ONG, integrada por un equipo de profesionales y voluntarios, que trabaja desde 1999 por la inclusión social, el desarrollo humano y comunitario de chicos y familias en situación de vulnerabilidad de Rincón de Milberg, Tigre. La Casita es un centro diurno para chicos entre 6 y 18 años. Funcionamos en 2 turnos, mañana y tarde, a contra turno escolar. La asistencia a la escuela oficial es requisito indispensable de ingreso y permanencia. Los chicos desayunan, almuerzan y meriendan en el centro, reciben apoyo escolar, atención psicopedagógica, nutricional y una amplia gama de talleres de desarrollo personal. Los Padres colaboran como voluntarios y participan de actividades para ellos. Respaldados por generosos donantes que hacen de este proyecto una realidad. <b>Todos creemos en que la Transformación Social es posible.</b></p>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 15px">
+      <div class="col-md-6 col-sm-12">
+        <h1 class="intro-title">NUESTRA MISI&OacuteN</h1>
+        <p>Acompañar en su desarrollo a nuestros chicos despertándoles la <b>curiosidad</b> para que aprendan con <b>entusiasmo y creatividad. Creemos que educar para el futuro es aprender a aprender, aprender a comprender, aprender a hacer y aprender a SER. Educamos para que sean adultos empoderados</b> y se constituyan como sujetos independientes, protagonistas de sus propias vidas y dueños de su destino.</p>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <h1 class="intro-title">NUESTRA FILOSOF&IacuteA</h1>
+        <p>Como todos los seres humanos nuestros chicos nacen con una genética predeterminada que comienza desde el nacimiento a interactuar con el medio en el que viven desarrollando su creatividad, capacidad de adaptación y aprendizaje en todos los ámbitos de la vida, desde lo intelectual, físico y emocional. Los tres se fusionan permanentemente en cada momento de su historia. Trabajamos con ellos desde una <b>filosofía integradora</b>, donde cada ámbito tiene la misma relevancia. La Casita considera a las familias de los chicos como parte fundamental de esta integración, por lo que colaboran y participan activamente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Pilares-->
+<a id="pilares"></a>
+
+<div id="blog" class="blog-section pd-top-30 pd-bottom-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-title">NUESTROS PILARES <i class="fa fa-file-text-o"></i></h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/1.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                          <div class="postTitle">APOYO ESCOLAR</div>
+                          <p>Contamos con un equipo de docentes y voluntarias calificadas que acompañan a los chicos en la curricula escolar con programas acordes a cada edad. Tenemos tambi&eacuten un area de psicopedagogia para chicos con dificultades academicas donde se los apoya de manera personalizada.</p>
+                    </div>
+                </div>
+                <!-- /.end blog single -->
+            </div>
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/2.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                      <div class="postTitle">SALUD Y NUTRICI&OacuteN</div>
+                        <p>Creemos que la alimentación es fundamental para un buen desarrollo y aprendizaje. Contamos con una Nutricionista para el diseño de los menús y seguimiento de los chicos a lo largo del año. Realizamos talleres de alimentación con las madres para reforzar buenos hábitos de higiene y alimentarios.</p>
+                        <!-- <h3 class="title"><a href="#">Salud y Nutrición</a></h3> -->
+
+                    </div>
+                </div>
+                <!-- /.end blog single -->
+            </div>
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/3.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                      <div class="postTitle">RED FAMILIAR</div>
+                      <p>Formamos una red social donde los padres son junto con sus hijos protagonista, ellos construyen, cuidan y nutren su sociedad. La Casita pretende facilitarles herramientas para ayudarlos en este esfuerzo. Brindamos talleres de tejido, manicura, nutrición, huerta, entre otros. Ellos cooperan con la limpieza y mantenimiento de La Casita.</p>
+                    </div>
+                </div>
+                <!-- /.end blog single -->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/4.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                      <div class="postTitle">DESARROLLO PERSONAL</div>
+                      <p>Creemos en una metodología constructivista en donde los niños son actores de sus aprendizajes; los docentes y voluntarios sus guías a través de TALLERES con una dinámica, donde lo grupal y lo subjetivo se interrelacionan. Los chicos investigan, crean y aprenden a través del ARTE, la MUSICA, los CUENTOS, la TECNOLOGIA, el DEPORTE y las ACTIVIDADES LUDICAS.</p>
+                    </div>
+                </div>
+                <!-- /.end blog single -->
+            </div>
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/5.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                      <div class="postTitle">APRENDIZAJE</div>
+                      <p>Es importante que los docentes no solo sean transmisores del conocimiento sino también guías y potenciadores de la motivación. Capacitados para guiar en la gestión del conflicto y desarrollo de la autoestima. Contamos con un equipo de docentes que reciben capacitación continua para tener la preparación óptima tanto en lo académico como en lo emocional.</p>
+                    </div>
+                </div>
+                <!-- /.end blog single -->
+            </div>
+            <div class="col-sm-4">
+                <div class="blog-single">
+                    <div class="thumb">
+                        <img alt="blog" src="{{ 'assets/images/blog/6.jpg'|theme }}">
+                    </div>
+                    <div class="post-desk">
+                      <div class="postTitle">VOLUNTARIADO</div>
+                      <p>Formamos un equipo importante de gente con el objetivo de colaborar en el desarrollo de los chicos desde las distintas &aacutereas. Son muchos los frentes en los que se puede hacer un gran aporte. Las ganas de formar parte de la construcción del futuro de cada uno de los chicos y la sociedad en general es lo que nos mueve a involucrarnos. Siempre tenemos las puertas abiertas para ser mas.</p>
+                      <a id="historias"></a>
+                    </div>
+
+                </div>
+                <!-- /.end blog single -->
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- FIN Blog Pilares-->
+
+
+
+<!-- Recent Cause -->
+
+
+<div class="recent-cause pd-top-30 pd-bottom-10">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-title">HISTORIAS QUE INSPIRAN <i class="fa fa-flag"></i></h2>
+            </div>
+            <div class="col-sm-12 col-md-4 recent-cause-list">
+              <div class="background-imageCh" style="background-image:url({{ 'assets/images/causes/9.jpg'|theme }});">
+              </div>
+                <div class="recent-cause-summary">
+                    <div class="recent-cause-content">
+                        <h3 class="recent-cause-title">Aldana 11 a&ntildeos</h3>
+                        <!-- <div class="cause-location"><i class="fa fa-globe" aria-hidden="true"></i> <a href="#">Nagasaki,</a> <a href="#">Japan</a></div>
+                        <div class="cause-tags"><i class="fa fa-tags" aria-hidden="true"></i> <a href="#">Children,</a> <a href="#">Sports,</a> <a href="#">Education</a></div> -->
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/jadOLs62W-M" data-target="#myModal">
+                            Conoce su historia
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 recent-cause-list">
+              <div class="background-imageCh" style="background-image:url({{ 'assets/images/causes/tizano.jpg'|theme }});">
+              </div>
+                <div class="recent-cause-summary">
+                    <div class="recent-cause-content">
+                        <h3 class="recent-cause-title">Tiziano 8 a&ntildeos</h3>
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/dZgXDlc0-ko" data-target="#myModal">
+                            Conoce su historia
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 recent-cause-list">
+              <div class="background-imageCh" style="background-image:url({{ 'assets/images/causes/7.jpg'|theme }});">
+              </div>
+                <div class="recent-cause-summary">
+                    <div class="recent-cause-content">
+                        <h3 class="recent-cause-title">Fernando 9 a&ntildeos</h3>
+                        <button type="button" class="btn btn-primary btn-cause video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/xNYTO_rwfqI" data-target="#myModal">
+                            Conoce su historia
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+
+
+                        <div class="modal-body">
+
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <!-- 16:9 aspect ratio -->
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always">></iframe>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Event Acciones Gracias -->
+<a id="acciones"></a>
+
+<div class="event-section pd-top-30">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-title">ACCIONES!  <i class="fa fa-star"></i></h2>
+            </div>
+            <div id="event-carousel" class="event-carousel owl-carousel" style="clear: left; padding-bottom: 30px">
+
+              {% set records = builderList.records %}
+              {% set displayColumn = builderList.displayColumn %}
+              {% set noRecordsMessage = builderList.noRecordsMessage %}
+              {% set detailsPage = builderList.detailsPage %}
+              {% set detailsKeyColumn = builderList.detailsKeyColumn %}
+              {% set detailsUrlParameter = builderList.detailsUrlParameter %}
+              {% set meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"] %}
+
+                <!-- <ul class="record-list"> -->
+                    {% for record in records %}
+
+                      {% if record.publish %}
+                                  <div class="item equal-height-wrap">
+                                      <div class="col-sm-6 no-pad equal-height-inner">
+                                          <img src="{{ record.foto.thumb(auto,auto) }}" alt="acciones">
+                                      </div>
+                                      <div class="col-sm-6 no-pad bg equal-height-inner">
+                                          <div class="slide-detels">
+                                              <div class="eventcount" id="count1"></div>
+                                              <h3 class="slide-title">{{ record.name }}</h3>
+                                              <p class="sort-content">{{ record.description|raw }}</p>
+                                              <div class="slide-meta">
+
+                                                  <span><i class="fa fa-calendar-o"></i>
+                                                    {{ meses[record.date|date('n')-1] }} {{ record.date|date('Y') }}
+                                                  </span>
+                                                  <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
+                                              </div>
+                                              <div class="slide-meta">
+                                                  <span><i class="fa fa-font-awesome"></i>{{ record.adress }}</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                      {% else %}
+                          <!-- <li class="no-data">{{ noRecordsMessage }}</li> -->
+                      {% endif %}
+
+                    {% endfor %}
+
+                    {% if records.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if records.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+
+                            {% for page in 1..records.lastPage %}
+                                <li class="{{ records.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+
+                            {% if records.lastPage > records.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+
+                <!-- <div class="item equal-height-wrap">
+                    <div class="col-sm-6 no-pad equal-height-inner">
+                        <img src="{{ 'storage/app/media/acciones/acciones1.jpg'}}" alt="acciones 1">
+                    </div>
+                    <div class="col-sm-6 no-pad bg equal-height-inner">
+                        <div class="slide-detels">
+                            <div class="eventcount" id="count1"></div>
+                            <h3 class="slide-title">{% content 'Objetivo1_titulo' %}</h3>
+                            <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span> -->
+                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
+                            <!-- </div>
+                            <div class="slide-meta">
+                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- FIN Event Acciones Gracias -->
+
+
+
+
+<!-- Gallery -->
+<a id="fotos"></a>
+
+<div class="home-gallery pd-top-30">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="section-title">FOTOS</h2>
+            </div>
+            <div class="col-sm-12 total-photo">
+                <div class="photo-carousel">
+                    <!-- <div class="item">
+                        <img alt="gallery" src="{{ 'storage/app/media/gallery/1.jpg' }}">
+                    </div> -->
+                    {% for image in gallery %}
+                    <div class="item">
+                        <img alt="" src="{{ 'storage/app/media/gallery/' ~ image }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Clients -->
+<a id="colaboradores"></a>
+
+<div class="clients pd-top-30 pd-bottom-85" data-animation="fadeIn">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="section-title">NUESTROS COLABORADORES <i class="fa fa-user"></i></h2>
+      </div>
+
+      <div class="col-sm-12">
+        <div class="col-sm-12 total-photo">
+            <div class="partner">
+                    {% for i in 0..colaboradores|length -1 %}
+                   <div class="item" style="text-align: center">
+                     <a href=""><img alt="" src="{{ 'storage/app/media/colaboradores/' ~ colaboradores[i] }}"></a>
+                      <div class="carousel-caption" id="nombre_partner">
+                        <span style="display: block">
+                          {{ nombres[i] }}
+                        </span>
+                      </div>
+                   </div>
+                   {% endfor %}
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

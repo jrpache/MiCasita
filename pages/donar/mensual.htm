@@ -47,6 +47,12 @@ is_hidden = 0
                     <label for="name">CUIL / CUIT</label>
                     <input type="number" name="cuit" class="form-control" required placeholder="CUIL / CUIT...">
                   </div><!-- /.form-group -->
+                  {% flash %}
+                      <div class="alert alert-{{ type }}">
+                          <h3>{{ message }}</h3>
+                      </div>
+                  {% endflash %}
+
                   <!-- /.form-group -->
                   <!-- <h4>Monto a donar mensulamente:</h4> -->
                   <hr>
@@ -78,11 +84,6 @@ is_hidden = 0
                     <!-- <div class="col-md-12"> -->
                       <button type="submit" id="btn-donar-mensualmente"class="btn  btn-primary">DONAR</button>
                     <!-- </div> -->
-                    {% flash %}
-                        <div class="alert alert-{{ type }}">
-                            {{ message }}
-                        </div>
-                    {% endflash %}
                 </form>
               </div>
               <!-- div_donar_mensualmente -->
