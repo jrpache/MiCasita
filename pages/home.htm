@@ -2,7 +2,20 @@ title = "Inicio Nueva Familia"
 url = "/"
 layout = "default"
 is_hidden = 0
+
+[builderList]
+modelClass = "Lacasita\Acciones\Models\Accion"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "order"
+sortDirection = "asc"
 ==
+
 <?php
 function onStart()
 {
@@ -18,6 +31,8 @@ function onStart()
     closedir($galleryFolder);
     natsort($galleryFiles);
     $this['gallery'] = $galleryFiles;
+
+    //set time local Argentina
 
 
     //colaboradores
@@ -351,7 +366,66 @@ function onStart()
                 <h2 class="section-title">ACCIONES!  <i class="fa fa-star"></i></h2>
             </div>
             <div id="event-carousel" class="event-carousel owl-carousel" style="clear: left; padding-bottom: 30px">
-                <div class="item equal-height-wrap">
+
+              {% set records = builderList.records %}
+              {% set displayColumn = builderList.displayColumn %}
+              {% set noRecordsMessage = builderList.noRecordsMessage %}
+              {% set detailsPage = builderList.detailsPage %}
+              {% set detailsKeyColumn = builderList.detailsKeyColumn %}
+              {% set detailsUrlParameter = builderList.detailsUrlParameter %}
+              {% set meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"] %}
+
+                <!-- <ul class="record-list"> -->
+                    {% for record in records %}
+
+                      {% if record.publish %}
+                                  <div class="item equal-height-wrap">
+                                      <div class="col-sm-6 no-pad equal-height-inner">
+                                          <img src="{{ record.foto.thumb(auto,auto) }}" alt="acciones">
+                                      </div>
+                                      <div class="col-sm-6 no-pad bg equal-height-inner">
+                                          <div class="slide-detels">
+                                              <div class="eventcount" id="count1"></div>
+                                              <h3 class="slide-title">{{ record.name }}</h3>
+                                              <p class="sort-content">{{ record.description|raw }}</p>
+                                              <div class="slide-meta">
+
+                                                  <span><i class="fa fa-calendar-o"></i>
+                                                    {{ meses[record.date|date('n')-1] }} {{ record.date|date('Y') }}
+                                                  </span>
+                                                  <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
+                                              </div>
+                                              <div class="slide-meta">
+                                                  <span><i class="fa fa-font-awesome"></i>{{ record.adress }}</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                      {% else %}
+                          <!-- <li class="no-data">{{ noRecordsMessage }}</li> -->
+                      {% endif %}
+
+                    {% endfor %}
+
+                    {% if records.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if records.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+
+                            {% for page in 1..records.lastPage %}
+                                <li class="{{ records.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+
+                            {% if records.lastPage > records.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (pageParam): (records.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+
+                <!-- <div class="item equal-height-wrap">
                     <div class="col-sm-6 no-pad equal-height-inner">
                         <img src="{{ 'storage/app/media/acciones/acciones1.jpg'}}" alt="acciones 1">
                     </div>
@@ -361,91 +435,15 @@ function onStart()
                             <h3 class="slide-title">{% content 'Objetivo1_titulo' %}</h3>
                             <p class="sort-content">{% content 'Objetivo1_descripcion' %}</p>
                             <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span>
+                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo1_fecha' %}</span> -->
                                 <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
-                            </div>
+                            <!-- </div>
                             <div class="slide-meta">
                                 <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo1_direccion' %}</span>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                        <img src="{{ 'storage/app/media/acciones/acciones2.jpg'}}" alt="acciones 1">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count1"></div>
-                            <h3 class="slide-title">{% content 'Objetivo2_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo2_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo2_fecha' %}</span>
-                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo1_hora' %}</span> -->
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo2_direccion' %}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                      <img src="{{ 'storage/app/media/acciones/acciones3.jpg'}}" alt="acciones 2">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count2"></div>
-                            <h3 class="slide-title">{% content 'Objetivo3_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo3_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo3_fecha' %}</span>
-                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo2_hora' %}</span> -->
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo3_direccion' %}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                      <img src="{{ 'storage/app/media/acciones/acciones4.jpg'}}" alt="acciones 3">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count3"></div>
-                            <h3 class="slide-title">{% content 'Objetivo4_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo4_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo4_fecha' %}</span>
-                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span> -->
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo4_direccion' %}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="item equal-height-wrap">
-                    <div class="col-sm-6 no-pad equal-height-inner">
-                      <img src="{{ 'storage/app/media/acciones/acciones5.jpg'}}" alt="acciones 4">
-                    </div>
-                    <div class="col-sm-6 no-pad bg equal-height-inner">
-                        <div class="slide-detels">
-                            <div class="eventcount" id="count4"></div>
-                            <h3 class="slide-title">{% content 'Objetivo5_titulo' %}</h3>
-                            <p class="sort-content">{% content 'Objetivo5_descripcion' %}</p>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-calendar-o"></i>{% content 'Objetivo5_fecha' %}</span>
-                                <!-- <span><i class="fa fa-clock-o"></i>{% content 'Objetivo3_hora' %}</span> -->
-                            </div>
-                            <div class="slide-meta">
-                                <span><i class="fa fa-font-awesome"></i>{% content 'Objetivo5_direccion' %}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
 
 
             </div>
