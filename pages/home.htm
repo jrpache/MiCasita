@@ -14,8 +14,19 @@ detailsUrlParameter = "id"
 pageNumber = "{{ :page }}"
 sortColumn = "order"
 sortDirection = "asc"
-==
 
+[builderList builderList2]
+modelClass = "Lacasita\Acciones\Models\Colaborador"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "name"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+sortColumn = "order"
+sortDirection = "asc"
+==
 <?php
 function onStart()
 {
@@ -471,21 +482,30 @@ function onStart()
         <h2 class="section-title">NUESTROS COLABORADORES <i class="fa fa-user"></i></h2>
       </div>
 
-      <div class="col-sm-12">
-        <div class="col-sm-12 total-photo">
-            <div class="partner">
-                    {% for i in 0..colaboradores|length -1 %}
-                   <div class="item" style="text-align: center">
-                     <a href=""><img alt="" src="{{ 'storage/app/media/colaboradores/' ~ colaboradores[i] }}"></a>
-                      <div class="carousel-caption" id="nombre_partner">
-                        <span style="display: block">
-                          {{ nombres[i] }}
-                        </span>
-                      </div>
-                   </div>
-                   {% endfor %}
-            </div>
-        </div>
-      </div>
-    </div>
+
+{% set records = builderList2.records %}
+{% set displayColumn = builderList2.displayColumn %}
+{% set noRecordsMessage = builderList2.noRecordsMessage %}
+{% set detailsPage = builderList2.detailsPage %}
+{% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+{% set detailsUrlParameter = builderList2.detailsUrlParameter %}
+
+
+<div class="col-sm-12">
+  <div class="col-sm-12 total-photo">
+    <div class="partner">
+      {% for record in records %}
+        {% if record.publish %}
+          <div class="item" style="text-align: center">
+            <img src="{{ record.colaborador.thumb(auto,auto) }}" alt="colaborador">
+             <div class="carousel-caption" id="nombre_partner">
+               <span style="display: block">
+                 {{ record.name }}
+               </span>
+             </div>
+          </div>
+        {% endif %}
+      {% endfor %}
   </div>
+</div>
+</div>
