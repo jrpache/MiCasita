@@ -4,8 +4,10 @@ layout = "default"
 meta_title = "Donacion"
 is_hidden = 0
 ==
-function onStart(){
+<?
 
+function onStart(){
+   require_once "./vendor/mercadopago/sdk/lib/mercadopago.php";   
    $mp = new MP ("4944856265001812", "3OAxUteEVdaM3yNWRImXgxOZvM9Knkp5");
 
    $monto = $_POST['monto'];
@@ -85,4 +87,5 @@ function onStart(){
    }
 
 }
+?>
 ==
