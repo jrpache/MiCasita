@@ -1099,12 +1099,22 @@ p{
     background-image: url("images/page-title/1.jpg");
     background-position: center center;
     background-size: cover;
+    margin-top: -20px;
+    padding-top: 300px;
+    position: relative;
 }
-.page-title-section {
-  margin-top: -20px;
-  padding-top: 300px;
-  position: relative;
+.page-title-section-padrinazgo {
+    background-image: url("images/page-title/3.jpg");
+    background-position: center center;
+    background-size: cover;
+    margin-top: -20px;
+    padding-top: 300px;
+    position: relative;
 }
+.padrinazgo p {
+  margin: 0 0 40px;
+}
+
 .page-title-wrap {
     overflow: hidden;
     position: relative;
