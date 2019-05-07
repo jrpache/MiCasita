@@ -93,7 +93,7 @@ recaptcha_size = "normal"
             <div class="thumbnail">
               <img src="themes\MiCasita\assets\logo\VISA-emblema.png" alt="logo Visa" class="thumb_donate">
               <div class="caption bank">
-                <h3>Queres ser padrino?</h3>
+                <h3>¿Queres ser padrino?</h3>
                 <h4>El espíritu de padrinazgo está en ayudar. No importa con cuánto o desde dónde, lo importante es la colaboración</h4>
                 <div class="row">
                   <button type="submit" class="btn  btn-primary"  href="#" data-toggle="modal" data-target="#contacto-modal">QUIERO APADRINAR</button>
@@ -106,81 +106,79 @@ recaptcha_size = "normal"
               </div><!-- /.caption bank -->
             </div><!-- /.thumbnail-->
           </div> <!--  /.donate-spacing -->
+          </div>
           <!-- <div class="display-flex donate-spacing"> -->
-<div class="row row-eq-height">
-
-
-          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
-            <div class="thumbnail">
-              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
-              <div class="caption bank">
-                <h4>Quiero donar por unica vez</h4>
-                <p>Cliqueando en cada boton usted donara un monto por unica vez mediante Mercado Pago</p>
-                <div class="display-flex">
-                  <!-- form buttons unicavez -->
+          <!-- <div class="row row-eq-height"> -->
+            <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+              <div class="thumbnail">
+                <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
+                <div class="caption bank">
+                  <h4>Quiero donar por unica vez</h4>
+                  <p>Cliqueando en cada boton usted donara un monto por unica vez mediante Mercado Pago</p>
+                  <div class="display-flex">
+                    <!-- form buttons unicavez -->
+                    <div class="row">
+                      <div class="col-md-4 col-xs-12">
+                        <form action='/donacion' method='post'>
+                          <input type='hidden'  name='monto' value='500.00' />
+                          <input type='hidden' name='forma_pago' value='unicavez' />
+                          <input type='hidden' name='name' value='' />
+                          <input type='hidden' name='email' value='' />
+                          <button type="submit" class="btn  btn-primary">$ 500</button>
+                        </form>
+                      </div>
+                      <div class="col-md-4 col-xs-12">
+                        <form action='/donacion' method='post'>
+                          <input type='hidden' name='monto' value='1000.00' />
+                          <input type='hidden' name='forma_pago' value='unicavez' />
+                          <input type='hidden' name='name' value='' />
+                          <input type='hidden' name='email' value='' />
+                          <button type="submit" class="btn  btn-primary">$ 1000</button>
+                        </form>
+                      </div>
+                      <div class="col-md-4 col-xs-12">
+                        <form action='/donacion' method='post'>
+                          <input type='hidden' name='monto' value='2000.00' />
+                          <input type='hidden' name='forma_pago' value='unicavez' />
+                          <input type='hidden' name='name' value='' />
+                          <input type='hidden' name='email' value='' />
+                          <button type="submit" class="btn  btn-primary">$ 2000</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-12 col-xs-12 col-lg-12">
+                        <form class="monto_variable" action='/donacion' method='post'>
+                          <input type="number" class="btn  btn-primary btn-block" min="50" step="50" name="monto" placeholder="Otro monto a donar...">
+                          <input type='hidden' name='forma_pago' value='unicavez' />
+                          <input type='hidden' name='name' value='' />
+                          <input type='hidden' name='email' value='' />
+                        </form>  <!-- end form buttons unicavez class="form-control btn btn-primary"-->
+                      </div>
+                    </div>
+                  </div>  <!-- end div display-flex -->
+                </div>  <!-- end div caption -->
+              </div>  <!-- end div thumbnail -->
+            </div>  <!-- end div donate-spacing -->
+            <!-- fin cuadro de donacion -->
+            <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
+              <div class="thumbnail">
+                <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
+                <div class="caption bank">
+                  <h4>Quiero donar mensualmente un monto fijo</h4>
+                  <p>Cliqueando en el boton usted donara un monto fijo mensual mediante Mercado Pago</p>
+                  <p>Ese pago mensual sirve para asegurar que se cumplan todos nuestros objetivos con La Casita</p>
+                  <!-- <p>Los niños podran apreciar vuestra colaboracion</p> -->
                   <div class="row">
-                    <div class="col-md-4 col-xs-12">
-                      <form action='/donacion' method='post'>
-                        <input type='hidden'  name='monto' value='500.00' />
-                        <input type='hidden' name='forma_pago' value='unicavez' />
-                        <input type='hidden' name='name' value='' />
-                        <input type='hidden' name='email' value='' />
-                        <button type="submit" class="btn  btn-primary">$ 500</button>
-                      </form>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                      <form action='/donacion' method='post'>
-                        <input type='hidden' name='monto' value='1000.00' />
-                        <input type='hidden' name='forma_pago' value='unicavez' />
-                        <input type='hidden' name='name' value='' />
-                        <input type='hidden' name='email' value='' />
-                        <button type="submit" class="btn  btn-primary">$ 1000</button>
-                      </form>
-                    </div>
-                    <div class="col-md-4 col-xs-12">
-                      <form action='/donacion' method='post'>
-                        <input type='hidden' name='monto' value='2000.00' />
-                        <input type='hidden' name='forma_pago' value='unicavez' />
-                        <input type='hidden' name='name' value='' />
-                        <input type='hidden' name='email' value='' />
-                        <button type="submit" class="btn  btn-primary">$ 2000</button>
-                      </form>
+                    <div class="col-md-12">
+                      <a class="btn btn-primary btn-block" href="/donar/mensual" role="button">Donar mensualmente</a>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-md-12 col-xs-12 col-lg-12">
-                      <form class="monto_variable" action='/donacion' method='post'>
-                        <input type="number" class="btn  btn-primary btn-block" min="50" step="50" name="monto" placeholder="Otro monto a donar...">
-                        <input type='hidden' name='forma_pago' value='unicavez' />
-                        <input type='hidden' name='name' value='' />
-                        <input type='hidden' name='email' value='' />
-                      </form>  <!-- end form buttons unicavez class="form-control btn btn-primary"-->
-                    </div>
-                  </div>
-                </div>  <!-- end div display-flex -->
-              </div>  <!-- end div caption -->
-            </div>  <!-- end div thumbnail -->
-          </div>  <!-- end div donate-spacing -->
-          <!-- fin cuadro de donacion -->
-          <div class="col-sm-6 col-md-6 col-xs-12 donate-spacing">
-            <div class="thumbnail">
-              <img src="themes\MiCasita\assets\logo\mercadopago.png" alt="logo mercado pago" class="thumb_donate">
-              <div class="caption bank">
-                <h4>Quiero donar mensualmente un monto fijo</h4>
-                <p>Cliqueando en el boton usted donara un monto fijo mensual mediante Mercado Pago</p>
-                <p>Ese pago mensual sirve para asegurar que se cumplan todos nuestros objetivos con La Casita</p>
-                <!-- <p>Los niños podran apreciar vuestra colaboracion</p> -->
-                <div class="row">
-                  <div class="col-md-12">
-                    <a class="btn btn-primary btn-block" href="/donar/mensual" role="button">Donar mensualmente</a>
-                  </div>
-                </div>
-              </div>   <!-- end div caption -->
-            </div>   <!-- end div thumbnail -->
-          </div>   <!-- end div donate-spacing -->
-          <!-- fin cuadro de donacion -->
-
-</div>
+                </div>   <!-- end div caption -->
+              </div>   <!-- end div thumbnail -->
+            </div>   <!-- end div donate-spacing -->
+            <!-- fin cuadro de donacion -->
+          <!-- </div> -->
 
 
           <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>

@@ -335,7 +335,6 @@ input[type=text] {
   padding: 12px;
 }
 
-
 #contacto-modal {
   text-align: left;
 }
@@ -361,6 +360,17 @@ input[type=text] {
 
 #texto-cena p {
   text-align: center;
+}
+
+/*
+ * Row with equal height columns
+ * --------------------------------------------------
+ */
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
 }
 
 /* ==================================================================
