@@ -1,83 +1,74 @@
-description = "Default layout"
+description = "Default layout" 
 ==
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}" />
+    <meta name="title" content="{{ this.page.meta_title }}" />
+    <meta name="author" content="OctoberCMS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="OctoberCMS" />
 
-        <!--
+    <!--
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         -->
 
-        <!--Fav and touch icons-->
-        <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}">
-        <link rel="apple-touch-icon" href="{{ 'assets/images/apple-touch-icon.png'|theme }}">
-        <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/apple-touch-icon-76x76.png'|theme }}">
-        <link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/apple-touch-icon-120x120.png'|theme }}">
-        <link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/apple-touch-icon-152x152.png'|theme }}">
+    <!--Fav and touch icons-->
+    <link rel="icon" href="{{ 'assets/images/favicon.ico'|theme }}" />
+    <link rel="apple-touch-icon" href="{{ 'assets/images/apple-touch-icon.png'|theme }}" />
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/apple-touch-icon-76x76.png'|theme }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/apple-touch-icon-120x120.png'|theme }}" />
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/apple-touch-icon-152x152.png'|theme }}" />
 
-        <!--Common Styles Plugins-->
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/bootstrap.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/font-awesome.min.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/animate.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.carousel.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/jquery-ui.min.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/css/magnific-popup.css'|theme }}">
+    <!--Common Styles Plugins-->
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/bootstrap.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/font-awesome.min.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/animate.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.carousel.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/owl.theme.default.min.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/jquery-ui.min.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/magnific-popup.css'|theme }}" />
 
+    <!-- <link href="{{ ['assets/css/bootstrap.css','assets/css/font-awesome.min.css','assets/css/animate.css','assets/css/owl.carousel.css','assets/css/owl.theme.default.min.css','assets/css/jquery-ui.min.css','assets/css/magnific-popup.css','assets/style.css','assets/space.css','assets/responsive.css']|theme }}" rel="stylesheet"> -->
 
-        <!-- <link href="{{ ['assets/css/bootstrap.css','assets/css/font-awesome.min.css','assets/css/animate.css','assets/css/owl.carousel.css','assets/css/owl.theme.default.min.css','assets/css/jquery-ui.min.css','assets/css/magnific-popup.css','assets/style.css','assets/space.css','assets/responsive.css']|theme }}" rel="stylesheet"> -->
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/style.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/space.css'|theme }}" />
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/responsive.css'|theme }}" />
 
-        <!--Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-        <!--Custom Style-->
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/style.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/space.css'|theme }}">
-        <link rel="stylesheet" type="text/css" href="{{ 'assets/responsive.css'|theme }}">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="{{ 'assets/js/html5shiv.min.js'|theme }}"></script>
+      <script src="{{ 'assets/js/respond.min.js'|theme }}"></script>
+    <![endif]-->
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="{{ 'assets/js/html5shiv.min.js'|theme }}"></script>
-            <script src="{{ 'assets/js/respond.min.js'|theme }}"></script>
-        <![endif]-->
+    {% styles %}
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="layout-header">{% partial 'header' %}</header>
 
-        {% styles %}
+    <!-- Content -->
+    <section id="layout-content">{% page %}</section>
 
-    </head>
-    <body>
+    <!-- Footer -->
+    <footer id="layout-footer">{% partial 'footer' %}</footer>
 
-        <!-- Header -->
-        <header id="layout-header">
-            {% partial 'header' %}
-        </header>
-
-        <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
-
-        <!-- Footer -->
-        <footer id="layout-footer">
-            {% partial 'footer' %}
-        </footer>
-
-        <!-- Scripts -->
-        <!--
+    <!-- Scripts -->
+    <!--
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         -->
-        {% scripts %}
+    {% scripts %}
 
-        <!--Common JS Plugin-->
+    <!--Common JS Plugin-->
     <!-- <script type="text/javascript" src="{{ 'assets/js/jquery-1.12.4.min.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/jquery-ui.min.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
@@ -100,8 +91,19 @@ description = "Default layout"
 
     <script src="{{ ['assets/js/jquery-1.12.4.min.js','assets/js/jquery-ui.min.js','assets/js/bootstrap.min.js','assets/js/retina.min.js','assets/js/jquery.easing.min.js','assets/js/jquery.scrollUp.min.js','assets/js/owl.carousel.min.js','assets/js/isotope.pkgd.min.js','assets/js/imagesloaded.pkgd.min.js','assets/js/headroom.min.js','assets/js/jQuery.headroom.min.js','assets/js/sticky-kit.min.js','assets/js/jquery.countdown.min.js','assets/js/jquery.waypoints.js','assets/js/jquery.magnific-popup.min.js','assets/js/jquery.counterup.min.js','assets/js/custom.js','@framework','@framework.extras'] | theme }}"></script>
 
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMloK_kzsasOQXg-xhGxnwvlAU3HTZWg&callback=initMap" async defer></script>
+    <!-- Modal reyes -->
+    <script type="text/javascript">
+      $(window).on("load", function () {
+        $("#reyes").modal("show");
+      });
+    </script>
+    <!-- Modal reyes -->
 
-    </body>
+    <!-- Google Map -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYMloK_kzsasOQXg-xhGxnwvlAU3HTZWg&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
 </html>
