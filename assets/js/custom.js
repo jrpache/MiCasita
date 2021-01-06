@@ -8,7 +8,7 @@
             Preloader
         ------------------------------------------------------------- */
         if ($('.preloader').length){
-            $(".preloader").delay(1000).fadeOut("fast"); /*cambio sergio delay 1000x10 y slow x fast */
+            $(".preloader").delay(500).fadeOut("fast"); /*cambio sergio delay 1000x500 y slow x fast */
         }
     });
 
@@ -125,7 +125,8 @@
             $('.home-slider').owlCarousel({
                 loop:true,
                 nav:true,
-                items: 1
+                items: 1,
+                autoplay: true // Owlcarousel autoplay
             });
         }
 
