@@ -47,19 +47,19 @@ function onStart()
 
 
     //colaboradores
-    $nombres = array();
-    $colabFiles = array();
-    $colabFolder = opendir('storage/app/media/colaboradores/');
-    while(false != ($file = readdir($colabFolder))) {
-        if(($file != ".") and ($file != "..") and ($file != "index.php")) {
-            $colabFiles[] = $file; // put in array.
-            $nombres[] = preg_split("/[_.]+/", "$file")[1];
-        }
-    }
-    closedir($colabFolder);
-    natsort($colabFiles);
-    $this['colaboradores'] = $colabFiles;
-    $this['nombres'] = $nombres;
+    // $nombres = array();
+    // $colabFiles = array();
+    // $colabFolder = opendir('storage/app/media/colaboradores/');
+    // while(false != ($file = readdir($colabFolder))) {
+    //     if(($file != ".") and ($file != "..") and ($file != "index.php")) {
+    //         $colabFiles[] = $file; // put in array.
+    //         $nombres[] = preg_split("/[_.]+/", "$file")[1];
+    //     }
+    // }
+    // closedir($colabFolder);
+    // natsort($colabFiles);
+    // $this['colaboradores'] = $colabFiles;
+    // $this['nombres'] = $nombres;
 
 
 
@@ -74,7 +74,7 @@ function onStart()
                 <h4 class="modal-title"></h4>
             </div>
             <div class="modal-body">
-                <img alt="slide-1" src="{{ 'assets/images/popup_1.jpg'|theme }}">
+                <img alt="popup donar" src="{{ 'assets/images/popup_1.jpg'|theme }}">
                 <!-- <p style= "font-size: 20px;  padding-top: 15px" >En este año tan particular te pedimos que pongas un zapato más y hagas que los Reyes Magos lleguen para ellos también. Con tu donación ayudamos a salir adelante a muchas familias. 
                     Sumate y convertite en un REY MAGO! 
                 </p> -->
@@ -93,7 +93,7 @@ function onStart()
 <div class="home-slider">
     <div class="item">
         <div class="slider-image">
-            <img alt="slide-1" src="{{ 'assets/images/slider/slider-1.jpg'|theme }}">
+            <img alt="slide-1" src="{{ 'assets/images/slider/foto_aros.jpg'|theme }}">
         </div>
         <div class="slider-content">
             <div class="container boxleft">
@@ -109,7 +109,7 @@ function onStart()
     </div>
     <div class="item">
         <div class="slider-image">
-            <img class="retina" alt="slide-2" src="{{ 'assets/images/slider/slider-2.jpg'|theme }}">
+            <img class="retina" alt="slide-2" src="{{ 'assets/images/slider/foto_compus.jpg'|theme }}">
         </div>
         <div class="slider-content">
             <div class="container boxleft">
@@ -125,7 +125,7 @@ function onStart()
     </div>
     <div class="item">
         <div class="slider-image">
-            <img class="retina" alt="slide-3" src="{{ 'assets/images/slider/slider-3.jpg'|theme }}">
+            <img class="retina" alt="slide-3" src="{{ 'assets/images/slider/foto_grupal.jpg'|theme }}">
         </div>
         <div class="slider-content">
             <div class="container boxleft">

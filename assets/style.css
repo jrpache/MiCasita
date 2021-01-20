@@ -678,7 +678,7 @@ input[type=text] {
 
 }
 .slider-content-text {
-    background-color: rgba(131, 137, 149, 0.5);
+    background-color: rgba(131, 137, 149, 0.2);
     border-radius: 2px; /* cambio sergio */
     padding-top: 15px;
     padding-bottom: 15px;  /* Agrego padding mas chico Sergio  */
@@ -841,7 +841,7 @@ p{
 }
 .equal-height-inner > img {
     bottom: 0;
-    height: 100%;
+    /* height: 100%; */
     left: 0;
     object-fit: cover;
     object-position: 50% 50%;
@@ -1637,7 +1637,7 @@ ul.feature-list {
 .event-carousel .slide-detels {
     height: auto;
     overflow: hidden;
-    padding: 60px 60px 120px 60px;
+    padding: 40px;
 }
 .event-carousel .slide-detels .slide-meta > span {
     padding-right: 10px;
@@ -3438,7 +3438,7 @@ ul.products {
 }
 .footer-top .footer-address .footer-map {
     font-weight: bold;
-    padding-top: 35px;
+    /* padding-top: 35px; */
 }
 .footer-widget .footer-address{
   padding-top: 20px;
