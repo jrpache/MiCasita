@@ -1062,8 +1062,12 @@ p{
   11.0 Newsletter Signup
 ================================================================== */
 
+#newsletter_forms_flash .alert-success{
+    background: #555;
+}
+
 .newsletter-section {
-    background: #2867de;
+    background: #555;
     padding: 50px 0;
 }
 .newsletter-section .title {
@@ -3499,6 +3503,10 @@ ul.products {
 }
 .footer-bottom span a:hover {
     color: #ff3450;
+}
+
+.footer-news h3 {
+    color:#ffffff;
 }
 
 /* ==================================================================

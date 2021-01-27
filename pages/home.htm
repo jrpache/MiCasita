@@ -3,6 +3,25 @@ url = "/"
 layout = "default"
 is_hidden = 0
 
+[genericForm newsletter]
+group = "Alta Newsletter"
+rules[email] = "required|email"
+rules_messages[email.email] = "Debe ingresar un email valido"
+messages_success = "Gracias por suscribirse, pronto recibira nuestras noticias en su email"
+messages_errors = "Verifique que sea un email correcto"
+mail_enabled = 1
+mail_subject = "Alta Newsletter La Casita"
+mail_recipients[] = "contacto@lacasita.ong"
+mail_bcc[] = "proagua2@gmail.com"
+reset_form = 1
+inline_errors = "disabled"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 0
+recaptcha_theme = "dark"
+recaptcha_type = "image"
+recaptcha_size = "normal"
+
 [builderList]
 modelClass = "Lacasita\Acciones\Models\Accion"
 scope = "-"
@@ -479,7 +498,7 @@ function onStart()
                 {% if record.publish %}
                 <div class="item equal-height-wrap">
                     <div class="col-sm-6 no-pad equal-height-inner">
-                        <img src="{{ record.foto.thumb(auto,auto) }}" alt="acciones">
+                        <img src="{{ record.foto.thumb(auto,auto) }}" alt="Acciones de la Casita">
                     </div>
                     <div class="col-sm-6 no-pad bg equal-height-inner">
                         <div class="slide-detels">
@@ -528,7 +547,6 @@ function onStart()
         </div>
     </div>
 </div>
-</div>
 
 <!-- FIN Event Acciones Gracias -->
 
@@ -563,7 +581,7 @@ function onStart()
 <!-- Clients -->
 <a id="colaboradores"></a>
 
-<div class="clients pd-top-30 pd-bottom-85" data-animation="fadeIn">
+<div class="clients pd-top-30" data-animation="fadeIn">
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-12">
@@ -597,3 +615,26 @@ function onStart()
                     </div>
                 </div>
             </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Newsletter -->
+<div class="newsletter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <h2 class="title">Newsletter</h2>
+                        <p>Suscribete a las Noticias de La Casita</p>
+                    </div>
+                    <div class="col-sm-9">
+                        {% component 'newsletter' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
