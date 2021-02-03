@@ -402,5 +402,11 @@
       // a poor man's stop video
       $("#video").attr("src", $videoSrc);
     });
+        /* -------------------------------------------------------------
+            Popover / Modal Home Video
+        ------------------------------------------------------------- */
+
+        $("#getCodeModal").modal("show");
+
   });
 })(jQuery);
